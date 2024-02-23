@@ -164,7 +164,7 @@ jobs:
           distribution: 'temurin'
       - name: Build with Maven
         run: |
-#           mvn -B package --file ./questionBank-backend/questionBank/pom.xml -DskipTests
+           mvn -B package --file ./questionBank-Backend/questionBank/pom.xml -DskipTests
            cd questionBank-backend/questionBank
            mvn --batch-mode --update-snapshots verify
       - name: build spring boot image
@@ -200,7 +200,7 @@ jobs:
 
       - name: build angular image
         run: |
-          cd questionBank-frontend/web
+          cd questionBank-Frontend/web
           docker build -t angular-app .
       - name: display spring-app image
         run: docker images
@@ -214,7 +214,7 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v4
         with:
-          context: ./questionBank-frontend
+          context: ./questionBank-Frontend
           file: ./web/Dockerfile
           push: true
           tags: gopiagasthia/qbfrontend:1
