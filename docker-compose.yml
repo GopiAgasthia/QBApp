@@ -1,0 +1,54 @@
+version: '3'
+services:
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.8.1
+    container_name: qb-data
+    environment:
+      - discovery.type=single-node
+      - xpack.security.enabled=false
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    healthcheck:
+      test: ["CMD","curl","-f","http://localhost:9200"]
+      interval: 20s
+      timeout: 50s
+      retries: 5
+    networks:
+      - qbapp-network
+    volumes:
+      - qbank_data:/usr/share/elasticsearch/data
+
+  backend:
+    image: rancher/qb-backend
+    container_name: QBAppBackend
+    ports:
+      - "8080:8080"
+    environment:
+      - ELASTICSEARCH_HOST=qb-data
+      - ELASTICSEARCH_PORT=9200
+    #      - "SPRING_DATA_ELASTICSEARCH_URIS=http://host.docker.internal:9200"
+
+    networks:
+      - qbapp-network
+    depends_on:
+      elasticsearch:
+        condition: service_healthy
+
+
+  frontend:
+    image: rancher/qb-frontend
+    container_name: QBAppFrontend
+    ports:
+      - "4200:4200"
+    networks:
+      - qbapp-network
+    depends_on:
+      - backend
+
+networks:
+  qbapp-network:
+    driver: bridge
+
+volumes:
+  qbank_data:
