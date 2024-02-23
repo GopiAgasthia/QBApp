@@ -39,14 +39,14 @@ jobs:
         working-directory: ./questionBank-Backend/questionBank
         run: |
           mvn --batch-mode --update-snapshots verify
-          docker build -t qbapp/qbank-backend:latest .
-          docker push qbapp/qbank-backend:latest
+          docker build -t gopiagasthia/qbank-backend:latest .
+          docker push gopiagasthia/qbank-backend:latest
  
       - name: Build and push frontend image
         working-directory: ./questionBank-Frontend/web
         run: |
-          docker build -t qbapp/qbank-frontend:latest .
-          docker push qbapp/qbank-frontend:latest
+          docker build -t gopiagasthia/qbank-frontend:latest .
+          docker push gopiagasthia/qbank-frontend:latest
  
       - name: Show Docker images
         run: docker images
@@ -68,11 +68,11 @@ jobs:
 
            # Pull the newly created backend image
       - name: Pull backend image
-        run: docker pull qbapp/qbank-backend:latest
+        run: docker pull gopiagasthia/qbank-backend:latest
 
       # Pull the newly created frontend image
       - name: Pull frontend image
-        run: docker pull qbank/qbank-frontend:latest
+        run: docker pull gopiagasthia/qbank-frontend:latest
  
       - name: Set up Docker Compose again
         run: docker-compose -f docker-compose.yml up -d
