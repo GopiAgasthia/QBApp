@@ -33,7 +33,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
  
       - name: Set up Docker Compose
-        run: docker-compose -f docker-compose.yml up -d
+        run: docker-compose -f docker-compose.yml up -d -y
  
       - name: Build and push backend image
         working-directory: ./questionBank-Backend/questionBank
