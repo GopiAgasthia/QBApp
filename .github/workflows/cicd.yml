@@ -116,9 +116,9 @@ name: CI CD Pipeline
 #
 on:
   push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+    branches: [ main ]
+#  pull_request:
+#    branches: [ main ]
 jobs:
   checkout-code:
     runs-on: ubuntu-latest
