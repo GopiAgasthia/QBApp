@@ -6,8 +6,13 @@ on:
 
 jobs:
 
+  checkout-code:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
   integration-unit-test:
-#    needs: [ checkout-code ]
+    needs: [ checkout-code ]
     runs-on: ubuntu-latest
 
     # if: needs.paths-filter.outputs.output1 == 'true'
