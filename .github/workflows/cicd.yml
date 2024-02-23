@@ -165,7 +165,7 @@ jobs:
       - name: Build with Maven
         run: |
            mvn -B package --file ./questionBank-Backend/questionBank/pom.xml -DskipTests
-           cd questionBank-backend/questionBank
+           cd ./questionBank-backend/questionBank
            mvn --batch-mode --update-snapshots verify
       - name: build spring boot image
         run: docker build -t spring-app .
@@ -200,7 +200,7 @@ jobs:
 
       - name: build angular image
         run: |
-          cd questionBank-Frontend/web
+          cd ./questionBank-Frontend/web
           docker build -t angular-app .
       - name: display spring-app image
         run: docker images
