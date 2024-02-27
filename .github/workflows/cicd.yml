@@ -36,14 +36,14 @@ jobs:
         run: docker-compose -f docker-compose.yml up -d
 
       - name: Build and push backend image
-        working-directory: ./BackEnd/EMS
+        working-directory: ./questionBank-Backend/questionbank
         run: |
           mvn --batch-mode --update-snapshots verify
           docker build -t gopiagasthia/qbbackend:latest .
           docker push gopiagasthia/qbbackend:latest
 
       - name: Build and push frontend image
-        working-directory: ./FrontEnd/web
+        working-directory: ./questionBank-Frontend/web
         run: |
           docker build -t gopiagasthia/qbfrontend:latest .
           docker push gopiagasthia/qbfrontend:latest
