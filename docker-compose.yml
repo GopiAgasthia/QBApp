@@ -20,7 +20,7 @@ services:
       - qbank_data:/usr/share/elasticsearch/data
 
   backend:
-    image: qbapp/qbank-backend
+    image: gopiagasthia/qbbackend
     container_name: QBAppBackend
     ports:
       - "8080:8080"
@@ -37,7 +37,7 @@ services:
 
 
   frontend:
-    image: qbapp/qbank-frontend
+    image: gopiagasthia/qbfrontend
     container_name: QBAppFrontend
     ports:
       - "4200:4200"
