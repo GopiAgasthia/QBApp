@@ -1,0 +1,12 @@
+﻿{
+  "repositoryName": "GopiAgasthia/QBApp",
+  "pipelineDirectory": "QBApp",
+  "workspaceDirectory": "QBApp\\QBApp",
+  "repositories": {
+    "GopiAgasthia/QBApp": {
+      "repositoryPath": "QBApp\\QBApp",
+      "lastRunOn": "02/27/2024 14:12:16 +05:30"
+    }
+  },
+  "lastRunOn": "02/27/2024 14:12:16 +05:30"
+}

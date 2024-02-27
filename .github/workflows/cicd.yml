@@ -70,7 +70,6 @@ jobs:
       - name: Pull backend image
         run: docker pull gopiagasthia/qbbackend:latest
 
-      # Pull the newly created frontend image
       - name: Pull frontend image
         run: docker pull gopiagasthia/qbfrontend:latest
 

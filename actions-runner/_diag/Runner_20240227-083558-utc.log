@@ -115,3 +115,39 @@
 [2024-02-27 08:36:00Z INFO Terminal] WRITE LINE: Current runner version: '2.313.0'
 [2024-02-27 08:36:00Z INFO Terminal] WRITE LINE: 2024-02-27 08:36:00Z: Listening for Jobs
 [2024-02-27 08:36:00Z INFO JobDispatcher] Set runner/worker IPC timeout to 30 seconds.
+[2024-02-27 08:42:14Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file C:\Users\gsss\Downloads\questionBank\actions-runner\.credentials_rsaparams
+[2024-02-27 08:42:14Z INFO MessageListener] Message '1' received from session '4af9d575-6077-46d8-bbed-4aa8a04d29c2'.
+[2024-02-27 08:42:14Z INFO Runner] Received job message of length 24590 from service, with hash '4bd0d73ade88909b41219477d3d8d1141da480c5895e3723c02db0cfa6dc2802'
+[2024-02-27 08:42:14Z INFO JobDispatcher] Job request 35 for plan fe2790ce-a037-4b13-ac63-9eb4e70896b2 job 3bd1eaf3-d624-5be1-f0e1-b82f230106fd received.
+[2024-02-27 08:42:14Z INFO JobDispatcher] Pull OrchestrationId fe2790ce-a037-4b13-ac63-9eb4e70896b2.deploying.__default from JWT claims
+[2024-02-27 08:42:14Z INFO Terminal] WRITE LINE: 2024-02-27 08:42:14Z: Running job: Deploying
+[2024-02-27 08:42:14Z INFO JobDispatcher] Start renew job request 35 for job 3bd1eaf3-d624-5be1-f0e1-b82f230106fd.
+[2024-02-27 08:42:15Z INFO JobDispatcher] Successfully renew job request 35, job is valid till 27-02-2024 08:50:21
+[2024-02-27 08:42:15Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-27 08:42:15Z INFO ProcessInvokerWrapper] Starting process:
+[2024-02-27 08:42:15Z INFO ProcessInvokerWrapper]   File name: 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin\Runner.Worker.exe'
+[2024-02-27 08:42:15Z INFO ProcessInvokerWrapper]   Arguments: 'spawnclient 1632 2096'
+[2024-02-27 08:42:15Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-27 08:42:15Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2024-02-27 08:42:15Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2024-02-27 08:42:15Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'True'
+[2024-02-27 08:42:15Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2024-02-27 08:42:15Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2024-02-27 08:42:15Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2024-02-27 08:42:15Z INFO ProcessInvokerWrapper]   High priority process: 'True'
+[2024-02-27 08:42:15Z INFO ProcessInvokerWrapper] Process started with process id 22924, waiting for process exit.
+[2024-02-27 08:42:15Z INFO JobDispatcher] Send job request message to worker for job 3bd1eaf3-d624-5be1-f0e1-b82f230106fd.
+[2024-02-27 08:42:15Z INFO ProcessChannel] Sending message of length 24590, with hash '4bd0d73ade88909b41219477d3d8d1141da480c5895e3723c02db0cfa6dc2802'
+[2024-02-27 08:42:15Z INFO JobNotification] Entering JobStarted Notification
+[2024-02-27 08:42:15Z INFO JobNotification] Entering StartMonitor
+[2024-02-27 08:43:15Z INFO JobDispatcher] Successfully renew job request 35, job is valid till 27-02-2024 08:51:22
+[2024-02-27 08:43:47Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2024-02-27 08:43:47Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2024-02-27 08:43:47Z INFO ProcessInvokerWrapper] Finished process 22924 with exit code 102, and elapsed time 00:01:32.7739437.
+[2024-02-27 08:43:47Z INFO JobDispatcher] Worker finished for job 3bd1eaf3-d624-5be1-f0e1-b82f230106fd. Code: 102
+[2024-02-27 08:43:47Z INFO JobDispatcher] finish job request for job 3bd1eaf3-d624-5be1-f0e1-b82f230106fd with result: Failed
+[2024-02-27 08:43:47Z INFO Terminal] WRITE LINE: 2024-02-27 08:43:47Z: Job Deploying completed with result: Failed
+[2024-02-27 08:43:47Z INFO JobDispatcher] Stop renew job request for job 3bd1eaf3-d624-5be1-f0e1-b82f230106fd.
+[2024-02-27 08:43:47Z INFO JobDispatcher] job renew has been cancelled, stop renew job request 35.
+[2024-02-27 08:43:47Z INFO JobNotification] Entering JobCompleted Notification
+[2024-02-27 08:43:47Z INFO JobNotification] Entering EndMonitor
