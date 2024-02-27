@@ -2,7 +2,7 @@ package com.example.questionBank;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-
+//question bank application
 @SpringBootApplication
 public class QuestionBankApplication {
 
