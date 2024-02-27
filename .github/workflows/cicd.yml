@@ -67,7 +67,6 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
-          # Pull the newly created backend image
       - name: Pull backend image
         run: docker pull gopiagasthia/qbbackend:latest
 

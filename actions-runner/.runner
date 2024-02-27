@@ -1,0 +1,9 @@
+﻿{
+  "agentId": 21,
+  "agentName": "QBApp",
+  "poolId": 1,
+  "poolName": "Default",
+  "serverUrl": "https://pipelinesghubeus6.actions.githubusercontent.com/MMum4OhXiZOovjHbPzFAt8FcQLGQ4aveTrcZYYQiIaM9FUpn2f/",
+  "gitHubUrl": "https://github.com/GopiAgasthia/QBApp",
+  "workFolder": "_work"
+}
