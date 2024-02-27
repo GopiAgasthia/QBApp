@@ -151,3 +151,52 @@
 [2024-02-27 08:43:47Z INFO JobDispatcher] job renew has been cancelled, stop renew job request 35.
 [2024-02-27 08:43:47Z INFO JobNotification] Entering JobCompleted Notification
 [2024-02-27 08:43:47Z INFO JobNotification] Entering EndMonitor
+[2024-02-27 08:54:09Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file C:\Users\gsss\Downloads\questionBank\actions-runner\.credentials_rsaparams
+[2024-02-27 08:54:09Z INFO MessageListener] Message '2' received from session '4af9d575-6077-46d8-bbed-4aa8a04d29c2'.
+[2024-02-27 08:54:09Z INFO Runner] Received job message of length 24594 from service, with hash '993a28a5ccefcc48d3fde7f6baaeff562724e5d79d6dff756a07de6584193a10'
+[2024-02-27 08:54:09Z INFO JobDispatcher] Job request 37 for plan 93aca88a-cc19-46c3-b1ca-6c377a9f9791 job 3bd1eaf3-d624-5be1-f0e1-b82f230106fd received.
+[2024-02-27 08:54:09Z INFO JobDispatcher] Pull OrchestrationId 93aca88a-cc19-46c3-b1ca-6c377a9f9791.deploying.__default from JWT claims
+[2024-02-27 08:54:09Z INFO JobDispatcher] Job request 3bd1eaf3-d624-5be1-f0e1-b82f230106fd processed succeed.
+[2024-02-27 08:54:09Z INFO Terminal] WRITE LINE: 2024-02-27 08:54:09Z: Running job: Deploying
+[2024-02-27 08:54:09Z INFO JobDispatcher] Start renew job request 37 for job 3bd1eaf3-d624-5be1-f0e1-b82f230106fd.
+[2024-02-27 08:54:10Z INFO JobDispatcher] Successfully renew job request 37, job is valid till 27-02-2024 09:02:16
+[2024-02-27 08:54:10Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-27 08:54:10Z INFO ProcessInvokerWrapper] Starting process:
+[2024-02-27 08:54:10Z INFO ProcessInvokerWrapper]   File name: 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin\Runner.Worker.exe'
+[2024-02-27 08:54:10Z INFO ProcessInvokerWrapper]   Arguments: 'spawnclient 2384 2396'
+[2024-02-27 08:54:10Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-27 08:54:10Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2024-02-27 08:54:10Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2024-02-27 08:54:10Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'True'
+[2024-02-27 08:54:10Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2024-02-27 08:54:10Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2024-02-27 08:54:10Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2024-02-27 08:54:10Z INFO ProcessInvokerWrapper]   High priority process: 'True'
+[2024-02-27 08:54:10Z INFO ProcessInvokerWrapper] Process started with process id 25972, waiting for process exit.
+[2024-02-27 08:54:10Z INFO JobDispatcher] Send job request message to worker for job 3bd1eaf3-d624-5be1-f0e1-b82f230106fd.
+[2024-02-27 08:54:10Z INFO ProcessChannel] Sending message of length 24594, with hash '993a28a5ccefcc48d3fde7f6baaeff562724e5d79d6dff756a07de6584193a10'
+[2024-02-27 08:54:10Z INFO JobNotification] Entering JobStarted Notification
+[2024-02-27 08:54:10Z INFO JobNotification] Entering StartMonitor
+[2024-02-27 08:55:10Z INFO JobDispatcher] Successfully renew job request 37, job is valid till 27-02-2024 09:03:16
+[2024-02-27 08:56:10Z INFO JobDispatcher] Successfully renew job request 37, job is valid till 27-02-2024 09:04:17
+[2024-02-27 08:56:17Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2024-02-27 08:56:17Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2024-02-27 08:56:17Z INFO ProcessInvokerWrapper] Finished process 25972 with exit code 100, and elapsed time 00:02:07.7606929.
+[2024-02-27 08:56:17Z INFO JobDispatcher] Worker finished for job 3bd1eaf3-d624-5be1-f0e1-b82f230106fd. Code: 100
+[2024-02-27 08:56:17Z INFO JobDispatcher] finish job request for job 3bd1eaf3-d624-5be1-f0e1-b82f230106fd with result: Succeeded
+[2024-02-27 08:56:17Z INFO Terminal] WRITE LINE: 2024-02-27 08:56:17Z: Job Deploying completed with result: Succeeded
+[2024-02-27 08:56:17Z INFO JobDispatcher] Stop renew job request for job 3bd1eaf3-d624-5be1-f0e1-b82f230106fd.
+[2024-02-27 08:56:17Z INFO JobDispatcher] job renew has been cancelled, stop renew job request 37.
+[2024-02-27 08:56:17Z INFO JobNotification] Entering JobCompleted Notification
+[2024-02-27 08:56:17Z INFO JobNotification] Entering EndMonitor
+[2024-02-27 08:59:28Z INFO Terminal] WRITE LINE: Exiting...
+[2024-02-27 08:59:28Z INFO ConfigurationStore] IsServiceConfigured()
+[2024-02-27 08:59:28Z INFO ConfigurationStore] IsServiceConfigured: False
+[2024-02-27 08:59:28Z INFO HostContext] Runner will be shutdown for UserCancelled
+[2024-02-27 08:59:28Z WARN GitHubActionsService] GET request to https://pipelinesghubeus6.actions.githubusercontent.com/MMum4OhXiZOovjHbPzFAt8FcQLGQ4aveTrcZYYQiIaM9FUpn2f/_apis/distributedtask/pools/1/messages?sessionId=4af9d575-6077-46d8-bbed-4aa8a04d29c2&lastMessageId=2&status=Online&runnerVersion=2.313.0&os=Windows&architecture=X64&disableUpdate=false has been cancelled.
+[2024-02-27 08:59:28Z INFO MessageListener] Get next message has been cancelled.
+[2024-02-27 08:59:28Z INFO JobDispatcher] Shutting down JobDispatcher. Make sure all WorkerDispatcher has finished.
+[2024-02-27 08:59:28Z INFO JobDispatcher] Ensure WorkerDispatcher for job 3bd1eaf3-d624-5be1-f0e1-b82f230106fd run to finish, cancel any running job.
+[2024-02-27 08:59:28Z INFO JobDispatcher] Job request 3bd1eaf3-d624-5be1-f0e1-b82f230106fd processed succeed.
+[2024-02-27 08:59:28Z INFO Runner] Deleting Runner Session...
+[2024-02-27 08:59:29Z INFO Listener] Runner execution been cancelled.
