@@ -1,4 +1,4 @@
-FROM node:20.4 as build
+FROM node:20.11.0 as build
 RUN mkdir /app
 WORKDIR /app
 RUN npm install -g @angular/cli

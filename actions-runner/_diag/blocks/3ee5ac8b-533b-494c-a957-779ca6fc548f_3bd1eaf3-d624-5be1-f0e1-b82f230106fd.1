@@ -1,0 +1,160 @@
+﻿2024-02-27T10:52:34.8581670Z Current runner version: '2.313.0'
+2024-02-27T10:52:34.8586516Z Runner name: 'QBApp'
+2024-02-27T10:52:34.8586929Z Runner group name: 'Default'
+2024-02-27T10:52:34.8587365Z Machine name: 'SAG-FFWTJX3'
+2024-02-27T10:52:34.8590095Z ##[group]GITHUB_TOKEN Permissions
+2024-02-27T10:52:34.8591255Z Actions: write
+2024-02-27T10:52:34.8591515Z Checks: write
+2024-02-27T10:52:34.8591719Z Contents: write
+2024-02-27T10:52:34.8591936Z Deployments: write
+2024-02-27T10:52:34.8592132Z Discussions: write
+2024-02-27T10:52:34.8592340Z Issues: write
+2024-02-27T10:52:34.8592539Z Metadata: read
+2024-02-27T10:52:34.8592745Z Packages: write
+2024-02-27T10:52:34.8592950Z Pages: write
+2024-02-27T10:52:34.8593132Z PullRequests: write
+2024-02-27T10:52:34.8593366Z RepositoryProjects: write
+2024-02-27T10:52:34.8593614Z SecurityEvents: write
+2024-02-27T10:52:34.8593831Z Statuses: write
+2024-02-27T10:52:34.8594027Z ##[endgroup]
+2024-02-27T10:52:34.8595684Z Secret source: Actions
+2024-02-27T10:52:34.8596079Z Prepare workflow directory
+2024-02-27T10:52:34.9377979Z Prepare all required actions
+2024-02-27T10:52:34.9475047Z Getting action download info
+2024-02-27T10:52:35.3843605Z Download action repository 'actions/checkout@v4' (SHA:b4ffde65f46336ab88eb53be808477a3936bae11)
+2024-02-27T10:52:36.6670360Z Download action repository 'docker/login-action@v3' (SHA:343f7c4344506bcbf9b4de18042ae17996df046d)
+2024-02-27T10:52:38.2168672Z Complete job name: Deploying
+2024-02-27T10:52:38.3205416Z ##[group]Run actions/checkout@v4
+2024-02-27T10:52:38.3205688Z with:
+2024-02-27T10:52:38.3205838Z   repository: GopiAgasthia/QBApp
+2024-02-27T10:52:38.3206203Z   token: ***
+2024-02-27T10:52:38.3206342Z   ssh-strict: true
+2024-02-27T10:52:38.3206494Z   persist-credentials: true
+2024-02-27T10:52:38.3206659Z   clean: true
+2024-02-27T10:52:38.3206802Z   sparse-checkout-cone-mode: true
+2024-02-27T10:52:38.3206985Z   fetch-depth: 1
+2024-02-27T10:52:38.3207129Z   fetch-tags: false
+2024-02-27T10:52:38.3207272Z   show-progress: true
+2024-02-27T10:52:38.3207421Z   lfs: false
+2024-02-27T10:52:38.3207551Z   submodules: false
+2024-02-27T10:52:38.3207714Z   set-safe-directory: true
+2024-02-27T10:52:38.3207870Z ##[endgroup]
+2024-02-27T10:52:38.5141912Z Syncing repository: GopiAgasthia/QBApp
+2024-02-27T10:52:38.5143266Z ##[group]Getting Git version info
+2024-02-27T10:52:38.5143822Z Working directory is 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work\QBApp\QBApp'
+2024-02-27T10:52:38.5144387Z [command]"C:\Program Files\Git\cmd\git.exe" version
+2024-02-27T10:52:38.5662662Z git version 2.43.0.windows.1
+2024-02-27T10:52:38.5726039Z ##[endgroup]
+2024-02-27T10:52:38.5737240Z Copying 'C:\Users\gsss\.gitconfig' to 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work\_temp\6d90f5e9-e327-44b8-8b34-286eb736bc91\.gitconfig'
+2024-02-27T10:52:38.5762620Z Temporarily overriding HOME='C:\Users\gsss\Downloads\questionBank\actions-runner\_work\_temp\6d90f5e9-e327-44b8-8b34-286eb736bc91' before making global git config changes
+2024-02-27T10:52:38.5763315Z Adding repository directory to the temporary git global config as a safe directory
+2024-02-27T10:52:38.5768668Z [command]"C:\Program Files\Git\cmd\git.exe" config --global --add safe.directory C:\Users\gsss\Downloads\questionBank\actions-runner\_work\QBApp\QBApp
+2024-02-27T10:52:38.6371468Z [command]"C:\Program Files\Git\cmd\git.exe" config --local --get remote.origin.url
+2024-02-27T10:52:38.6880962Z https://github.com/GopiAgasthia/QBApp
+2024-02-27T10:52:38.6947320Z ##[group]Removing previously created refs, to avoid conflicts
+2024-02-27T10:52:38.6953040Z [command]"C:\Program Files\Git\cmd\git.exe" rev-parse --symbolic-full-name --verify --quiet HEAD
+2024-02-27T10:52:38.7506830Z refs/heads/main
+2024-02-27T10:52:38.7573947Z [command]"C:\Program Files\Git\cmd\git.exe" checkout --detach
+2024-02-27T10:52:38.8374322Z HEAD is now at 268b5f2 Update CI CD
+2024-02-27T10:52:38.9621783Z ##[endgroup]
+2024-02-27T10:52:38.9627792Z [command]"C:\Program Files\Git\cmd\git.exe" submodule status
+2024-02-27T10:52:40.1018021Z ##[error]fatal: no submodule mapping found in .gitmodules for path 'actions-runner/_work/QBApp/QBApp'
+2024-02-27T10:52:40.1169226Z Bad Submodules found, removing existing files
+2024-02-27T10:52:40.1169893Z ##[group]Cleaning the repository
+2024-02-27T10:52:40.1173528Z [command]"C:\Program Files\Git\cmd\git.exe" clean -ffdx
+2024-02-27T10:52:40.1773822Z [command]"C:\Program Files\Git\cmd\git.exe" reset --hard HEAD
+2024-02-27T10:52:40.2550779Z HEAD is now at 268b5f2 Update CI CD
+2024-02-27T10:52:40.2608428Z ##[endgroup]
+2024-02-27T10:52:40.2620516Z ##[warning]Unable to clean or reset the repository. The repository will be recreated instead.
+2024-02-27T10:52:40.2622095Z Deleting the contents of 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work\QBApp\QBApp'
+2024-02-27T10:52:40.3589492Z ##[group]Initializing the repository
+2024-02-27T10:52:40.3595839Z [command]"C:\Program Files\Git\cmd\git.exe" init C:\Users\gsss\Downloads\questionBank\actions-runner\_work\QBApp\QBApp
+2024-02-27T10:52:40.4225324Z Initialized empty Git repository in C:/Users/gsss/Downloads/questionBank/actions-runner/_work/QBApp/QBApp/.git/
+2024-02-27T10:52:40.4287420Z [command]"C:\Program Files\Git\cmd\git.exe" remote add origin https://github.com/GopiAgasthia/QBApp
+2024-02-27T10:52:40.4852144Z ##[endgroup]
+2024-02-27T10:52:40.4852450Z ##[group]Disabling automatic garbage collection
+2024-02-27T10:52:40.4859400Z [command]"C:\Program Files\Git\cmd\git.exe" config --local gc.auto 0
+2024-02-27T10:52:40.5410606Z ##[endgroup]
+2024-02-27T10:52:40.5411351Z ##[group]Setting up auth
+2024-02-27T10:52:40.5418893Z [command]"C:\Program Files\Git\cmd\git.exe" config --local --name-only --get-regexp core\.sshCommand
+2024-02-27T10:52:40.5997458Z [command]"C:\Program Files\Git\cmd\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+2024-02-27T10:52:41.6906608Z [command]"C:\Program Files\Git\cmd\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2024-02-27T10:52:41.7504836Z [command]"C:\Program Files\Git\cmd\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+2024-02-27T10:52:42.8255139Z [command]"C:\Program Files\Git\cmd\git.exe" config --local http.https://github.com/.extraheader "AUTHORIZATION: basic ***"
+2024-02-27T10:52:42.8881196Z ##[endgroup]
+2024-02-27T10:52:42.8882668Z ##[group]Fetching the repository
+2024-02-27T10:52:42.8890332Z [command]"C:\Program Files\Git\cmd\git.exe" -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +6456e19265ca4137071bfa93b5d63b72680dc9b8:refs/remotes/origin/main
+2024-02-27T10:53:34.0864177Z From https://github.com/GopiAgasthia/QBApp
+2024-02-27T10:53:34.0865005Z  * [new ref]         6456e19265ca4137071bfa93b5d63b72680dc9b8 -> origin/main
+2024-02-27T10:53:34.1289242Z ##[endgroup]
+2024-02-27T10:53:34.1289544Z ##[group]Determining the checkout info
+2024-02-27T10:53:34.1292934Z ##[endgroup]
+2024-02-27T10:53:34.1293249Z ##[group]Checking out the ref
+2024-02-27T10:53:34.1296036Z [command]"C:\Program Files\Git\cmd\git.exe" checkout --progress --force -B main refs/remotes/origin/main
+2024-02-27T10:53:35.8868986Z Updating files:  85% (448/524)
+2024-02-27T10:53:35.8889340Z Updating files:  86% (451/524)
+2024-02-27T10:53:35.8931743Z Updating files:  87% (456/524)
+2024-02-27T10:53:35.8973932Z Updating files:  88% (462/524)
+2024-02-27T10:53:35.9005840Z Updating files:  89% (467/524)
+2024-02-27T10:53:35.9027392Z Updating files:  90% (472/524)
+2024-02-27T10:53:35.9084821Z Updating files:  91% (477/524)
+2024-02-27T10:53:35.9105645Z Updating files:  92% (483/524)
+2024-02-27T10:53:35.9126876Z Updating files:  93% (488/524)
+2024-02-27T10:53:35.9149802Z Updating files:  94% (493/524)
+2024-02-27T10:53:35.9175323Z Updating files:  95% (498/524)
+2024-02-27T10:53:35.9189920Z Updating files:  96% (504/524)
+2024-02-27T10:53:35.9212937Z Updating files:  97% (509/524)
+2024-02-27T10:53:35.9244364Z Updating files:  98% (514/524)
+2024-02-27T10:53:35.9261294Z Updating files:  99% (519/524)
+2024-02-27T10:53:35.9261661Z Updating files: 100% (524/524)
+2024-02-27T10:53:35.9262014Z Updating files: 100% (524/524), done.
+2024-02-27T10:53:35.9407482Z branch 'main' set up to track 'origin/main'.
+2024-02-27T10:53:35.9408045Z Switched to a new branch 'main'
+2024-02-27T10:53:35.9573506Z ##[endgroup]
+2024-02-27T10:53:36.0240799Z [command]"C:\Program Files\Git\cmd\git.exe" log -1 --format='%H'
+2024-02-27T10:53:36.0734136Z '6456e19265ca4137071bfa93b5d63b72680dc9b8'
+2024-02-27T10:53:36.1321744Z ##[group]Run docker/login-action@v3
+2024-02-27T10:53:36.1321966Z with:
+2024-02-27T10:53:36.1322095Z   registry: docker.io
+2024-02-27T10:53:36.1322407Z   username: ***
+2024-02-27T10:53:36.1322561Z   password: ***
+2024-02-27T10:53:36.1322693Z   ecr: auto
+2024-02-27T10:53:36.1322831Z   logout: true
+2024-02-27T10:53:36.1322962Z ##[endgroup]
+2024-02-27T10:53:36.3058082Z Logging into docker.io...
+2024-02-27T10:53:48.3275494Z Login Succeeded!
+2024-02-27T10:53:48.3698349Z ##[group]Run docker pull ***/qbbackend:latest
+2024-02-27T10:53:48.3698776Z [36;1mdocker pull ***/qbbackend:latest[0m
+2024-02-27T10:53:48.3744061Z shell: C:\windows\System32\WindowsPowerShell\v1.0\powershell.EXE -command ". '{0}'"
+2024-02-27T10:53:48.3744442Z ##[endgroup]
+2024-02-27T10:54:02.5301003Z latest: Pulling from ***/qbbackend
+2024-02-27T10:54:02.5301257Z 5262579e8e45: Already exists
+2024-02-27T10:54:02.5327167Z 0eab4e2287a5: Already exists
+2024-02-27T10:54:02.5359213Z 7c002e8f6062: Already exists
+2024-02-27T10:54:02.5380952Z 163370dd3d76: Pulling fs layer
+2024-02-27T10:54:11.6525446Z 163370dd3d76: Download complete
+2024-02-27T10:54:11.9392798Z 163370dd3d76: Pull complete
+2024-02-27T10:54:11.9456972Z Digest: sha256:52ae0d222bd2835f956f20d4f7f45090bff4c720b07d8690fcb8ad8cbd721a78
+2024-02-27T10:54:11.9482188Z Status: Downloaded newer image for ***/qbbackend:latest
+2024-02-27T10:54:11.9495552Z docker.io/***/qbbackend:latest
+2024-02-27T10:54:12.0205212Z ##[group]Run docker pull ***/qbfrontend:latest
+2024-02-27T10:54:12.0205556Z [36;1mdocker pull ***/qbfrontend:latest[0m
+2024-02-27T10:54:12.0231561Z shell: C:\windows\System32\WindowsPowerShell\v1.0\powershell.EXE -command ". '{0}'"
+2024-02-27T10:54:12.0231893Z ##[endgroup]
+2024-02-27T10:54:55.5368991Z Error response from daemon: Get "https://registry-1.docker.io/v2/***/qbfrontend/manifests/sha256:208e82e00cf7b55296eb9ba43d2c7bb6be77313d577f6e0132dd99fe4dbc5e26": dial tcp 54.227.20.253:443: i/o timeout
+2024-02-27T10:54:55.5798436Z ##[error]Process completed with exit code 1.
+2024-02-27T10:54:55.6093883Z Post job cleanup.
+2024-02-27T10:54:55.7337002Z [command]"C:\Program Files\Rancher Desktop\resources\resources\win32\bin\docker.exe" logout docker.io
+2024-02-27T10:54:55.7928463Z Removing login credentials for docker.io
+2024-02-27T10:54:56.0490869Z Post job cleanup.
+2024-02-27T10:54:56.1452810Z [command]"C:\Program Files\Git\cmd\git.exe" version
+2024-02-27T10:54:56.1991524Z git version 2.43.0.windows.1
+2024-02-27T10:54:56.2067918Z Copying 'C:\Users\gsss\.gitconfig' to 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work\_temp\a6b57840-8122-4632-b302-a7fd3dbcca42\.gitconfig'
+2024-02-27T10:54:56.2100431Z Temporarily overriding HOME='C:\Users\gsss\Downloads\questionBank\actions-runner\_work\_temp\a6b57840-8122-4632-b302-a7fd3dbcca42' before making global git config changes
+2024-02-27T10:54:56.2101229Z Adding repository directory to the temporary git global config as a safe directory
+2024-02-27T10:54:56.2107060Z [command]"C:\Program Files\Git\cmd\git.exe" config --global --add safe.directory C:\Users\gsss\Downloads\questionBank\actions-runner\_work\QBApp\QBApp
+2024-02-27T10:54:56.2701515Z [command]"C:\Program Files\Git\cmd\git.exe" config --local --name-only --get-regexp core\.sshCommand
+2024-02-27T10:54:56.3294421Z [command]"C:\Program Files\Git\cmd\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+2024-02-27T10:54:57.3682743Z fatal: No url found for submodule path 'actions-runner/_work/QBApp/QBApp' in .gitmodules
+2024-02-27T10:54:57.3854317Z ##[warning]The process 'C:\Program Files\Git\cmd\git.exe' failed with exit code 128
+2024-02-27T10:54:57.4027522Z Cleaning up orphan processes

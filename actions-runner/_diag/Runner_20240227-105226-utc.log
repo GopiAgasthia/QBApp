@@ -1,0 +1,218 @@
+[2024-02-27 10:52:26Z INFO HostContext] No proxy settings were found based on environmental variables (http_proxy/https_proxy/HTTP_PROXY/HTTPS_PROXY)
+[2024-02-27 10:52:26Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-27 10:52:26Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-27 10:52:26Z INFO HostContext] Well known config file 'Credentials': 'C:\Users\gsss\Downloads\questionBank\actions-runner\.credentials'
+[2024-02-27 10:52:27Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-27 10:52:27Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-27 10:52:27Z INFO HostContext] Well known config file 'Runner': 'C:\Users\gsss\Downloads\questionBank\actions-runner\.runner'
+[2024-02-27 10:52:27Z INFO Listener] Runner is built for Windows (X64) - win-x64.
+[2024-02-27 10:52:27Z INFO Listener] RuntimeInformation: Microsoft Windows 10.0.19045.
+[2024-02-27 10:52:27Z INFO Listener] Version: 2.313.0
+[2024-02-27 10:52:27Z INFO Listener] Commit: d502c4623e5cd140e949f1e644ffe03762bd4151
+[2024-02-27 10:52:27Z INFO Listener] Culture: en-IN
+[2024-02-27 10:52:27Z INFO Listener] UI Culture: en-US
+[2024-02-27 10:52:27Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-27 10:52:27Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-27 10:52:27Z INFO Listener] Validating directory permissions for: 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-27 10:52:27Z INFO CommandLineParser] Parse
+[2024-02-27 10:52:27Z INFO CommandLineParser] Parsing 1 args
+[2024-02-27 10:52:27Z INFO CommandLineParser] parsing argument
+[2024-02-27 10:52:27Z INFO CommandLineParser] HasArgs: False
+[2024-02-27 10:52:27Z INFO CommandLineParser] Adding Command: run
+[2024-02-27 10:52:27Z INFO Listener] Arguments parsed
+[2024-02-27 10:52:27Z INFO Runner] ExecuteCommand
+[2024-02-27 10:52:27Z INFO ConfigurationStore] currentAssemblyLocation: C:\Users\gsss\Downloads\questionBank\actions-runner\bin\Runner.Listener.dll
+[2024-02-27 10:52:27Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-27 10:52:27Z INFO ConfigurationStore] binPath: C:\Users\gsss\Downloads\questionBank\actions-runner\bin
+[2024-02-27 10:52:27Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-27 10:52:27Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-27 10:52:27Z INFO ConfigurationStore] RootFolder: C:\Users\gsss\Downloads\questionBank\actions-runner
+[2024-02-27 10:52:27Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-27 10:52:27Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-27 10:52:27Z INFO HostContext] Well known config file 'Runner': 'C:\Users\gsss\Downloads\questionBank\actions-runner\.runner'
+[2024-02-27 10:52:27Z INFO ConfigurationStore] ConfigFilePath: C:\Users\gsss\Downloads\questionBank\actions-runner\.runner
+[2024-02-27 10:52:27Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-27 10:52:27Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-27 10:52:27Z INFO HostContext] Well known config file 'Credentials': 'C:\Users\gsss\Downloads\questionBank\actions-runner\.credentials'
+[2024-02-27 10:52:27Z INFO ConfigurationStore] CredFilePath: C:\Users\gsss\Downloads\questionBank\actions-runner\.credentials
+[2024-02-27 10:52:27Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-27 10:52:27Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-27 10:52:27Z INFO HostContext] Well known config file 'MigratedCredentials': 'C:\Users\gsss\Downloads\questionBank\actions-runner\.credentials_migrated'
+[2024-02-27 10:52:27Z INFO ConfigurationStore] MigratedCredFilePath: C:\Users\gsss\Downloads\questionBank\actions-runner\.credentials_migrated
+[2024-02-27 10:52:27Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-27 10:52:27Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-27 10:52:27Z INFO HostContext] Well known config file 'Service': 'C:\Users\gsss\Downloads\questionBank\actions-runner\.service'
+[2024-02-27 10:52:27Z INFO ConfigurationStore] ServiceConfigFilePath: C:\Users\gsss\Downloads\questionBank\actions-runner\.service
+[2024-02-27 10:52:27Z INFO CommandSettings] Flag 'help': 'False'
+[2024-02-27 10:52:27Z INFO CommandSettings] Flag 'version': 'False'
+[2024-02-27 10:52:27Z INFO CommandSettings] Flag 'commit': 'False'
+[2024-02-27 10:52:27Z INFO CommandSettings] Flag 'check': 'False'
+[2024-02-27 10:52:27Z INFO CommandSettings] Command 'configure': 'False'
+[2024-02-27 10:52:27Z INFO CommandSettings] Command 'remove': 'False'
+[2024-02-27 10:52:27Z INFO CommandSettings] Command 'warmup': 'False'
+[2024-02-27 10:52:27Z INFO ConfigurationManager] LoadSettings
+[2024-02-27 10:52:27Z INFO ConfigurationStore] IsConfigured()
+[2024-02-27 10:52:27Z INFO ConfigurationStore] IsConfigured: True
+[2024-02-27 10:52:27Z INFO ConfigurationManager] Is configured: True
+[2024-02-27 10:52:27Z INFO ConfigurationStore] Read setting file: 298 chars
+[2024-02-27 10:52:27Z INFO ConfigurationManager] Settings Loaded
+[2024-02-27 10:52:27Z INFO ConfigurationStore] IsServiceConfigured()
+[2024-02-27 10:52:27Z INFO ConfigurationStore] IsServiceConfigured: False
+[2024-02-27 10:52:27Z INFO CommandSettings] Command 'run': 'True'
+[2024-02-27 10:52:27Z INFO ConfigurationStore] IsConfigured()
+[2024-02-27 10:52:27Z INFO ConfigurationStore] IsConfigured: True
+[2024-02-27 10:52:27Z INFO ConfigurationManager] Is configured: True
+[2024-02-27 10:52:27Z INFO Runner] Could not parse the argument value '' for StartupType. Defaulting to Manual
+[2024-02-27 10:52:27Z INFO Runner] Set runner startup type - Manual
+[2024-02-27 10:52:27Z INFO CommandSettings] Flag 'once': 'False'
+[2024-02-27 10:52:27Z INFO CommandSettings] Flag 'once': 'False'
+[2024-02-27 10:52:27Z INFO Runner] RunAsync
+[2024-02-27 10:52:27Z INFO ConfigurationManager] LoadSettings
+[2024-02-27 10:52:27Z INFO ConfigurationStore] IsConfigured()
+[2024-02-27 10:52:27Z INFO ConfigurationStore] IsConfigured: True
+[2024-02-27 10:52:27Z INFO ConfigurationManager] Is configured: True
+[2024-02-27 10:52:27Z INFO ConfigurationManager] Settings Loaded
+[2024-02-27 10:52:27Z INFO MessageListener] {
+  "AgentId": 21,
+  "AgentName": "QBApp",
+  "PoolId": 1,
+  "PoolName": "Default",
+  "ServerUrl": "https://pipelinesghubeus6.actions.githubusercontent.com/MMum4OhXiZOovjHbPzFAt8FcQLGQ4aveTrcZYYQiIaM9FUpn2f/",
+  "GitHubUrl": "https://github.com/GopiAgasthia/QBApp",
+  "WorkFolder": "_work"
+}
+[2024-02-27 10:52:27Z INFO MessageListener] Loading Credentials
+[2024-02-27 10:52:27Z INFO ConfigurationStore] HasCredentials()
+[2024-02-27 10:52:27Z INFO ConfigurationStore] stored True
+[2024-02-27 10:52:27Z INFO CredentialManager] GetCredentialProvider
+[2024-02-27 10:52:27Z INFO CredentialManager] Creating type OAuth
+[2024-02-27 10:52:27Z INFO CredentialManager] Creating credential type: OAuth
+[2024-02-27 10:52:27Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-27 10:52:27Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-27 10:52:27Z INFO HostContext] Well known config file 'RSACredentials': 'C:\Users\gsss\Downloads\questionBank\actions-runner\.credentials_rsaparams'
+[2024-02-27 10:52:27Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file C:\Users\gsss\Downloads\questionBank\actions-runner\.credentials_rsaparams
+[2024-02-27 10:52:27Z INFO MessageListener] Attempt to create session.
+[2024-02-27 10:52:27Z INFO MessageListener] Connecting to the Runner Server...
+[2024-02-27 10:52:27Z INFO RunnerServer] EstablishVssConnection
+[2024-02-27 10:52:27Z INFO RunnerServer] Establish connection with 100 seconds timeout.
+[2024-02-27 10:52:27Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2024-02-27 10:52:27Z INFO RunnerServer] EstablishVssConnection
+[2024-02-27 10:52:27Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2024-02-27 10:52:27Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2024-02-27 10:52:27Z INFO RunnerServer] EstablishVssConnection
+[2024-02-27 10:52:27Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2024-02-27 10:52:27Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2024-02-27 10:52:28Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2024-02-27 10:52:28Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2024-02-27 10:52:28Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2024-02-27 10:52:28Z INFO MessageListener] VssConnection created
+[2024-02-27 10:52:28Z INFO Terminal] WRITE LINE: 
+[2024-02-27 10:52:28Z INFO Terminal] WRITE LINE: 
+[2024-02-27 10:52:28Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file C:\Users\gsss\Downloads\questionBank\actions-runner\.credentials_rsaparams
+[2024-02-27 10:52:28Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file C:\Users\gsss\Downloads\questionBank\actions-runner\.credentials_rsaparams
+[2024-02-27 10:52:29Z INFO GitHubActionsService] AAD Correlation ID for this token request: Unknown
+[2024-02-27 10:52:29Z INFO MessageListener] Session created.
+[2024-02-27 10:52:29Z INFO Terminal] WRITE LINE: Current runner version: '2.313.0'
+[2024-02-27 10:52:29Z INFO Terminal] WRITE LINE: 2024-02-27 10:52:29Z: Listening for Jobs
+[2024-02-27 10:52:29Z INFO JobDispatcher] Set runner/worker IPC timeout to 30 seconds.
+[2024-02-27 10:52:32Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file C:\Users\gsss\Downloads\questionBank\actions-runner\.credentials_rsaparams
+[2024-02-27 10:52:32Z INFO MessageListener] Message '3' received from session '994a12fe-34c5-4af0-9371-a8844650241b'.
+[2024-02-27 10:52:32Z INFO Runner] Received job message of length 24611 from service, with hash 'e11acffaa46464ac1b25cbc039f12215017e328398e22e39a6589d3866467489'
+[2024-02-27 10:52:32Z INFO JobDispatcher] Job request 39 for plan 3ee5ac8b-533b-494c-a957-779ca6fc548f job 3bd1eaf3-d624-5be1-f0e1-b82f230106fd received.
+[2024-02-27 10:52:32Z INFO JobDispatcher] Pull OrchestrationId 3ee5ac8b-533b-494c-a957-779ca6fc548f.deploying.__default from JWT claims
+[2024-02-27 10:52:32Z INFO Terminal] WRITE LINE: 2024-02-27 10:52:32Z: Running job: Deploying
+[2024-02-27 10:52:32Z INFO JobDispatcher] Start renew job request 39 for job 3bd1eaf3-d624-5be1-f0e1-b82f230106fd.
+[2024-02-27 10:52:33Z INFO JobDispatcher] Successfully renew job request 39, job is valid till 27-02-2024 11:00:39
+[2024-02-27 10:52:33Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-27 10:52:33Z INFO ProcessInvokerWrapper] Starting process:
+[2024-02-27 10:52:33Z INFO ProcessInvokerWrapper]   File name: 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin\Runner.Worker.exe'
+[2024-02-27 10:52:33Z INFO ProcessInvokerWrapper]   Arguments: 'spawnclient 2100 1832'
+[2024-02-27 10:52:33Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-27 10:52:33Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2024-02-27 10:52:33Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2024-02-27 10:52:33Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'True'
+[2024-02-27 10:52:33Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2024-02-27 10:52:33Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2024-02-27 10:52:33Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2024-02-27 10:52:33Z INFO ProcessInvokerWrapper]   High priority process: 'True'
+[2024-02-27 10:52:33Z INFO ProcessInvokerWrapper] Process started with process id 26020, waiting for process exit.
+[2024-02-27 10:52:33Z INFO JobDispatcher] Send job request message to worker for job 3bd1eaf3-d624-5be1-f0e1-b82f230106fd.
+[2024-02-27 10:52:33Z INFO ProcessChannel] Sending message of length 24611, with hash 'e11acffaa46464ac1b25cbc039f12215017e328398e22e39a6589d3866467489'
+[2024-02-27 10:52:33Z INFO JobNotification] Entering JobStarted Notification
+[2024-02-27 10:52:33Z INFO JobNotification] Entering StartMonitor
+[2024-02-27 10:53:33Z INFO JobDispatcher] Successfully renew job request 39, job is valid till 27-02-2024 11:01:40
+[2024-02-27 10:54:55Z WARN GitHubActionsService] Attempt 1 of GET request to https://pipelinesghubeus6.actions.githubusercontent.com/MMum4OhXiZOovjHbPzFAt8FcQLGQ4aveTrcZYYQiIaM9FUpn2f/_apis/distributedtask/pools/1/messages?sessionId=994a12fe-34c5-4af0-9371-a8844650241b&lastMessageId=3&status=Online&runnerVersion=2.313.0&os=Windows&architecture=X64&disableUpdate=false failed (Socket Error: ConnectionReset). The operation will be retried in 11.141 seconds.
+[2024-02-27 10:54:56Z WARN GitHubActionsService] Attempt 1 of PATCH request to https://pipelinesghubeus6.actions.githubusercontent.com/MMum4OhXiZOovjHbPzFAt8FcQLGQ4aveTrcZYYQiIaM9FUpn2f/_apis/distributedtask/pools/1/jobrequests/39?lockToken=00000000-0000-0000-0000-000000000000 failed (Socket Error: ConnectionReset). The operation will be retried in 11.152 seconds.
+[2024-02-27 10:55:28Z WARN GitHubActionsService] Attempt 2 of GET request to https://pipelinesghubeus6.actions.githubusercontent.com/MMum4OhXiZOovjHbPzFAt8FcQLGQ4aveTrcZYYQiIaM9FUpn2f/_apis/distributedtask/pools/1/messages?sessionId=994a12fe-34c5-4af0-9371-a8844650241b&lastMessageId=3&status=Online&runnerVersion=2.313.0&os=Windows&architecture=X64&disableUpdate=false failed (Socket Error: TimedOut). The operation will be retried in 12.484 seconds.
+[2024-02-27 10:55:28Z WARN GitHubActionsService] Attempt 2 of PATCH request to https://pipelinesghubeus6.actions.githubusercontent.com/MMum4OhXiZOovjHbPzFAt8FcQLGQ4aveTrcZYYQiIaM9FUpn2f/_apis/distributedtask/pools/1/jobrequests/39?lockToken=00000000-0000-0000-0000-000000000000 failed (Socket Error: TimedOut). The operation will be retried in 13.033 seconds.
+[2024-02-27 10:56:01Z WARN GitHubActionsService] Attempt 3 of GET request to https://pipelinesghubeus6.actions.githubusercontent.com/MMum4OhXiZOovjHbPzFAt8FcQLGQ4aveTrcZYYQiIaM9FUpn2f/_apis/distributedtask/pools/1/messages?sessionId=994a12fe-34c5-4af0-9371-a8844650241b&lastMessageId=3&status=Online&runnerVersion=2.313.0&os=Windows&architecture=X64&disableUpdate=false failed (Socket Error: TimedOut). The operation will be retried in 17.161 seconds.
+[2024-02-27 10:56:02Z WARN GitHubActionsService] Attempt 3 of PATCH request to https://pipelinesghubeus6.actions.githubusercontent.com/MMum4OhXiZOovjHbPzFAt8FcQLGQ4aveTrcZYYQiIaM9FUpn2f/_apis/distributedtask/pools/1/jobrequests/39?lockToken=00000000-0000-0000-0000-000000000000 failed (Socket Error: TimedOut). The operation will be retried in 17.07 seconds.
+[2024-02-27 10:56:39Z ERR  GitHubActionsService] Attempt 4 of GET request to https://pipelinesghubeus6.actions.githubusercontent.com/MMum4OhXiZOovjHbPzFAt8FcQLGQ4aveTrcZYYQiIaM9FUpn2f/_apis/distributedtask/pools/1/messages?sessionId=994a12fe-34c5-4af0-9371-a8844650241b&lastMessageId=3&status=Online&runnerVersion=2.313.0&os=Windows&architecture=X64&disableUpdate=false failed (Socket Error: TimedOut). The maximum number of attempts has been reached.
+[2024-02-27 10:56:39Z ERR  MessageListener] Catch exception during get next message.
+[2024-02-27 10:56:39Z ERR  MessageListener] System.Net.Http.HttpRequestException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond. (pipelinesghubeus6.actions.githubusercontent.com:443)
+ ---> System.Net.Sockets.SocketException (10060): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|277_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at GitHub.Services.Common.VssHttpRetryMessageHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at GitHub.Services.WebApi.VssHttpClientBase.SendAsync(HttpRequestMessage message, HttpCompletionOption completionOption, Object userState, CancellationToken cancellationToken)
+   at GitHub.Services.WebApi.VssHttpClientBase.SendAsync[T](HttpRequestMessage message, Object userState, CancellationToken cancellationToken)
+   at GitHub.Services.WebApi.VssHttpClientBase.SendAsync[T](HttpMethod method, IEnumerable`1 additionalHeaders, Guid locationId, Object routeValues, ApiResourceVersion version, HttpContent content, IEnumerable`1 queryParameters, Object userState, CancellationToken cancellationToken)
+   at GitHub.Runner.Listener.MessageListener.GetNextMessageAsync(CancellationToken token)
+[2024-02-27 10:56:39Z ERR  MessageListener] #####################################################
+[2024-02-27 10:56:39Z ERR  MessageListener] System.Net.Sockets.SocketException (10060): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|277_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+[2024-02-27 10:56:39Z INFO MessageListener] Retriable exception: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond. (pipelinesghubeus6.actions.githubusercontent.com:443)
+[2024-02-27 10:56:39Z ERR  Terminal] WRITE ERROR: 2024-02-27 10:56:39Z: Runner connect error: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond. (pipelinesghubeus6.actions.githubusercontent.com:443). Retrying until reconnected.
+[2024-02-27 10:56:39Z INFO RunnerServer] Refresh MessageQueue VssConnection to get on a different AFD node.
+[2024-02-27 10:56:39Z INFO RunnerServer] EstablishVssConnection
+[2024-02-27 10:56:39Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2024-02-27 10:56:39Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2024-02-27 10:56:41Z ERR  GitHubActionsService] Attempt 4 of PATCH request to https://pipelinesghubeus6.actions.githubusercontent.com/MMum4OhXiZOovjHbPzFAt8FcQLGQ4aveTrcZYYQiIaM9FUpn2f/_apis/distributedtask/pools/1/jobrequests/39?lockToken=00000000-0000-0000-0000-000000000000 failed (Socket Error: TimedOut). The maximum number of attempts has been reached.
+[2024-02-27 10:56:41Z ERR  JobDispatcher] Catch exception during renew runner jobrequest 39.
+[2024-02-27 10:56:41Z ERR  JobDispatcher] System.Net.Http.HttpRequestException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond. (pipelinesghubeus6.actions.githubusercontent.com:443)
+ ---> System.Net.Sockets.SocketException (10060): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|277_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at GitHub.Services.Common.VssHttpRetryMessageHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at GitHub.Services.WebApi.VssHttpClientBase.SendAsync(HttpRequestMessage message, HttpCompletionOption completionOption, Object userState, CancellationToken cancellationToken)
+   at GitHub.DistributedTask.WebApi.TaskAgentHttpClient.SendAsync[T](HttpRequestMessage message, Object userState, CancellationToken cancellationToken, Func`3 processResponse)
+   at GitHub.DistributedTask.WebApi.TaskAgentHttpClient.SendAsync[T](HttpMethod method, IEnumerable`1 additionalHeaders, Guid locationId, Object routeValues, ApiResourceVersion version, HttpContent content, IEnumerable`1 queryParameters, Object userState, CancellationToken cancellationToken, Func`3 processResponse)
+   at GitHub.Runner.Listener.JobDispatcher.RenewJobRequestAsync(IRunnerServer runnerServer, Int32 poolId, Int64 requestId, Guid lockToken, String orchestrationId, TaskCompletionSource`1 firstJobRequestRenewed, CancellationToken token)
+[2024-02-27 10:56:41Z ERR  JobDispatcher] #####################################################
+[2024-02-27 10:56:41Z ERR  JobDispatcher] System.Net.Sockets.SocketException (10060): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|277_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+[2024-02-27 10:56:41Z INFO JobDispatcher] Retrying lock renewal for jobrequest 39. Job is valid until 27-02-2024 11:01:40.
+[2024-02-27 10:56:41Z INFO RunnerServer] Refresh JobRequest VssConnection to get on a different AFD node.
+[2024-02-27 10:56:41Z INFO RunnerServer] EstablishVssConnection
+[2024-02-27 10:56:41Z INFO RunnerServer] Establish connection with 30 seconds timeout.
+[2024-02-27 10:56:41Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2024-02-27 10:57:00Z WARN GitHubActionsService] Attempt 1 of GET request to https://pipelinesghubeus6.actions.githubusercontent.com/MMum4OhXiZOovjHbPzFAt8FcQLGQ4aveTrcZYYQiIaM9FUpn2f/_apis/connectionData?connectOptions=0&lastChangeId=256954371&lastChangeId64=256954371 failed (Socket Error: TimedOut). The operation will be retried in 11.188 seconds.
+[2024-02-27 10:57:02Z WARN GitHubActionsService] Attempt 1 of GET request to https://pipelinesghubeus6.actions.githubusercontent.com/MMum4OhXiZOovjHbPzFAt8FcQLGQ4aveTrcZYYQiIaM9FUpn2f/_apis/connectionData?connectOptions=0&lastChangeId=256954371&lastChangeId64=256954371 failed (Socket Error: TimedOut). The operation will be retried in 10.866 seconds.
+[2024-02-27 10:57:13Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2024-02-27 10:57:14Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2024-02-27 10:57:14Z INFO MessageListener] Sleeping for 25.893 seconds before retrying.
+[2024-02-27 10:57:22Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2024-02-27 10:57:22Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2024-02-27 10:57:23Z INFO ProcessInvokerWrapper] Finished process 26020 with exit code 102, and elapsed time 00:04:49.7538249.
+[2024-02-27 10:57:23Z INFO JobDispatcher] Worker finished for job 3bd1eaf3-d624-5be1-f0e1-b82f230106fd. Code: 102
+[2024-02-27 10:57:23Z INFO JobDispatcher] finish job request for job 3bd1eaf3-d624-5be1-f0e1-b82f230106fd with result: Failed
+[2024-02-27 10:57:23Z INFO Terminal] WRITE LINE: 2024-02-27 10:57:23Z: Job Deploying completed with result: Failed
+[2024-02-27 10:57:23Z INFO JobDispatcher] Stop renew job request for job 3bd1eaf3-d624-5be1-f0e1-b82f230106fd.
+[2024-02-27 10:57:23Z INFO JobDispatcher] job renew has been cancelled, stop renew job request 39.
+[2024-02-27 10:57:23Z INFO JobNotification] Entering JobCompleted Notification
+[2024-02-27 10:57:23Z INFO JobNotification] Entering EndMonitor
+[2024-02-27 10:58:31Z INFO Terminal] WRITE LINE: 2024-02-27 10:58:31Z: Runner reconnected.
