@@ -43,7 +43,7 @@ export class EditQuestionComponent {
     }, 300);
   }
 
-  
+
 
   private saveQuestion(){
     let data: any;
@@ -76,10 +76,13 @@ export class EditQuestionComponent {
     },
     100);
   }
-  
+
   onSubmit(){
     //console.log(this.question);
+    setTimeout(()=>{
     this.saveQuestion();
+    },
+    100);
   }
 }
 

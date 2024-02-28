@@ -216,3 +216,14 @@
 [2024-02-27 10:57:23Z INFO JobNotification] Entering JobCompleted Notification
 [2024-02-27 10:57:23Z INFO JobNotification] Entering EndMonitor
 [2024-02-27 10:58:31Z INFO Terminal] WRITE LINE: 2024-02-27 10:58:31Z: Runner reconnected.
+[2024-02-27 11:06:42Z INFO Terminal] WRITE LINE: Exiting...
+[2024-02-27 11:06:42Z INFO ConfigurationStore] IsServiceConfigured()
+[2024-02-27 11:06:42Z INFO ConfigurationStore] IsServiceConfigured: False
+[2024-02-27 11:06:42Z INFO HostContext] Runner will be shutdown for UserCancelled
+[2024-02-27 11:06:42Z WARN GitHubActionsService] GET request to https://pipelinesghubeus6.actions.githubusercontent.com/MMum4OhXiZOovjHbPzFAt8FcQLGQ4aveTrcZYYQiIaM9FUpn2f/_apis/distributedtask/pools/1/messages?sessionId=994a12fe-34c5-4af0-9371-a8844650241b&lastMessageId=3&status=Online&runnerVersion=2.313.0&os=Windows&architecture=X64&disableUpdate=false has been cancelled.
+[2024-02-27 11:06:42Z INFO MessageListener] Get next message has been cancelled.
+[2024-02-27 11:06:42Z INFO JobDispatcher] Shutting down JobDispatcher. Make sure all WorkerDispatcher has finished.
+[2024-02-27 11:06:42Z INFO JobDispatcher] Ensure WorkerDispatcher for job 3bd1eaf3-d624-5be1-f0e1-b82f230106fd run to finish, cancel any running job.
+[2024-02-27 11:06:42Z INFO JobDispatcher] Job request 3bd1eaf3-d624-5be1-f0e1-b82f230106fd processed succeed.
+[2024-02-27 11:06:42Z INFO Runner] Deleting Runner Session...
+[2024-02-27 11:06:43Z INFO Listener] Runner execution been cancelled.

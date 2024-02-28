@@ -1,0 +1,190 @@
+[2024-02-28 04:55:13Z INFO HostContext] No proxy settings were found based on environmental variables (http_proxy/https_proxy/HTTP_PROXY/HTTPS_PROXY)
+[2024-02-28 04:55:13Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 04:55:13Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 04:55:13Z INFO HostContext] Well known config file 'Credentials': 'C:\Users\gsss\Downloads\questionBank\actions-runner\.credentials'
+[2024-02-28 04:55:13Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 04:55:13Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 04:55:13Z INFO HostContext] Well known config file 'Runner': 'C:\Users\gsss\Downloads\questionBank\actions-runner\.runner'
+[2024-02-28 04:55:13Z INFO Listener] Runner is built for Windows (X64) - win-x64.
+[2024-02-28 04:55:13Z INFO Listener] RuntimeInformation: Microsoft Windows 10.0.19045.
+[2024-02-28 04:55:13Z INFO Listener] Version: 2.313.0
+[2024-02-28 04:55:13Z INFO Listener] Commit: d502c4623e5cd140e949f1e644ffe03762bd4151
+[2024-02-28 04:55:13Z INFO Listener] Culture: en-IN
+[2024-02-28 04:55:13Z INFO Listener] UI Culture: en-US
+[2024-02-28 04:55:13Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 04:55:13Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 04:55:13Z INFO Listener] Validating directory permissions for: 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 04:55:13Z INFO CommandLineParser] Parse
+[2024-02-28 04:55:13Z INFO CommandLineParser] Parsing 1 args
+[2024-02-28 04:55:13Z INFO CommandLineParser] parsing argument
+[2024-02-28 04:55:13Z INFO CommandLineParser] HasArgs: False
+[2024-02-28 04:55:13Z INFO CommandLineParser] Adding Command: run
+[2024-02-28 04:55:13Z INFO Listener] Arguments parsed
+[2024-02-28 04:55:13Z INFO Runner] ExecuteCommand
+[2024-02-28 04:55:13Z INFO ConfigurationStore] currentAssemblyLocation: C:\Users\gsss\Downloads\questionBank\actions-runner\bin\Runner.Listener.dll
+[2024-02-28 04:55:13Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 04:55:13Z INFO ConfigurationStore] binPath: C:\Users\gsss\Downloads\questionBank\actions-runner\bin
+[2024-02-28 04:55:13Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 04:55:13Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 04:55:13Z INFO ConfigurationStore] RootFolder: C:\Users\gsss\Downloads\questionBank\actions-runner
+[2024-02-28 04:55:13Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 04:55:13Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 04:55:13Z INFO HostContext] Well known config file 'Runner': 'C:\Users\gsss\Downloads\questionBank\actions-runner\.runner'
+[2024-02-28 04:55:13Z INFO ConfigurationStore] ConfigFilePath: C:\Users\gsss\Downloads\questionBank\actions-runner\.runner
+[2024-02-28 04:55:13Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 04:55:13Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 04:55:13Z INFO HostContext] Well known config file 'Credentials': 'C:\Users\gsss\Downloads\questionBank\actions-runner\.credentials'
+[2024-02-28 04:55:13Z INFO ConfigurationStore] CredFilePath: C:\Users\gsss\Downloads\questionBank\actions-runner\.credentials
+[2024-02-28 04:55:13Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 04:55:13Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 04:55:13Z INFO HostContext] Well known config file 'MigratedCredentials': 'C:\Users\gsss\Downloads\questionBank\actions-runner\.credentials_migrated'
+[2024-02-28 04:55:13Z INFO ConfigurationStore] MigratedCredFilePath: C:\Users\gsss\Downloads\questionBank\actions-runner\.credentials_migrated
+[2024-02-28 04:55:13Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 04:55:13Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 04:55:13Z INFO HostContext] Well known config file 'Service': 'C:\Users\gsss\Downloads\questionBank\actions-runner\.service'
+[2024-02-28 04:55:13Z INFO ConfigurationStore] ServiceConfigFilePath: C:\Users\gsss\Downloads\questionBank\actions-runner\.service
+[2024-02-28 04:55:13Z INFO CommandSettings] Flag 'help': 'False'
+[2024-02-28 04:55:13Z INFO CommandSettings] Flag 'version': 'False'
+[2024-02-28 04:55:13Z INFO CommandSettings] Flag 'commit': 'False'
+[2024-02-28 04:55:13Z INFO CommandSettings] Flag 'check': 'False'
+[2024-02-28 04:55:13Z INFO CommandSettings] Command 'configure': 'False'
+[2024-02-28 04:55:13Z INFO CommandSettings] Command 'remove': 'False'
+[2024-02-28 04:55:13Z INFO CommandSettings] Command 'warmup': 'False'
+[2024-02-28 04:55:13Z INFO ConfigurationManager] LoadSettings
+[2024-02-28 04:55:13Z INFO ConfigurationStore] IsConfigured()
+[2024-02-28 04:55:13Z INFO ConfigurationStore] IsConfigured: True
+[2024-02-28 04:55:13Z INFO ConfigurationManager] Is configured: True
+[2024-02-28 04:55:13Z INFO ConfigurationStore] Read setting file: 298 chars
+[2024-02-28 04:55:13Z INFO ConfigurationManager] Settings Loaded
+[2024-02-28 04:55:13Z INFO ConfigurationStore] IsServiceConfigured()
+[2024-02-28 04:55:13Z INFO ConfigurationStore] IsServiceConfigured: False
+[2024-02-28 04:55:13Z INFO CommandSettings] Command 'run': 'True'
+[2024-02-28 04:55:13Z INFO ConfigurationStore] IsConfigured()
+[2024-02-28 04:55:13Z INFO ConfigurationStore] IsConfigured: True
+[2024-02-28 04:55:13Z INFO ConfigurationManager] Is configured: True
+[2024-02-28 04:55:13Z INFO Runner] Could not parse the argument value '' for StartupType. Defaulting to Manual
+[2024-02-28 04:55:13Z INFO Runner] Set runner startup type - Manual
+[2024-02-28 04:55:13Z INFO CommandSettings] Flag 'once': 'False'
+[2024-02-28 04:55:13Z INFO CommandSettings] Flag 'once': 'False'
+[2024-02-28 04:55:13Z INFO Runner] RunAsync
+[2024-02-28 04:55:13Z INFO ConfigurationManager] LoadSettings
+[2024-02-28 04:55:13Z INFO ConfigurationStore] IsConfigured()
+[2024-02-28 04:55:13Z INFO ConfigurationStore] IsConfigured: True
+[2024-02-28 04:55:13Z INFO ConfigurationManager] Is configured: True
+[2024-02-28 04:55:13Z INFO ConfigurationManager] Settings Loaded
+[2024-02-28 04:55:13Z INFO MessageListener] {
+  "AgentId": 21,
+  "AgentName": "QBApp",
+  "PoolId": 1,
+  "PoolName": "Default",
+  "ServerUrl": "https://pipelinesghubeus6.actions.githubusercontent.com/MMum4OhXiZOovjHbPzFAt8FcQLGQ4aveTrcZYYQiIaM9FUpn2f/",
+  "GitHubUrl": "https://github.com/GopiAgasthia/QBApp",
+  "WorkFolder": "_work"
+}
+[2024-02-28 04:55:13Z INFO MessageListener] Loading Credentials
+[2024-02-28 04:55:13Z INFO ConfigurationStore] HasCredentials()
+[2024-02-28 04:55:13Z INFO ConfigurationStore] stored True
+[2024-02-28 04:55:13Z INFO CredentialManager] GetCredentialProvider
+[2024-02-28 04:55:13Z INFO CredentialManager] Creating type OAuth
+[2024-02-28 04:55:13Z INFO CredentialManager] Creating credential type: OAuth
+[2024-02-28 04:55:13Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 04:55:13Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 04:55:13Z INFO HostContext] Well known config file 'RSACredentials': 'C:\Users\gsss\Downloads\questionBank\actions-runner\.credentials_rsaparams'
+[2024-02-28 04:55:13Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file C:\Users\gsss\Downloads\questionBank\actions-runner\.credentials_rsaparams
+[2024-02-28 04:55:13Z INFO MessageListener] Attempt to create session.
+[2024-02-28 04:55:13Z INFO MessageListener] Connecting to the Runner Server...
+[2024-02-28 04:55:13Z INFO RunnerServer] EstablishVssConnection
+[2024-02-28 04:55:13Z INFO RunnerServer] Establish connection with 100 seconds timeout.
+[2024-02-28 04:55:13Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2024-02-28 04:55:13Z INFO RunnerServer] EstablishVssConnection
+[2024-02-28 04:55:13Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2024-02-28 04:55:13Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2024-02-28 04:55:13Z INFO RunnerServer] EstablishVssConnection
+[2024-02-28 04:55:13Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2024-02-28 04:55:13Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2024-02-28 04:55:14Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2024-02-28 04:55:14Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2024-02-28 04:55:14Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2024-02-28 04:55:15Z INFO MessageListener] VssConnection created
+[2024-02-28 04:55:15Z INFO Terminal] WRITE LINE: 
+[2024-02-28 04:55:15Z INFO Terminal] WRITE LINE: 
+[2024-02-28 04:55:15Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file C:\Users\gsss\Downloads\questionBank\actions-runner\.credentials_rsaparams
+[2024-02-28 04:55:15Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file C:\Users\gsss\Downloads\questionBank\actions-runner\.credentials_rsaparams
+[2024-02-28 04:55:15Z INFO GitHubActionsService] AAD Correlation ID for this token request: Unknown
+[2024-02-28 04:55:15Z INFO MessageListener] Session created.
+[2024-02-28 04:55:15Z INFO Terminal] WRITE LINE: Current runner version: '2.313.0'
+[2024-02-28 04:55:15Z INFO Terminal] WRITE LINE: 2024-02-28 04:55:15Z: Listening for Jobs
+[2024-02-28 04:55:15Z INFO JobDispatcher] Set runner/worker IPC timeout to 30 seconds.
+[2024-02-28 04:56:11Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file C:\Users\gsss\Downloads\questionBank\actions-runner\.credentials_rsaparams
+[2024-02-28 04:56:11Z INFO MessageListener] Message '5' received from session '6ea8a236-fd14-4cbe-962b-319f2c09904d'.
+[2024-02-28 04:56:11Z INFO Runner] Received job message of length 24627 from service, with hash '44a02039403b207f482c060132c06cfc6891e06f39cb7050297c2c559cfe53dd'
+[2024-02-28 04:56:11Z INFO JobDispatcher] Job request 43 for plan 369eb4cf-3a6d-4dc7-b3e8-6f02218c45ed job 3bd1eaf3-d624-5be1-f0e1-b82f230106fd received.
+[2024-02-28 04:56:11Z INFO JobDispatcher] Pull OrchestrationId 369eb4cf-3a6d-4dc7-b3e8-6f02218c45ed.deploying.__default from JWT claims
+[2024-02-28 04:56:11Z INFO Terminal] WRITE LINE: 2024-02-28 04:56:11Z: Running job: Deploying
+[2024-02-28 04:56:11Z INFO JobDispatcher] Start renew job request 43 for job 3bd1eaf3-d624-5be1-f0e1-b82f230106fd.
+[2024-02-28 04:56:11Z INFO JobDispatcher] Successfully renew job request 43, job is valid till 28-02-2024 05:04:17
+[2024-02-28 04:56:11Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 04:56:11Z INFO ProcessInvokerWrapper] Starting process:
+[2024-02-28 04:56:11Z INFO ProcessInvokerWrapper]   File name: 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin\Runner.Worker.exe'
+[2024-02-28 04:56:11Z INFO ProcessInvokerWrapper]   Arguments: 'spawnclient 1784 1716'
+[2024-02-28 04:56:11Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 04:56:11Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2024-02-28 04:56:11Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2024-02-28 04:56:11Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'True'
+[2024-02-28 04:56:11Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2024-02-28 04:56:11Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2024-02-28 04:56:11Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2024-02-28 04:56:11Z INFO ProcessInvokerWrapper]   High priority process: 'True'
+[2024-02-28 04:56:11Z INFO ProcessInvokerWrapper] Process started with process id 8300, waiting for process exit.
+[2024-02-28 04:56:11Z INFO JobDispatcher] Send job request message to worker for job 3bd1eaf3-d624-5be1-f0e1-b82f230106fd.
+[2024-02-28 04:56:11Z INFO ProcessChannel] Sending message of length 24627, with hash '44a02039403b207f482c060132c06cfc6891e06f39cb7050297c2c559cfe53dd'
+[2024-02-28 04:56:11Z INFO JobNotification] Entering JobStarted Notification
+[2024-02-28 04:56:11Z INFO JobNotification] Entering StartMonitor
+[2024-02-28 04:56:43Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2024-02-28 04:56:43Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2024-02-28 04:56:43Z INFO ProcessInvokerWrapper] Finished process 8300 with exit code 102, and elapsed time 00:00:32.0706087.
+[2024-02-28 04:56:43Z INFO JobDispatcher] Worker finished for job 3bd1eaf3-d624-5be1-f0e1-b82f230106fd. Code: 102
+[2024-02-28 04:56:43Z INFO JobDispatcher] finish job request for job 3bd1eaf3-d624-5be1-f0e1-b82f230106fd with result: Failed
+[2024-02-28 04:56:43Z INFO Terminal] WRITE LINE: 2024-02-28 04:56:43Z: Job Deploying completed with result: Failed
+[2024-02-28 04:56:43Z INFO JobDispatcher] Stop renew job request for job 3bd1eaf3-d624-5be1-f0e1-b82f230106fd.
+[2024-02-28 04:56:43Z INFO JobDispatcher] job renew has been cancelled, stop renew job request 43.
+[2024-02-28 04:56:43Z INFO JobNotification] Entering JobCompleted Notification
+[2024-02-28 04:56:43Z INFO JobNotification] Entering EndMonitor
+[2024-02-28 05:00:49Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file C:\Users\gsss\Downloads\questionBank\actions-runner\.credentials_rsaparams
+[2024-02-28 05:00:49Z INFO MessageListener] Message '6' received from session '6ea8a236-fd14-4cbe-962b-319f2c09904d'.
+[2024-02-28 05:00:49Z INFO Runner] Received job message of length 24626 from service, with hash '9658a329958a842a41aa5114e3f437c4d35f7f29e13acb850c4e7108ff6c8c08'
+[2024-02-28 05:00:49Z INFO JobDispatcher] Job request 44 for plan cb4b79af-32bc-4b13-b63a-1738c9ece8a4 job 3bd1eaf3-d624-5be1-f0e1-b82f230106fd received.
+[2024-02-28 05:00:49Z INFO JobDispatcher] Pull OrchestrationId cb4b79af-32bc-4b13-b63a-1738c9ece8a4.deploying.__default from JWT claims
+[2024-02-28 05:00:49Z INFO JobDispatcher] Job request 3bd1eaf3-d624-5be1-f0e1-b82f230106fd processed succeed.
+[2024-02-28 05:00:49Z INFO Terminal] WRITE LINE: 2024-02-28 05:00:49Z: Running job: Deploying
+[2024-02-28 05:00:49Z INFO JobDispatcher] Start renew job request 44 for job 3bd1eaf3-d624-5be1-f0e1-b82f230106fd.
+[2024-02-28 05:00:50Z INFO JobDispatcher] Successfully renew job request 44, job is valid till 28-02-2024 05:08:56
+[2024-02-28 05:00:50Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 05:00:50Z INFO ProcessInvokerWrapper] Starting process:
+[2024-02-28 05:00:50Z INFO ProcessInvokerWrapper]   File name: 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin\Runner.Worker.exe'
+[2024-02-28 05:00:50Z INFO ProcessInvokerWrapper]   Arguments: 'spawnclient 1788 1636'
+[2024-02-28 05:00:50Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 05:00:50Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2024-02-28 05:00:50Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2024-02-28 05:00:50Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'True'
+[2024-02-28 05:00:50Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2024-02-28 05:00:50Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2024-02-28 05:00:50Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2024-02-28 05:00:50Z INFO ProcessInvokerWrapper]   High priority process: 'True'
+[2024-02-28 05:00:50Z INFO ProcessInvokerWrapper] Process started with process id 19472, waiting for process exit.
+[2024-02-28 05:00:50Z INFO JobDispatcher] Send job request message to worker for job 3bd1eaf3-d624-5be1-f0e1-b82f230106fd.
+[2024-02-28 05:00:50Z INFO ProcessChannel] Sending message of length 24626, with hash '9658a329958a842a41aa5114e3f437c4d35f7f29e13acb850c4e7108ff6c8c08'
+[2024-02-28 05:00:50Z INFO JobNotification] Entering JobStarted Notification
+[2024-02-28 05:00:50Z INFO JobNotification] Entering StartMonitor
+[2024-02-28 05:01:50Z INFO JobDispatcher] Successfully renew job request 44, job is valid till 28-02-2024 05:09:56
+[2024-02-28 05:02:50Z INFO JobDispatcher] Successfully renew job request 44, job is valid till 28-02-2024 05:10:56
+[2024-02-28 05:02:56Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2024-02-28 05:02:56Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2024-02-28 05:02:56Z INFO ProcessInvokerWrapper] Finished process 19472 with exit code 100, and elapsed time 00:02:06.2004962.
+[2024-02-28 05:02:56Z INFO JobDispatcher] Worker finished for job 3bd1eaf3-d624-5be1-f0e1-b82f230106fd. Code: 100
+[2024-02-28 05:02:56Z INFO JobDispatcher] finish job request for job 3bd1eaf3-d624-5be1-f0e1-b82f230106fd with result: Succeeded
+[2024-02-28 05:02:56Z INFO Terminal] WRITE LINE: 2024-02-28 05:02:56Z: Job Deploying completed with result: Succeeded
+[2024-02-28 05:02:56Z INFO JobDispatcher] Stop renew job request for job 3bd1eaf3-d624-5be1-f0e1-b82f230106fd.
+[2024-02-28 05:02:56Z INFO JobDispatcher] job renew has been cancelled, stop renew job request 44.
+[2024-02-28 05:02:56Z INFO JobNotification] Entering JobCompleted Notification
+[2024-02-28 05:02:56Z INFO JobNotification] Entering EndMonitor
