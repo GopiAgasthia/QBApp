@@ -1,0 +1,4 @@
+[2024-02-29 07:21:00Z INFO HostContext] No proxy settings were found based on environmental variables (http_proxy/https_proxy/HTTP_PROXY/HTTPS_PROXY)
+[2024-02-29 07:21:00Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-29 07:21:00Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-29 07:21:00Z INFO HostContext] Well known config file 'Credentials': 'C:\Users\gsss\Downloads\questionBank\actions-runner\.credentials'

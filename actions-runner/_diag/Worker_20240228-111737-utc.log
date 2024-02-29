@@ -1,0 +1,4269 @@
+[2024-02-28 11:17:37Z INFO HostContext] No proxy settings were found based on environmental variables (http_proxy/https_proxy/HTTP_PROXY/HTTPS_PROXY)
+[2024-02-28 11:17:37Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:17:37Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:17:37Z INFO HostContext] Well known config file 'Credentials': 'C:\Users\gsss\Downloads\questionBank\actions-runner\.credentials'
+[2024-02-28 11:17:37Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:17:37Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:17:37Z INFO HostContext] Well known config file 'Runner': 'C:\Users\gsss\Downloads\questionBank\actions-runner\.runner'
+[2024-02-28 11:17:37Z INFO Worker] Version: 2.313.0
+[2024-02-28 11:17:37Z INFO Worker] Commit: d502c4623e5cd140e949f1e644ffe03762bd4151
+[2024-02-28 11:17:37Z INFO Worker] Culture: en-IN
+[2024-02-28 11:17:37Z INFO Worker] UI Culture: en-US
+[2024-02-28 11:17:37Z INFO Worker] Waiting to receive the job message from the channel.
+[2024-02-28 11:17:37Z INFO ProcessChannel] Receiving message of length 24618, with hash '068f4c295995364fcd54a4774809bb6aeed68e1995831c000a88e48e77058ae0'
+[2024-02-28 11:17:37Z INFO Worker] Message received.
+[2024-02-28 11:17:38Z INFO Worker] Job message:
+ {
+  "fileTable": [
+    ".github/workflows/cicd.yml"
+  ],
+  "mask": [
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    }
+  ],
+  "steps": [
+    {
+      "type": "action",
+      "reference": {
+        "type": "repository",
+        "name": "actions/checkout",
+        "ref": "v4",
+        "repositoryType": "GitHub",
+        "path": ""
+      },
+      "contextName": "__actions_checkout",
+      "condition": "success()",
+      "id": "ba478e42-295a-5352-7229-27bcde7d8679",
+      "name": "__actions_checkout"
+    },
+    {
+      "type": "action",
+      "reference": {
+        "type": "repository",
+        "name": "docker/login-action",
+        "ref": "v3",
+        "repositoryType": "GitHub",
+        "path": ""
+      },
+      "displayNameToken": {
+        "type": 0,
+        "file": 1,
+        "line": 63,
+        "col": 15,
+        "lit": "Login to Docker Hub"
+      },
+      "contextName": "__docker_login-action",
+      "inputs": {
+        "type": 2,
+        "file": 1,
+        "line": 66,
+        "col": 11,
+        "map": [
+          {
+            "key": {
+              "type": 0,
+              "file": 1,
+              "line": 66,
+              "col": 11,
+              "lit": "registry"
+            },
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 66,
+              "col": 21,
+              "lit": "docker.io"
+            }
+          },
+          {
+            "key": {
+              "type": 0,
+              "file": 1,
+              "line": 67,
+              "col": 11,
+              "lit": "username"
+            },
+            "value": {
+              "type": 3,
+              "file": 1,
+              "line": 67,
+              "col": 21,
+              "expr": "secrets.DOCKER_USERNAME"
+            }
+          },
+          {
+            "key": {
+              "type": 0,
+              "file": 1,
+              "line": 68,
+              "col": 11,
+              "lit": "password"
+            },
+            "value": {
+              "type": 3,
+              "file": 1,
+              "line": 68,
+              "col": 21,
+              "expr": "secrets.DOCKER_PASSWORD"
+            }
+          }
+        ]
+      },
+      "condition": "success()",
+      "id": "37ae4e0a-1fa9-5c6c-2e65-a13a12178ef9",
+      "name": "__docker_login-action"
+    },
+    {
+      "type": "action",
+      "reference": {
+        "type": "script"
+      },
+      "displayNameToken": {
+        "type": 0,
+        "file": 1,
+        "line": 70,
+        "col": 15,
+        "lit": "Pull backend image"
+      },
+      "contextName": "__run",
+      "inputs": {
+        "type": 2,
+        "map": [
+          {
+            "key": "script",
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 71,
+              "col": 14,
+              "lit": "docker pull ***/qbbackend:latest"
+            }
+          }
+        ]
+      },
+      "condition": "success()",
+      "id": "d54fcd28-d409-5f75-9279-d772843b7d79",
+      "name": "__run"
+    },
+    {
+      "type": "action",
+      "reference": {
+        "type": "script"
+      },
+      "displayNameToken": {
+        "type": 0,
+        "file": 1,
+        "line": 73,
+        "col": 15,
+        "lit": "Pull frontend image"
+      },
+      "contextName": "__run_2",
+      "inputs": {
+        "type": 2,
+        "map": [
+          {
+            "key": "script",
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 74,
+              "col": 14,
+              "lit": "docker pull ***/qbfrontend:latest"
+            }
+          }
+        ]
+      },
+      "condition": "success()",
+      "id": "39cfc694-5cbb-5e12-3c84-0f9141e89cbf",
+      "name": "__run_2"
+    },
+    {
+      "type": "action",
+      "reference": {
+        "type": "script"
+      },
+      "displayNameToken": {
+        "type": 0,
+        "file": 1,
+        "line": 76,
+        "col": 15,
+        "lit": "Set up Docker Compose again"
+      },
+      "contextName": "__run_3",
+      "inputs": {
+        "type": 2,
+        "map": [
+          {
+            "key": "script",
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 77,
+              "col": 14,
+              "lit": "docker-compose -f docker-compose.yml up -d"
+            }
+          }
+        ]
+      },
+      "condition": "success()",
+      "id": "296d5370-bf7e-51e1-9d6b-c9340fae4e8b",
+      "name": "__run_3"
+    }
+  ],
+  "variables": {
+    "DOCKER_PASSWORD": {
+      "value": "***",
+      "isSecret": true
+    },
+    "DOCKER_USERNAME": {
+      "value": "***",
+      "isSecret": true
+    },
+    "system.isScheduled": {
+      "value": "False"
+    },
+    "system.servertype": {
+      "value": "Hosted"
+    },
+    "system.culture": {
+      "value": ""
+    },
+    "system.pipelineStartTime": {
+      "value": "2024-02-28 11:17:35+00:00"
+    },
+    "system.runner.lowdiskspacethreshold": {
+      "value": "100"
+    },
+    "DistributedTask.NewActionMetadata": {
+      "value": "true"
+    },
+    "DistributedTask.EnableCompositeActions": {
+      "value": "true"
+    },
+    "DistributedTask.EnhancedAnnotations": {
+      "value": "true"
+    },
+    "DistributedTask.UploadStepSummary": {
+      "value": "true"
+    },
+    "DistributedTask.ForceGithubJavascriptActionsToNode16": {
+      "value": "true"
+    },
+    "DistributedTask.AddWarningToNode12Action": {
+      "value": "true"
+    },
+    "DistributedTask.AddWarningToNode16Action": {
+      "value": "true"
+    },
+    "DistributedTask.LogTemplateErrorsAsDebugMessages": {
+      "value": "true"
+    },
+    "DistributedTask.AllowRunnerContainerHooks": {
+      "value": "true"
+    },
+    "DistributedTask.DeprecateStepOutputCommands": {
+      "value": "true"
+    },
+    "Actions.EnableHttpRedirects": {
+      "value": "true"
+    },
+    "DistributedTask.UseActionArchiveCache": {
+      "value": "true"
+    },
+    "DistributedTask.UseWhich2": {
+      "value": "true"
+    },
+    "DistributedTask.DetailUntarFailure": {
+      "value": "true"
+    },
+    "DistributedTask.EnableJobServerQueueTelemetry": {
+      "value": "true"
+    },
+    "DistributedTask.MarkJobAsFailedOnWorkerCrash": {
+      "value": "true"
+    },
+    "system.teamProjectId": {
+      "value": "00000000-0000-0000-0000-000000000000"
+    },
+    "build.buildId": {
+      "value": "26"
+    },
+    "build.containerId": {
+      "value": "8678109"
+    },
+    "system.workflowFilePath": {
+      "value": ".github/workflows/cicd.yml"
+    },
+    "system.phaseDisplayName": {
+      "value": "Deploying"
+    },
+    "system.phaseId": {
+      "value": "04f18a50-801c-592d-e1a5-89a54a2e1048"
+    },
+    "system.phaseName": {
+      "value": "Deploying"
+    },
+    "system.phaseAttempt": {
+      "value": "1"
+    },
+    "system.jobIdentifier": {
+      "value": "Deploying.__default"
+    },
+    "system.jobAttempt": {
+      "value": "1"
+    },
+    "System.JobPositionInPhase": {
+      "value": "1"
+    },
+    "System.TotalJobsInPhase": {
+      "value": "1"
+    },
+    "system.github.job": {
+      "value": "Deploying"
+    },
+    "system.jobDisplayName": {
+      "value": "Deploying"
+    },
+    "system.jobId": {
+      "value": "3bd1eaf3-d624-5be1-f0e1-b82f230106fd"
+    },
+    "system.jobName": {
+      "value": "__default"
+    },
+    "system.github.token.permissions": {
+      "value": "{\"Actions\":\"write\",\"Checks\":\"write\",\"Contents\":\"write\",\"Deployments\":\"write\",\"Discussions\":\"write\",\"Issues\":\"write\",\"Metadata\":\"read\",\"Packages\":\"write\",\"Pages\":\"write\",\"PullRequests\":\"write\",\"RepositoryProjects\":\"write\",\"SecurityEvents\":\"write\",\"Statuses\":\"write\"}"
+    },
+    "system.github.token": {
+      "value": "***",
+      "isSecret": true
+    },
+    "system.runnerEnvironment": {
+      "value": "self-hosted"
+    },
+    "system.github.results_endpoint": {
+      "value": "https://results-receiver.actions.githubusercontent.com/"
+    },
+    "system.github.results_upload_with_sdk": {
+      "value": "True"
+    },
+    "system.orchestrationId": {
+      "value": "0488dd85-37c6-42f8-8b76-912b5e321682.deploying.__default"
+    },
+    "system.runnerGroupName": {
+      "value": "Default"
+    }
+  },
+  "messageType": "PipelineAgentJobRequest",
+  "plan": {
+    "scopeIdentifier": "00000000-0000-0000-0000-000000000000",
+    "planType": "Actions",
+    "version": 39,
+    "planId": "0488dd85-37c6-42f8-8b76-912b5e321682",
+    "planGroup": "Actions:00000000-0000-0000-0000-000000000000:1",
+    "artifactUri": "vstfs:///Build/Build/26",
+    "artifactLocation": null,
+    "definition": {
+      "_links": {},
+      "id": 3,
+      "name": "QBApp"
+    },
+    "owner": {
+      "_links": {},
+      "id": 3,
+      "name": "GopiAgasthia"
+    }
+  },
+  "timeline": {
+    "id": "0488dd85-37c6-42f8-8b76-912b5e321682",
+    "changeId": 0,
+    "location": null
+  },
+  "jobId": "3bd1eaf3-d624-5be1-f0e1-b82f230106fd",
+  "jobDisplayName": "Deploying",
+  "jobName": "__default",
+  "requestId": 50,
+  "lockedUntil": "0001-01-01T00:00:00",
+  "resources": {
+    "endpoints": [
+      {
+        "data": {
+          "ServerId": "553dff64-fefd-475f-a450-1fd01f953523",
+          "ServerName": "MMum4OhXiZOovjHbPzFAt8FcQLGQ4aveTrcZYYQiIaM9FUpn2f",
+          "CacheServerUrl": "https://acghubeus2.actions.githubusercontent.com/MMum4OhXiZOovjHbPzFAt8FcQLGQ4aveTrcZYYQiIaM9FUpn2f/",
+          "FeedStreamUrl": "https://results-receiver.actions.githubusercontent.com/_ws/ingest.sock",
+          "ResultsServiceUrl": "https://results-receiver.actions.githubusercontent.com/",
+          "ConnectivityChecks": "[\"https://acghubeus0.actions.githubusercontent.com/_apis/health\",\"https://results-receiver.actions.githubusercontent.com/health\",\"https://actions-results-receiver-production.githubapp.com/health\",\"https://pipelinesghubeus6.actions.githubusercontent.com/_apis/health\"]"
+        },
+        "name": "SystemVssConnection",
+        "url": "https://pipelinesghubeus6.actions.githubusercontent.com/MMum4OhXiZOovjHbPzFAt8FcQLGQ4aveTrcZYYQiIaM9FUpn2f/",
+        "authorization": {
+          "parameters": {
+            "AccessToken": ***
+          },
+          "scheme": "OAuth"
+        },
+        "isShared": false,
+        "isReady": true
+      }
+    ]
+  },
+  "contextData": {
+    "github": {
+      "t": 2,
+      "d": [
+        {
+          "k": "ref",
+          "v": "refs/heads/main"
+        },
+        {
+          "k": "sha",
+          "v": "62d657e91a49543832be078a0f7f95fe5432ee80"
+        },
+        {
+          "k": "repository",
+          "v": "GopiAgasthia/QBApp"
+        },
+        {
+          "k": "repository_owner",
+          "v": "GopiAgasthia"
+        },
+        {
+          "k": "repository_owner_id",
+          "v": "69740917"
+        },
+        {
+          "k": "repositoryUrl",
+          "v": "git://github.com/GopiAgasthia/QBApp.git"
+        },
+        {
+          "k": "run_id",
+          "v": "8079451393"
+        },
+        {
+          "k": "run_number",
+          "v": "26"
+        },
+        {
+          "k": "retention_days",
+          "v": "90"
+        },
+        {
+          "k": "run_attempt",
+          "v": "1"
+        },
+        {
+          "k": "artifact_cache_size_limit",
+          "v": "10"
+        },
+        {
+          "k": "repository_visibility",
+          "v": "public"
+        },
+        {
+          "k": "repo-self-hosted-runners-disabled",
+          "v": false
+        },
+        {
+          "k": "enterprise-managed-business-id",
+          "v": ""
+        },
+        {
+          "k": "repository_id",
+          "v": "762228420"
+        },
+        {
+          "k": "actor_id",
+          "v": "69740917"
+        },
+        {
+          "k": "actor",
+          "v": "GopiAgasthia"
+        },
+        {
+          "k": "triggering_actor",
+          "v": "GopiAgasthia"
+        },
+        {
+          "k": "workflow",
+          "v": "CI/CD Pipeline"
+        },
+        {
+          "k": "head_ref",
+          "v": ""
+        },
+        {
+          "k": "base_ref",
+          "v": ""
+        },
+        {
+          "k": "event_name",
+          "v": "push"
+        },
+        {
+          "k": "event",
+          "v": {
+            "t": 2,
+            "d": [
+              {
+                "k": "after",
+                "v": "62d657e91a49543832be078a0f7f95fe5432ee80"
+              },
+              {
+                "k": "base_ref",
+                "v": null
+              },
+              {
+                "k": "before",
+                "v": "1412cdb774a6a21afbabc4aef40d81dc074eba9a"
+              },
+              {
+                "k": "commits",
+                "v": {
+                  "t": 1,
+                  "a": [
+                    {
+                      "t": 2,
+                      "d": [
+                        {
+                          "k": "author",
+                          "v": {
+                            "t": 2,
+                            "d": [
+                              {
+                                "k": "email",
+                                "v": "agasthia6312@gmail.com"
+                              },
+                              {
+                                "k": "name",
+                                "v": "Gopi Agasthia"
+                              },
+                              {
+                                "k": "username",
+                                "v": "GopiAgasthia"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "k": "committer",
+                          "v": {
+                            "t": 2,
+                            "d": [
+                              {
+                                "k": "email",
+                                "v": "agasthia6312@gmail.com"
+                              },
+                              {
+                                "k": "name",
+                                "v": "Gopi Agasthia"
+                              },
+                              {
+                                "k": "username",
+                                "v": "GopiAgasthia"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "k": "distinct",
+                          "v": true
+                        },
+                        {
+                          "k": "id",
+                          "v": "62d657e91a49543832be078a0f7f95fe5432ee80"
+                        },
+                        {
+                          "k": "message",
+                          "v": "chaNGE BG"
+                        },
+                        {
+                          "k": "timestamp",
+                          "v": "2024-02-28T16:43:00+05:30"
+                        },
+                        {
+                          "k": "tree_id",
+                          "v": "27c6871084aa05d3d38e9e2fea7f059ed6473277"
+                        },
+                        {
+                          "k": "url",
+                          "v": "https://github.com/GopiAgasthia/QBApp/commit/62d657e91a49543832be078a0f7f95fe5432ee80"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "k": "compare",
+                "v": "https://github.com/GopiAgasthia/QBApp/compare/1412cdb774a6...62d657e91a49"
+              },
+              {
+                "k": "created",
+                "v": false
+              },
+              {
+                "k": "deleted",
+                "v": false
+              },
+              {
+                "k": "forced",
+                "v": false
+              },
+              {
+                "k": "head_commit",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "author",
+                      "v": {
+                        "t": 2,
+                        "d": [
+                          {
+                            "k": "email",
+                            "v": "agasthia6312@gmail.com"
+                          },
+                          {
+                            "k": "name",
+                            "v": "Gopi Agasthia"
+                          },
+                          {
+                            "k": "username",
+                            "v": "GopiAgasthia"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "k": "committer",
+                      "v": {
+                        "t": 2,
+                        "d": [
+                          {
+                            "k": "email",
+                            "v": "agasthia6312@gmail.com"
+                          },
+                          {
+                            "k": "name",
+                            "v": "Gopi Agasthia"
+                          },
+                          {
+                            "k": "username",
+                            "v": "GopiAgasthia"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "k": "distinct",
+                      "v": true
+                    },
+                    {
+                      "k": "id",
+                      "v": "62d657e91a49543832be078a0f7f95fe5432ee80"
+                    },
+                    {
+                      "k": "message",
+                      "v": "chaNGE BG"
+                    },
+                    {
+                      "k": "timestamp",
+                      "v": "2024-02-28T16:43:00+05:30"
+                    },
+                    {
+                      "k": "tree_id",
+                      "v": "27c6871084aa05d3d38e9e2fea7f059ed6473277"
+                    },
+                    {
+                      "k": "url",
+                      "v": "https://github.com/GopiAgasthia/QBApp/commit/62d657e91a49543832be078a0f7f95fe5432ee80"
+                    }
+                  ]
+                }
+              },
+              {
+                "k": "pusher",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "email",
+                      "v": "69740917+GopiAgasthia@users.noreply.github.com"
+                    },
+                    {
+                      "k": "name",
+                      "v": "GopiAgasthia"
+                    }
+                  ]
+                }
+              },
+              {
+                "k": "ref",
+                "v": "refs/heads/main"
+              },
+              {
+                "k": "repository",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "allow_forking",
+                      "v": true
+                    },
+                    {
+                      "k": "archive_url",
+                      "v": "https://api.github.com/repos/GopiAgasthia/QBApp/{archive_format}{/ref}"
+                    },
+                    {
+                      "k": "archived",
+                      "v": false
+                    },
+                    {
+                      "k": "assignees_url",
+                      "v": "https://api.github.com/repos/GopiAgasthia/QBApp/assignees{/user}"
+                    },
+                    {
+                      "k": "blobs_url",
+                      "v": "https://api.github.com/repos/GopiAgasthia/QBApp/git/blobs{/sha}"
+                    },
+                    {
+                      "k": "branches_url",
+                      "v": "https://api.github.com/repos/GopiAgasthia/QBApp/branches{/branch}"
+                    },
+                    {
+                      "k": "clone_url",
+                      "v": "https://github.com/GopiAgasthia/QBApp.git"
+                    },
+                    {
+                      "k": "collaborators_url",
+                      "v": "https://api.github.com/repos/GopiAgasthia/QBApp/collaborators{/collaborator}"
+                    },
+                    {
+                      "k": "comments_url",
+                      "v": "https://api.github.com/repos/GopiAgasthia/QBApp/comments{/number}"
+                    },
+                    {
+                      "k": "commits_url",
+                      "v": "https://api.github.com/repos/GopiAgasthia/QBApp/commits{/sha}"
+                    },
+                    {
+                      "k": "compare_url",
+                      "v": "https://api.github.com/repos/GopiAgasthia/QBApp/compare/{base}...{head}"
+                    },
+                    {
+                      "k": "contents_url",
+                      "v": "https://api.github.com/repos/GopiAgasthia/QBApp/contents/{+path}"
+                    },
+                    {
+                      "k": "contributors_url",
+                      "v": "https://api.github.com/repos/GopiAgasthia/QBApp/contributors"
+                    },
+                    {
+                      "k": "created_at",
+                      "v": 1708685110.0
+                    },
+                    {
+                      "k": "default_branch",
+                      "v": "main"
+                    },
+                    {
+                      "k": "deployments_url",
+                      "v": "https://api.github.com/repos/GopiAgasthia/QBApp/deployments"
+                    },
+                    {
+                      "k": "description",
+                      "v": null
+                    },
+                    {
+                      "k": "disabled",
+                      "v": false
+                    },
+                    {
+                      "k": "downloads_url",
+                      "v": "https://api.github.com/repos/GopiAgasthia/QBApp/downloads"
+                    },
+                    {
+                      "k": "events_url",
+                      "v": "https://api.github.com/repos/GopiAgasthia/QBApp/events"
+                    },
+                    {
+                      "k": "fork",
+                      "v": false
+                    },
+                    {
+                      "k": "forks",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "forks_count",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "forks_url",
+                      "v": "https://api.github.com/repos/GopiAgasthia/QBApp/forks"
+                    },
+                    {
+                      "k": "full_name",
+                      "v": "GopiAgasthia/QBApp"
+                    },
+                    {
+                      "k": "git_commits_url",
+                      "v": "https://api.github.com/repos/GopiAgasthia/QBApp/git/commits{/sha}"
+                    },
+                    {
+                      "k": "git_refs_url",
+                      "v": "https://api.github.com/repos/GopiAgasthia/QBApp/git/refs{/sha}"
+                    },
+                    {
+                      "k": "git_tags_url",
+                      "v": "https://api.github.com/repos/GopiAgasthia/QBApp/git/tags{/sha}"
+                    },
+                    {
+                      "k": "git_url",
+                      "v": "git://github.com/GopiAgasthia/QBApp.git"
+                    },
+                    {
+                      "k": "has_discussions",
+                      "v": false
+                    },
+                    {
+                      "k": "has_downloads",
+                      "v": true
+                    },
+                    {
+                      "k": "has_issues",
+                      "v": true
+                    },
+                    {
+                      "k": "has_pages",
+                      "v": false
+                    },
+                    {
+                      "k": "has_projects",
+                      "v": true
+                    },
+                    {
+                      "k": "has_wiki",
+                      "v": true
+                    },
+                    {
+                      "k": "homepage",
+                      "v": null
+                    },
+                    {
+                      "k": "hooks_url",
+                      "v": "https://api.github.com/repos/GopiAgasthia/QBApp/hooks"
+                    },
+                    {
+                      "k": "html_url",
+                      "v": "https://github.com/GopiAgasthia/QBApp"
+                    },
+                    {
+                      "k": "id",
+                      "v": 762228420.0
+                    },
+                    {
+                      "k": "is_template",
+                      "v": false
+                    },
+                    {
+                      "k": "issue_comment_url",
+                      "v": "https://api.github.com/repos/GopiAgasthia/QBApp/issues/comments{/number}"
+                    },
+                    {
+                      "k": "issue_events_url",
+                      "v": "https://api.github.com/repos/GopiAgasthia/QBApp/issues/events{/number}"
+                    },
+                    {
+                      "k": "issues_url",
+                      "v": "https://api.github.com/repos/GopiAgasthia/QBApp/issues{/number}"
+                    },
+                    {
+                      "k": "keys_url",
+                      "v": "https://api.github.com/repos/GopiAgasthia/QBApp/keys{/key_id}"
+                    },
+                    {
+                      "k": "labels_url",
+                      "v": "https://api.github.com/repos/GopiAgasthia/QBApp/labels{/name}"
+                    },
+                    {
+                      "k": "language",
+                      "v": "JavaScript"
+                    },
+                    {
+                      "k": "languages_url",
+                      "v": "https://api.github.com/repos/GopiAgasthia/QBApp/languages"
+                    },
+                    {
+                      "k": "license",
+                      "v": null
+                    },
+                    {
+                      "k": "master_branch",
+                      "v": "main"
+                    },
+                    {
+                      "k": "merges_url",
+                      "v": "https://api.github.com/repos/GopiAgasthia/QBApp/merges"
+                    },
+                    {
+                      "k": "milestones_url",
+                      "v": "https://api.github.com/repos/GopiAgasthia/QBApp/milestones{/number}"
+                    },
+                    {
+                      "k": "mirror_url",
+                      "v": null
+                    },
+                    {
+                      "k": "name",
+                      "v": "QBApp"
+                    },
+                    {
+                      "k": "node_id",
+                      "v": "R_kgDOLW6uxA"
+                    },
+                    {
+                      "k": "notifications_url",
+                      "v": "https://api.github.com/repos/GopiAgasthia/QBApp/notifications{?since,all,participating}"
+                    },
+                    {
+                      "k": "open_issues",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "open_issues_count",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "owner",
+                      "v": {
+                        "t": 2,
+                        "d": [
+                          {
+                            "k": "avatar_url",
+                            "v": "https://avatars.githubusercontent.com/u/69740917?v=4"
+                          },
+                          {
+                            "k": "email",
+                            "v": "69740917+GopiAgasthia@users.noreply.github.com"
+                          },
+                          {
+                            "k": "events_url",
+                            "v": "https://api.github.com/users/GopiAgasthia/events{/privacy}"
+                          },
+                          {
+                            "k": "followers_url",
+                            "v": "https://api.github.com/users/GopiAgasthia/followers"
+                          },
+                          {
+                            "k": "following_url",
+                            "v": "https://api.github.com/users/GopiAgasthia/following{/other_user}"
+                          },
+                          {
+                            "k": "gists_url",
+                            "v": "https://api.github.com/users/GopiAgasthia/gists{/gist_id}"
+                          },
+                          {
+                            "k": "gravatar_id",
+                            "v": ""
+                          },
+                          {
+                            "k": "html_url",
+                            "v": "https://github.com/GopiAgasthia"
+                          },
+                          {
+                            "k": "id",
+                            "v": 69740917.0
+                          },
+                          {
+                            "k": "login",
+                            "v": "GopiAgasthia"
+                          },
+                          {
+                            "k": "name",
+                            "v": "GopiAgasthia"
+                          },
+                          {
+                            "k": "node_id",
+                            "v": "MDQ6VXNlcjY5NzQwOTE3"
+                          },
+                          {
+                            "k": "organizations_url",
+                            "v": "https://api.github.com/users/GopiAgasthia/orgs"
+                          },
+                          {
+                            "k": "received_events_url",
+                            "v": "https://api.github.com/users/GopiAgasthia/received_events"
+                          },
+                          {
+                            "k": "repos_url",
+                            "v": "https://api.github.com/users/GopiAgasthia/repos"
+                          },
+                          {
+                            "k": "site_admin",
+                            "v": false
+                          },
+                          {
+                            "k": "starred_url",
+                            "v": "https://api.github.com/users/GopiAgasthia/starred{/owner}{/repo}"
+                          },
+                          {
+                            "k": "subscriptions_url",
+                            "v": "https://api.github.com/users/GopiAgasthia/subscriptions"
+                          },
+                          {
+                            "k": "type",
+                            "v": "User"
+                          },
+                          {
+                            "k": "url",
+                            "v": "https://api.github.com/users/GopiAgasthia"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "k": "private",
+                      "v": false
+                    },
+                    {
+                      "k": "pulls_url",
+                      "v": "https://api.github.com/repos/GopiAgasthia/QBApp/pulls{/number}"
+                    },
+                    {
+                      "k": "pushed_at",
+                      "v": 1709118790.0
+                    },
+                    {
+                      "k": "releases_url",
+                      "v": "https://api.github.com/repos/GopiAgasthia/QBApp/releases{/id}"
+                    },
+                    {
+                      "k": "size",
+                      "v": 160814.0
+                    },
+                    {
+                      "k": "ssh_url",
+                      "v": "git@github.com:GopiAgasthia/QBApp.git"
+                    },
+                    {
+                      "k": "stargazers",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "stargazers_count",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "stargazers_url",
+                      "v": "https://api.github.com/repos/GopiAgasthia/QBApp/stargazers"
+                    },
+                    {
+                      "k": "statuses_url",
+                      "v": "https://api.github.com/repos/GopiAgasthia/QBApp/statuses/{sha}"
+                    },
+                    {
+                      "k": "subscribers_url",
+                      "v": "https://api.github.com/repos/GopiAgasthia/QBApp/subscribers"
+                    },
+                    {
+                      "k": "subscription_url",
+                      "v": "https://api.github.com/repos/GopiAgasthia/QBApp/subscription"
+                    },
+                    {
+                      "k": "svn_url",
+                      "v": "https://github.com/GopiAgasthia/QBApp"
+                    },
+                    {
+                      "k": "tags_url",
+                      "v": "https://api.github.com/repos/GopiAgasthia/QBApp/tags"
+                    },
+                    {
+                      "k": "teams_url",
+                      "v": "https://api.github.com/repos/GopiAgasthia/QBApp/teams"
+                    },
+                    {
+                      "k": "topics",
+                      "v": {
+                        "t": 1
+                      }
+                    },
+                    {
+                      "k": "trees_url",
+                      "v": "https://api.github.com/repos/GopiAgasthia/QBApp/git/trees{/sha}"
+                    },
+                    {
+                      "k": "updated_at",
+                      "v": "2024-02-27T08:37:03Z"
+                    },
+                    {
+                      "k": "url",
+                      "v": "https://github.com/GopiAgasthia/QBApp"
+                    },
+                    {
+                      "k": "visibility",
+                      "v": "public"
+                    },
+                    {
+                      "k": "watchers",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "watchers_count",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "web_commit_signoff_required",
+                      "v": false
+                    }
+                  ]
+                }
+              },
+              {
+                "k": "sender",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "avatar_url",
+                      "v": "https://avatars.githubusercontent.com/u/69740917?v=4"
+                    },
+                    {
+                      "k": "events_url",
+                      "v": "https://api.github.com/users/GopiAgasthia/events{/privacy}"
+                    },
+                    {
+                      "k": "followers_url",
+                      "v": "https://api.github.com/users/GopiAgasthia/followers"
+                    },
+                    {
+                      "k": "following_url",
+                      "v": "https://api.github.com/users/GopiAgasthia/following{/other_user}"
+                    },
+                    {
+                      "k": "gists_url",
+                      "v": "https://api.github.com/users/GopiAgasthia/gists{/gist_id}"
+                    },
+                    {
+                      "k": "gravatar_id",
+                      "v": ""
+                    },
+                    {
+                      "k": "html_url",
+                      "v": "https://github.com/GopiAgasthia"
+                    },
+                    {
+                      "k": "id",
+                      "v": 69740917.0
+                    },
+                    {
+                      "k": "login",
+                      "v": "GopiAgasthia"
+                    },
+                    {
+                      "k": "node_id",
+                      "v": "MDQ6VXNlcjY5NzQwOTE3"
+                    },
+                    {
+                      "k": "organizations_url",
+                      "v": "https://api.github.com/users/GopiAgasthia/orgs"
+                    },
+                    {
+                      "k": "received_events_url",
+                      "v": "https://api.github.com/users/GopiAgasthia/received_events"
+                    },
+                    {
+                      "k": "repos_url",
+                      "v": "https://api.github.com/users/GopiAgasthia/repos"
+                    },
+                    {
+                      "k": "site_admin",
+                      "v": false
+                    },
+                    {
+                      "k": "starred_url",
+                      "v": "https://api.github.com/users/GopiAgasthia/starred{/owner}{/repo}"
+                    },
+                    {
+                      "k": "subscriptions_url",
+                      "v": "https://api.github.com/users/GopiAgasthia/subscriptions"
+                    },
+                    {
+                      "k": "type",
+                      "v": "User"
+                    },
+                    {
+                      "k": "url",
+                      "v": "https://api.github.com/users/GopiAgasthia"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "k": "server_url",
+          "v": "https://github.com"
+        },
+        {
+          "k": "api_url",
+          "v": "https://api.github.com"
+        },
+        {
+          "k": "graphql_url",
+          "v": "https://api.github.com/graphql"
+        },
+        {
+          "k": "ref_name",
+          "v": "main"
+        },
+        {
+          "k": "ref_protected",
+          "v": false
+        },
+        {
+          "k": "ref_type",
+          "v": "branch"
+        },
+        {
+          "k": "secret_source",
+          "v": "Actions"
+        },
+        {
+          "k": "workflow_ref",
+          "v": "GopiAgasthia/QBApp/.github/workflows/cicd.yml@refs/heads/main"
+        },
+        {
+          "k": "workflow_sha",
+          "v": "62d657e91a49543832be078a0f7f95fe5432ee80"
+        }
+      ]
+    },
+    "run-feature-flags": {
+      "t": 2,
+      "d": [
+        {
+          "k": "actions_stream_logs_via_results_service",
+          "v": true
+        },
+        {
+          "k": "actions_use_results_service",
+          "v": true
+        }
+      ]
+    },
+    "partialrerun": false,
+    "needs": {
+      "t": 2,
+      "d": [
+        {
+          "k": "Building",
+          "v": {
+            "t": 2,
+            "d": [
+              {
+                "k": "result",
+                "v": "success"
+              },
+              {
+                "k": "outputs",
+                "v": {
+                  "t": 2
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "vars": null,
+    "inputs": {
+      "t": 2
+    },
+    "matrix": null,
+    "strategy": {
+      "t": 2,
+      "d": [
+        {
+          "k": "fail-fast",
+          "v": true
+        },
+        {
+          "k": "job-index",
+          "v": 0.0
+        },
+        {
+          "k": "job-total",
+          "v": 1.0
+        },
+        {
+          "k": "max-parallel",
+          "v": 1.0
+        }
+      ]
+    },
+    "EndpointsOverride": null
+  }
+}
+[2024-02-28 11:17:38Z INFO JobRunner] Job ID 3bd1eaf3-d624-5be1-f0e1-b82f230106fd
+[2024-02-28 11:17:38Z INFO JobRunner] Creating job server with URL: https://pipelinesghubeus6.actions.githubusercontent.com/MMum4OhXiZOovjHbPzFAt8FcQLGQ4aveTrcZYYQiIaM9FUpn2f/
+[2024-02-28 11:17:38Z INFO ConfigurationStore] currentAssemblyLocation: C:\Users\gsss\Downloads\questionBank\actions-runner\bin\Runner.Worker.dll
+[2024-02-28 11:17:38Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:17:38Z INFO ConfigurationStore] binPath: C:\Users\gsss\Downloads\questionBank\actions-runner\bin
+[2024-02-28 11:17:38Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:17:38Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:17:38Z INFO ConfigurationStore] RootFolder: C:\Users\gsss\Downloads\questionBank\actions-runner
+[2024-02-28 11:17:38Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:17:38Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:17:38Z INFO HostContext] Well known config file 'Runner': 'C:\Users\gsss\Downloads\questionBank\actions-runner\.runner'
+[2024-02-28 11:17:38Z INFO ConfigurationStore] ConfigFilePath: C:\Users\gsss\Downloads\questionBank\actions-runner\.runner
+[2024-02-28 11:17:38Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:17:38Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:17:38Z INFO HostContext] Well known config file 'Credentials': 'C:\Users\gsss\Downloads\questionBank\actions-runner\.credentials'
+[2024-02-28 11:17:38Z INFO ConfigurationStore] CredFilePath: C:\Users\gsss\Downloads\questionBank\actions-runner\.credentials
+[2024-02-28 11:17:38Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:17:38Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:17:38Z INFO HostContext] Well known config file 'MigratedCredentials': 'C:\Users\gsss\Downloads\questionBank\actions-runner\.credentials_migrated'
+[2024-02-28 11:17:38Z INFO ConfigurationStore] MigratedCredFilePath: C:\Users\gsss\Downloads\questionBank\actions-runner\.credentials_migrated
+[2024-02-28 11:17:38Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:17:38Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:17:38Z INFO HostContext] Well known config file 'Service': 'C:\Users\gsss\Downloads\questionBank\actions-runner\.service'
+[2024-02-28 11:17:38Z INFO ConfigurationStore] ServiceConfigFilePath: C:\Users\gsss\Downloads\questionBank\actions-runner\.service
+[2024-02-28 11:17:38Z INFO ConfigurationStore] Read setting file: 298 chars
+[2024-02-28 11:17:38Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2024-02-28 11:17:38Z INFO Worker] Listening for cancel message from the channel.
+[2024-02-28 11:17:38Z INFO Worker] Waiting for the job to complete or for a cancel message from the channel.
+[2024-02-28 11:17:39Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2024-02-28 11:17:39Z INFO JobServer] Creating websocket client ...wss://results-receiver.actions.githubusercontent.com/_ws/ingest.sock
+[2024-02-28 11:17:39Z INFO JobServer] Attempting to start websocket client with delay 00:00:00.
+[2024-02-28 11:17:39Z INFO JobServerQueue] Initializing results client
+[2024-02-28 11:17:39Z INFO JobServerQueue] Start process web console line queue.
+[2024-02-28 11:17:39Z INFO JobServerQueue] Start process file upload queue.
+[2024-02-28 11:17:39Z INFO JobServerQueue] Start results file upload queue.
+[2024-02-28 11:17:39Z INFO JobServerQueue] Starting results-based upload queue...
+[2024-02-28 11:17:39Z INFO JobServerQueue] Start process timeline update queue.
+[2024-02-28 11:17:39Z INFO ExecutionContext] Initialize GitHub context
+[2024-02-28 11:17:39Z INFO ExecutionContext] Initialize Env context
+[2024-02-28 11:17:39Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:17:39Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:17:39Z INFO HostContext] Well known directory 'Diag': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_diag'
+[2024-02-28 11:17:39Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:17:39Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:17:39Z INFO HostContext] Well known directory 'Diag': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_diag'
+[2024-02-28 11:17:39Z INFO JobRunner] Starting the job execution context.
+[2024-02-28 11:17:39Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:17:39Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:17:39Z INFO HostContext] Well known directory 'Work': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work'
+[2024-02-28 11:17:39Z INFO JobRunner] Validating directory permissions for: 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work'
+[2024-02-28 11:17:39Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:17:39Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:17:39Z INFO HostContext] Well known directory 'Work': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work'
+[2024-02-28 11:17:39Z INFO HostContext] Well known directory 'Tools': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work\_tool'
+[2024-02-28 11:17:39Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:17:39Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:17:39Z INFO HostContext] Well known directory 'Work': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work'
+[2024-02-28 11:17:39Z INFO HostContext] Well known directory 'Temp': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work\_temp'
+[2024-02-28 11:17:39Z INFO JobRunner] Getting job extension.
+[2024-02-28 11:17:39Z INFO JobRunner] Initialize job. Getting all job steps.
+[2024-02-28 11:17:39Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:17:39Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:17:39Z INFO HostContext] Well known directory 'Diag': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_diag'
+[2024-02-28 11:17:39Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:17:39Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:17:39Z INFO HostContext] Well known directory 'Diag': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_diag'
+[2024-02-28 11:17:39Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:17:39Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:17:39Z INFO HostContext] Well known config file 'Credentials': 'C:\Users\gsss\Downloads\questionBank\actions-runner\.credentials'
+[2024-02-28 11:17:39Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:17:39Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:17:39Z INFO HostContext] Well known config file 'SetupInfo': 'C:\Users\gsss\Downloads\questionBank\actions-runner\.setup_info'
+[2024-02-28 11:17:39Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:17:39Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:17:39Z INFO HostContext] Well known directory 'Work': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work'
+[2024-02-28 11:17:39Z INFO PipelineDirectoryManager] Loading tracking config if exists: C:\Users\gsss\Downloads\questionBank\actions-runner\_work\_PipelineMapping\GopiAgasthia/QBApp\PipelineFolder.json
+[2024-02-28 11:17:39Z INFO PipelineDirectoryManager] Updating job run properties.
+[2024-02-28 11:17:39Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:17:39Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:17:39Z INFO HostContext] Well known directory 'Work': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work'
+[2024-02-28 11:17:39Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:17:39Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:17:39Z INFO HostContext] Well known directory 'Work': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work'
+[2024-02-28 11:17:39Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:17:39Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:17:39Z INFO HostContext] Well known directory 'Work': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work'
+[2024-02-28 11:17:39Z INFO JobExtension] Downloading actions
+[2024-02-28 11:17:39Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:17:39Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:17:39Z INFO HostContext] Well known directory 'Work': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work'
+[2024-02-28 11:17:39Z INFO HostContext] Well known directory 'Actions': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work\_actions'
+[2024-02-28 11:17:40Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:17:40Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:17:40Z INFO HostContext] Well known directory 'Work': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work'
+[2024-02-28 11:17:40Z INFO HostContext] Well known directory 'Actions': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work\_actions'
+[2024-02-28 11:17:40Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:17:40Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:17:40Z INFO HostContext] Well known directory 'Work': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work'
+[2024-02-28 11:17:40Z INFO HostContext] Well known directory 'Actions': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work\_actions'
+[2024-02-28 11:17:40Z INFO ActionManager] Save archive 'https://api.github.com/repos/actions/checkout/zipball/b4ffde65f46336ab88eb53be808477a3936bae11' into C:\Users\gsss\Downloads\questionBank\actions-runner\_work\_actions\_temp_21ff3003-335d-4618-9f70-8fd1ebdb5c9d\7f4e7fa8-6bf3-40af-b16c-63ab42ebd474.zip.
+[2024-02-28 11:17:40Z INFO JobServer] Successfully started websocket client.
+[2024-02-28 11:17:40Z INFO JobServerQueue] Try to append 1 batches web console lines for record '4c35be2b-a5b0-4983-9ee0-9b25f8c98651', success rate: 1/1.
+[2024-02-28 11:17:40Z INFO JobServerQueue] Try to append 1 batches web console lines for record '4c35be2b-a5b0-4983-9ee0-9b25f8c98651', success rate: 1/1.
+[2024-02-28 11:17:41Z INFO JobServerQueue] Job timeline record has been updated for the first time.
+[2024-02-28 11:17:41Z INFO ActionManager] Request URL: https://api.github.com/repos/actions/checkout/zipball/b4ffde65f46336ab88eb53be808477a3936bae11 X-GitHub-Request-Id: 66C0:3AC536:3642B:D921E:65DF1655 Http Status: OK
+[2024-02-28 11:17:41Z INFO ActionManager] Finished getting action repository.
+[2024-02-28 11:17:41Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:17:41Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:17:41Z INFO HostContext] Well known directory 'Work': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work'
+[2024-02-28 11:17:41Z INFO HostContext] Well known directory 'Actions': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work\_actions'
+[2024-02-28 11:17:41Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:17:41Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:17:41Z INFO HostContext] Well known directory 'Work': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work'
+[2024-02-28 11:17:41Z INFO HostContext] Well known directory 'Actions': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work\_actions'
+[2024-02-28 11:17:41Z INFO ActionManager] Save archive 'https://api.github.com/repos/docker/login-action/zipball/343f7c4344506bcbf9b4de18042ae17996df046d' into C:\Users\gsss\Downloads\questionBank\actions-runner\_work\_actions\_temp_928a8a74-4bc7-41f0-a063-db49826b4a43\ce9e35e2-d8ee-4c4f-a19f-3a335f6f8865.zip.
+[2024-02-28 11:17:41Z INFO JobServerQueue] Try to append 1 batches web console lines for record '4c35be2b-a5b0-4983-9ee0-9b25f8c98651', success rate: 1/1.
+[2024-02-28 11:17:42Z INFO ActionManager] Request URL: https://api.github.com/repos/docker/login-action/zipball/343f7c4344506bcbf9b4de18042ae17996df046d X-GitHub-Request-Id: E602:28780:22E79:8EA4E:65DF1657 Http Status: OK
+[2024-02-28 11:17:42Z INFO ActionManager] Finished getting action repository.
+[2024-02-28 11:17:42Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:17:42Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:17:42Z INFO HostContext] Well known directory 'Work': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work'
+[2024-02-28 11:17:42Z INFO HostContext] Well known directory 'Actions': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work\_actions'
+[2024-02-28 11:17:42Z INFO ActionManifestManager] Load schema file with definitions: [
+  "null",
+  "boolean",
+  "number",
+  "string",
+  "sequence",
+  "mapping",
+  "any",
+  "action-root",
+  "inputs",
+  "input",
+  "outputs",
+  "output-definition",
+  "runs",
+  "container-runs",
+  "container-runs-args",
+  "container-runs-env",
+  "node-runs",
+  "plugin-runs",
+  "composite-runs",
+  "composite-steps",
+  "composite-step",
+  "run-step",
+  "uses-step",
+  "container-runs-context",
+  "output-value",
+  "input-default-context",
+  "non-empty-string",
+  "string-steps-context",
+  "boolean-steps-context",
+  "step-env",
+  "step-if",
+  "step-with"
+]
+[2024-02-28 11:17:42Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:17:42Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:17:42Z INFO HostContext] Well known directory 'Work': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work'
+[2024-02-28 11:17:42Z INFO HostContext] Well known directory 'Actions': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work\_actions'
+[2024-02-28 11:17:43Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Checkout",
+  "description": "Checkout a Git repository at a particular version",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 4,
+          "col": 3,
+          "lit": "repository"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 6,
+          "col": 14,
+          "expr": "github.repository"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 7,
+          "col": 3,
+          "lit": "ref"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 12,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 24,
+          "col": 14,
+          "expr": "github.token"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 25,
+          "col": 3,
+          "lit": "ssh-key"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 37,
+          "col": 3,
+          "lit": "ssh-known-hosts"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 42,
+          "col": 3,
+          "lit": "ssh-strict"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 47,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 48,
+          "col": 3,
+          "lit": "persist-credentials"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 50,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 51,
+          "col": 3,
+          "lit": "path"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 53,
+          "col": 3,
+          "lit": "clean"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 55,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 56,
+          "col": 3,
+          "lit": "filter"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 60,
+          "col": 14,
+          "lit": ""
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 61,
+          "col": 3,
+          "lit": "sparse-checkout"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 65,
+          "col": 14,
+          "lit": ""
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 66,
+          "col": 3,
+          "lit": "sparse-checkout-cone-mode"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 69,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 70,
+          "col": 3,
+          "lit": "fetch-depth"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 72,
+          "col": 14,
+          "lit": "1"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 73,
+          "col": 3,
+          "lit": "fetch-tags"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 75,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 76,
+          "col": 3,
+          "lit": "show-progress"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 78,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 79,
+          "col": 3,
+          "lit": "lfs"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 81,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 82,
+          "col": 3,
+          "lit": "submodules"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 90,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 91,
+          "col": 3,
+          "lit": "set-safe-directory"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 93,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 94,
+          "col": 3,
+          "lit": "github-server-url"
+        },
+        "value": ""
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": "dist/index.js",
+    "nodeVersion": "node20",
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2024-02-28 11:17:43Z INFO ActionManager] Action node.js file: dist/index.js, no more preparation.
+[2024-02-28 11:17:43Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:17:43Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:17:43Z INFO HostContext] Well known directory 'Work': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work'
+[2024-02-28 11:17:43Z INFO HostContext] Well known directory 'Actions': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work\_actions'
+[2024-02-28 11:17:43Z INFO ActionManager] Load action that reference repository from 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work\_actions\actions\checkout\v4'
+[2024-02-28 11:17:43Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:17:43Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:17:43Z INFO HostContext] Well known directory 'Work': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work'
+[2024-02-28 11:17:43Z INFO HostContext] Well known directory 'Actions': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work\_actions'
+[2024-02-28 11:17:43Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Checkout",
+  "description": "Checkout a Git repository at a particular version",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 4,
+          "col": 3,
+          "lit": "repository"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 6,
+          "col": 14,
+          "expr": "github.repository"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 7,
+          "col": 3,
+          "lit": "ref"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 12,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 24,
+          "col": 14,
+          "expr": "github.token"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 25,
+          "col": 3,
+          "lit": "ssh-key"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 37,
+          "col": 3,
+          "lit": "ssh-known-hosts"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 42,
+          "col": 3,
+          "lit": "ssh-strict"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 47,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 48,
+          "col": 3,
+          "lit": "persist-credentials"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 50,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 51,
+          "col": 3,
+          "lit": "path"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 53,
+          "col": 3,
+          "lit": "clean"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 55,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 56,
+          "col": 3,
+          "lit": "filter"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 60,
+          "col": 14,
+          "lit": ""
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 61,
+          "col": 3,
+          "lit": "sparse-checkout"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 65,
+          "col": 14,
+          "lit": ""
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 66,
+          "col": 3,
+          "lit": "sparse-checkout-cone-mode"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 69,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 70,
+          "col": 3,
+          "lit": "fetch-depth"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 72,
+          "col": 14,
+          "lit": "1"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 73,
+          "col": 3,
+          "lit": "fetch-tags"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 75,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 76,
+          "col": 3,
+          "lit": "show-progress"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 78,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 79,
+          "col": 3,
+          "lit": "lfs"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 81,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 82,
+          "col": 3,
+          "lit": "submodules"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 90,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 91,
+          "col": 3,
+          "lit": "set-safe-directory"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 93,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 94,
+          "col": 3,
+          "lit": "github-server-url"
+        },
+        "value": ""
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": "dist/index.js",
+    "nodeVersion": "node20",
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2024-02-28 11:17:43Z INFO ActionManager] Action pre node.js file: N/A.
+[2024-02-28 11:17:43Z INFO ActionManager] Action node.js file: dist/index.js.
+[2024-02-28 11:17:43Z INFO ActionManager] Action post node.js file: dist/index.js.
+[2024-02-28 11:17:43Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:17:43Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:17:43Z INFO HostContext] Well known directory 'Work': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work'
+[2024-02-28 11:17:43Z INFO HostContext] Well known directory 'Actions': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work\_actions'
+[2024-02-28 11:17:43Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:17:43Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:17:43Z INFO HostContext] Well known directory 'Work': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work'
+[2024-02-28 11:17:43Z INFO HostContext] Well known directory 'Actions': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work\_actions'
+[2024-02-28 11:17:43Z INFO ActionManifestManager] Ignore action property author.
+[2024-02-28 11:17:43Z INFO ActionManifestManager] Ignore action property branding.
+[2024-02-28 11:17:43Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Docker Login",
+  "description": "GitHub Action to login against a Docker registry",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 10,
+          "col": 3,
+          "lit": "registry"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 13,
+          "col": 3,
+          "lit": "username"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 16,
+          "col": 3,
+          "lit": "password"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 19,
+          "col": 3,
+          "lit": "ecr"
+        },
+        "value": {
+          "type": 0,
+          "file": 3,
+          "line": 21,
+          "col": 14,
+          "lit": "auto"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 23,
+          "col": 3,
+          "lit": "logout"
+        },
+        "value": {
+          "type": 0,
+          "file": 3,
+          "line": 25,
+          "col": 14,
+          "lit": "true"
+        }
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": "dist/index.js",
+    "nodeVersion": "node20",
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2024-02-28 11:17:43Z INFO ActionManager] Action node.js file: dist/index.js, no more preparation.
+[2024-02-28 11:17:43Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:17:43Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:17:43Z INFO HostContext] Well known directory 'Work': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work'
+[2024-02-28 11:17:43Z INFO HostContext] Well known directory 'Actions': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work\_actions'
+[2024-02-28 11:17:43Z INFO ActionManager] Load action that reference repository from 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work\_actions\docker\login-action\v3'
+[2024-02-28 11:17:43Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:17:43Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:17:43Z INFO HostContext] Well known directory 'Work': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work'
+[2024-02-28 11:17:43Z INFO HostContext] Well known directory 'Actions': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work\_actions'
+[2024-02-28 11:17:43Z INFO ActionManifestManager] Ignore action property author.
+[2024-02-28 11:17:43Z INFO ActionManifestManager] Ignore action property branding.
+[2024-02-28 11:17:43Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Docker Login",
+  "description": "GitHub Action to login against a Docker registry",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 10,
+          "col": 3,
+          "lit": "registry"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 13,
+          "col": 3,
+          "lit": "username"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 16,
+          "col": 3,
+          "lit": "password"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 19,
+          "col": 3,
+          "lit": "ecr"
+        },
+        "value": {
+          "type": 0,
+          "file": 3,
+          "line": 21,
+          "col": 14,
+          "lit": "auto"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 23,
+          "col": 3,
+          "lit": "logout"
+        },
+        "value": {
+          "type": 0,
+          "file": 3,
+          "line": 25,
+          "col": 14,
+          "lit": "true"
+        }
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": "dist/index.js",
+    "nodeVersion": "node20",
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2024-02-28 11:17:43Z INFO ActionManager] Action pre node.js file: N/A.
+[2024-02-28 11:17:43Z INFO ActionManager] Action node.js file: dist/index.js.
+[2024-02-28 11:17:43Z INFO ActionManager] Action post node.js file: dist/index.js.
+[2024-02-28 11:17:43Z INFO JobExtension] Adding .
+[2024-02-28 11:17:43Z INFO JobExtension] Adding .
+[2024-02-28 11:17:43Z INFO JobExtension] Adding .
+[2024-02-28 11:17:43Z INFO JobExtension] Adding .
+[2024-02-28 11:17:43Z INFO JobExtension] Adding .
+[2024-02-28 11:17:43Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:17:43Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:17:43Z INFO HostContext] Well known directory 'Diag': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_diag'
+[2024-02-28 11:17:43Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:17:43Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:17:43Z INFO HostContext] Well known directory 'Diag': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_diag'
+[2024-02-28 11:17:43Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:17:43Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:17:43Z INFO HostContext] Well known directory 'Diag': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_diag'
+[2024-02-28 11:17:43Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:17:43Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:17:43Z INFO HostContext] Well known directory 'Diag': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_diag'
+[2024-02-28 11:17:43Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:17:43Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:17:43Z INFO HostContext] Well known directory 'Diag': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_diag'
+[2024-02-28 11:17:43Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:17:43Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:17:43Z INFO HostContext] Well known directory 'Diag': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_diag'
+[2024-02-28 11:17:43Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:17:43Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:17:43Z INFO HostContext] Well known directory 'Diag': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_diag'
+[2024-02-28 11:17:43Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:17:43Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:17:43Z INFO HostContext] Well known directory 'Diag': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_diag'
+[2024-02-28 11:17:43Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:17:43Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:17:43Z INFO HostContext] Well known directory 'Diag': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_diag'
+[2024-02-28 11:17:43Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:17:43Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:17:43Z INFO HostContext] Well known directory 'Diag': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_diag'
+[2024-02-28 11:17:43Z INFO JobExtension] Total accessible running process: 308.
+[2024-02-28 11:17:43Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:17:43Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:17:43Z INFO HostContext] Well known directory 'Work': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work'
+[2024-02-28 11:17:43Z INFO JobExtension] Start checking server connectivity.
+[2024-02-28 11:17:43Z INFO JobExtension] Check server connectivity for https://acghubeus0.actions.githubusercontent.com/_apis/health.
+[2024-02-28 11:17:43Z INFO JobExtension] Check server connectivity for https://results-receiver.actions.githubusercontent.com/health.
+[2024-02-28 11:17:43Z INFO JobExtension] Check server connectivity for https://actions-results-receiver-production.githubapp.com/health.
+[2024-02-28 11:17:43Z INFO JobExtension] Check server connectivity for https://pipelinesghubeus6.actions.githubusercontent.com/_apis/health.
+[2024-02-28 11:17:43Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "setup_job",
+  "type": "runner",
+  "stage": "Pre",
+  "stepId": "4c35be2b-a5b0-4983-9ee0-9b25f8c98651",
+  "result": "succeeded",
+  "errorMessages": [],
+  "executionTimeInSeconds": 4,
+  "startTime": "2024-02-28T11:17:39.5158933Z",
+  "finishTime": "2024-02-28T11:17:43.0678048Z"
+}.
+[2024-02-28 11:17:43Z INFO JobRunner] Total job steps: 5.
+[2024-02-28 11:17:43Z INFO JobRunner] Run all job steps.
+[2024-02-28 11:17:43Z INFO StepsRunner] Processing step: DisplayName='Run actions/checkout@v4'
+[2024-02-28 11:17:43Z INFO StepsRunner] Evaluating: success()
+[2024-02-28 11:17:43Z INFO StepsRunner] Result: true
+[2024-02-28 11:17:43Z INFO StepsRunner] Starting the step.
+[2024-02-28 11:17:43Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:17:43Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:17:43Z INFO HostContext] Well known directory 'Work': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work'
+[2024-02-28 11:17:43Z INFO StepsRunner] Which: 'chcp'
+[2024-02-28 11:17:43Z INFO StepsRunner] Location: 'C:\windows\system32\chcp.COM'
+[2024-02-28 11:17:43Z INFO ProcessInvokerWrapper] Starting process:
+[2024-02-28 11:17:43Z INFO ProcessInvokerWrapper]   File name: 'C:\windows\system32\chcp.COM'
+[2024-02-28 11:17:43Z INFO ProcessInvokerWrapper]   Arguments: '65001'
+[2024-02-28 11:17:43Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work'
+[2024-02-28 11:17:43Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2024-02-28 11:17:43Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2024-02-28 11:17:43Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2024-02-28 11:17:43Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2024-02-28 11:17:43Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2024-02-28 11:17:43Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2024-02-28 11:17:43Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2024-02-28 11:17:43Z INFO ProcessInvokerWrapper] Process started with process id 17268, waiting for process exit.
+[2024-02-28 11:17:43Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2024-02-28 11:17:43Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2024-02-28 11:17:43Z INFO ProcessInvokerWrapper] Finished process 17268 with exit code 0, and elapsed time 00:00:00.0300948.
+[2024-02-28 11:17:43Z INFO StepsRunner] Successfully returned to code page 65001 (UTF8)
+[2024-02-28 11:17:43Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:17:43Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:17:43Z INFO HostContext] Well known directory 'Work': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work'
+[2024-02-28 11:17:43Z INFO HostContext] Well known directory 'Actions': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work\_actions'
+[2024-02-28 11:17:43Z INFO ActionManager] Load action that reference repository from 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work\_actions\actions\checkout\v4'
+[2024-02-28 11:17:43Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:17:43Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:17:43Z INFO HostContext] Well known directory 'Work': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work'
+[2024-02-28 11:17:43Z INFO HostContext] Well known directory 'Actions': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work\_actions'
+[2024-02-28 11:17:43Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Checkout",
+  "description": "Checkout a Git repository at a particular version",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 4,
+          "col": 3,
+          "lit": "repository"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 6,
+          "col": 14,
+          "expr": "github.repository"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 7,
+          "col": 3,
+          "lit": "ref"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 12,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 24,
+          "col": 14,
+          "expr": "github.token"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 25,
+          "col": 3,
+          "lit": "ssh-key"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 37,
+          "col": 3,
+          "lit": "ssh-known-hosts"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 42,
+          "col": 3,
+          "lit": "ssh-strict"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 47,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 48,
+          "col": 3,
+          "lit": "persist-credentials"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 50,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 51,
+          "col": 3,
+          "lit": "path"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 53,
+          "col": 3,
+          "lit": "clean"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 55,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 56,
+          "col": 3,
+          "lit": "filter"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 60,
+          "col": 14,
+          "lit": ""
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 61,
+          "col": 3,
+          "lit": "sparse-checkout"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 65,
+          "col": 14,
+          "lit": ""
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 66,
+          "col": 3,
+          "lit": "sparse-checkout-cone-mode"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 69,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 70,
+          "col": 3,
+          "lit": "fetch-depth"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 72,
+          "col": 14,
+          "lit": "1"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 73,
+          "col": 3,
+          "lit": "fetch-tags"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 75,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 76,
+          "col": 3,
+          "lit": "show-progress"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 78,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 79,
+          "col": 3,
+          "lit": "lfs"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 81,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 82,
+          "col": 3,
+          "lit": "submodules"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 90,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 91,
+          "col": 3,
+          "lit": "set-safe-directory"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 93,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 94,
+          "col": 3,
+          "lit": "github-server-url"
+        },
+        "value": ""
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": "dist/index.js",
+    "nodeVersion": "node20",
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2024-02-28 11:17:43Z INFO ActionManager] Action pre node.js file: N/A.
+[2024-02-28 11:17:43Z INFO ActionManager] Action node.js file: dist/index.js.
+[2024-02-28 11:17:43Z INFO ActionManager] Action post node.js file: dist/index.js.
+[2024-02-28 11:17:43Z INFO ExecutionContext] Reserve record order 7 to 12 for post job actions.
+[2024-02-28 11:17:43Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:17:43Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:17:43Z INFO HostContext] Well known directory 'Diag': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_diag'
+[2024-02-28 11:17:43Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:17:43Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:17:43Z INFO HostContext] Well known directory 'Diag': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_diag'
+[2024-02-28 11:17:43Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:17:43Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:17:43Z INFO HostContext] Well known directory 'Work': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work'
+[2024-02-28 11:17:43Z INFO HostContext] Well known directory 'Temp': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work\_temp'
+[2024-02-28 11:17:43Z INFO ExecutionContext] Write event payload to C:\Users\gsss\Downloads\questionBank\actions-runner\_work\_temp\_github_workflow\event.json
+[2024-02-28 11:17:43Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:17:43Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:17:43Z INFO HostContext] Well known directory 'Work': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work'
+[2024-02-28 11:17:43Z INFO HostContext] Well known directory 'Temp': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work\_temp'
+[2024-02-28 11:17:43Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2024-02-28 11:17:43Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.AddPathFileCommand, Runner.Worker
+[2024-02-28 11:17:43Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SetEnvFileCommand, Runner.Worker
+[2024-02-28 11:17:43Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.CreateStepSummaryCommand, Runner.Worker
+[2024-02-28 11:17:43Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SaveStateFileCommand, Runner.Worker
+[2024-02-28 11:17:43Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SetOutputFileCommand, Runner.Worker
+[2024-02-28 11:17:43Z INFO ActionManifestManager] Input 'repository': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 6,
+  "col": 14,
+  "lit": "GopiAgasthia/QBApp"
+}
+[2024-02-28 11:17:43Z INFO ActionManifestManager] Input 'ref': default value evaluate result: ""
+[2024-02-28 11:17:43Z INFO ActionManifestManager] Input 'token': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 24,
+  "col": 14,
+  "lit": "***"
+}
+[2024-02-28 11:17:43Z INFO ActionManifestManager] Input 'ssh-key': default value evaluate result: ""
+[2024-02-28 11:17:43Z INFO ActionManifestManager] Input 'ssh-known-hosts': default value evaluate result: ""
+[2024-02-28 11:17:43Z INFO ActionManifestManager] Input 'ssh-strict': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 47,
+  "col": 14,
+  "lit": "true"
+}
+[2024-02-28 11:17:43Z INFO ActionManifestManager] Input 'persist-credentials': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 50,
+  "col": 14,
+  "lit": "true"
+}
+[2024-02-28 11:17:43Z INFO ActionManifestManager] Input 'path': default value evaluate result: ""
+[2024-02-28 11:17:43Z INFO ActionManifestManager] Input 'clean': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 55,
+  "col": 14,
+  "lit": "true"
+}
+[2024-02-28 11:17:43Z INFO ActionManifestManager] Input 'filter': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 60,
+  "col": 14,
+  "lit": ""
+}
+[2024-02-28 11:17:43Z INFO ActionManifestManager] Input 'sparse-checkout': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 65,
+  "col": 14,
+  "lit": ""
+}
+[2024-02-28 11:17:43Z INFO ActionManifestManager] Input 'sparse-checkout-cone-mode': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 69,
+  "col": 14,
+  "lit": "true"
+}
+[2024-02-28 11:17:43Z INFO ActionManifestManager] Input 'fetch-depth': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 72,
+  "col": 14,
+  "lit": "1"
+}
+[2024-02-28 11:17:43Z INFO ActionManifestManager] Input 'fetch-tags': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 75,
+  "col": 14,
+  "lit": "false"
+}
+[2024-02-28 11:17:43Z INFO ActionManifestManager] Input 'show-progress': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 78,
+  "col": 14,
+  "lit": "true"
+}
+[2024-02-28 11:17:43Z INFO ActionManifestManager] Input 'lfs': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 81,
+  "col": 14,
+  "lit": "false"
+}
+[2024-02-28 11:17:43Z INFO ActionManifestManager] Input 'submodules': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 90,
+  "col": 14,
+  "lit": "false"
+}
+[2024-02-28 11:17:43Z INFO ActionManifestManager] Input 'set-safe-directory': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 93,
+  "col": 14,
+  "lit": "true"
+}
+[2024-02-28 11:17:43Z INFO ActionManifestManager] Input 'github-server-url': default value evaluate result: ""
+[2024-02-28 11:17:43Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2024-02-28 11:17:43Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.InternalPluginSetRepoPathCommandExtension, Runner.Worker
+[2024-02-28 11:17:43Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SetEnvCommandExtension, Runner.Worker
+[2024-02-28 11:17:43Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SetOutputCommandExtension, Runner.Worker
+[2024-02-28 11:17:43Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SaveStateCommandExtension, Runner.Worker
+[2024-02-28 11:17:43Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.AddPathCommandExtension, Runner.Worker
+[2024-02-28 11:17:43Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.AddMaskCommandExtension, Runner.Worker
+[2024-02-28 11:17:43Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.AddMatcherCommandExtension, Runner.Worker
+[2024-02-28 11:17:43Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.RemoveMatcherCommandExtension, Runner.Worker
+[2024-02-28 11:17:43Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.WarningCommandExtension, Runner.Worker
+[2024-02-28 11:17:43Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.ErrorCommandExtension, Runner.Worker
+[2024-02-28 11:17:43Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.NoticeCommandExtension, Runner.Worker
+[2024-02-28 11:17:43Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.DebugCommandExtension, Runner.Worker
+[2024-02-28 11:17:43Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.GroupCommandExtension, Runner.Worker
+[2024-02-28 11:17:43Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.EndGroupCommandExtension, Runner.Worker
+[2024-02-28 11:17:43Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.EchoCommandExtension, Runner.Worker
+[2024-02-28 11:17:43Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2024-02-28 11:17:43Z INFO ActionCommandManager] Register action command extension for command set-env
+[2024-02-28 11:17:43Z INFO ActionCommandManager] Register action command extension for command set-output
+[2024-02-28 11:17:43Z INFO ActionCommandManager] Register action command extension for command save-state
+[2024-02-28 11:17:43Z INFO ActionCommandManager] Register action command extension for command add-path
+[2024-02-28 11:17:43Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2024-02-28 11:17:43Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2024-02-28 11:17:43Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2024-02-28 11:17:43Z INFO ActionCommandManager] Register action command extension for command warning
+[2024-02-28 11:17:43Z INFO ActionCommandManager] Register action command extension for command error
+[2024-02-28 11:17:43Z INFO ActionCommandManager] Register action command extension for command notice
+[2024-02-28 11:17:43Z INFO ActionCommandManager] Register action command extension for command debug
+[2024-02-28 11:17:43Z INFO ActionCommandManager] Register action command extension for command group
+[2024-02-28 11:17:43Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2024-02-28 11:17:43Z INFO JobServerQueue] Try to append 1 batches web console lines for record '4c35be2b-a5b0-4983-9ee0-9b25f8c98651', success rate: 1/1.
+[2024-02-28 11:17:43Z INFO ActionCommandManager] Register action command extension for command echo
+[2024-02-28 11:17:43Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:17:43Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:17:43Z INFO HostContext] Well known directory 'Externals': 'C:\Users\gsss\Downloads\questionBank\actions-runner\externals'
+[2024-02-28 11:17:43Z INFO ProcessInvokerWrapper] Starting process:
+[2024-02-28 11:17:43Z INFO ProcessInvokerWrapper]   File name: 'C:\Users\gsss\Downloads\questionBank\actions-runner\externals\node20\bin\node.exe'
+[2024-02-28 11:17:43Z INFO ProcessInvokerWrapper]   Arguments: '"C:\Users\gsss\Downloads\questionBank\actions-runner\_work\_actions\actions\checkout\v4\dist/index.js"'
+[2024-02-28 11:17:43Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work\QBApp\QBApp'
+[2024-02-28 11:17:43Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2024-02-28 11:17:43Z INFO ProcessInvokerWrapper]   Encoding web name: utf-8 ; code page: '65001'
+[2024-02-28 11:17:43Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2024-02-28 11:17:43Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2024-02-28 11:17:43Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2024-02-28 11:17:43Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2024-02-28 11:17:43Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2024-02-28 11:17:43Z INFO ProcessInvokerWrapper] Process started with process id 3960, waiting for process exit.
+[2024-02-28 11:17:43Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'ba478e42-295a-5352-7229-27bcde7d8679', success rate: 1/1.
+[2024-02-28 11:17:43Z INFO AddMaskCommandExtension] Add new secret mask with length of 76
+[2024-02-28 11:17:43Z INFO JobServerQueue] Got a step log file to send to results service.
+[2024-02-28 11:17:43Z INFO JobServerQueue] Starting upload of step log file to results service ResultsLog, C:\Users\gsss\Downloads\questionBank\actions-runner\_diag\blocks\0488dd85-37c6-42f8-8b76-912b5e321682_4c35be2b-a5b0-4983-9ee0-9b25f8c98651.1
+[2024-02-28 11:17:43Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'ba478e42-295a-5352-7229-27bcde7d8679', success rate: 1/1.
+[2024-02-28 11:17:43Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'ba478e42-295a-5352-7229-27bcde7d8679', success rate: 1/1.
+[2024-02-28 11:17:44Z INFO JobServerQueue] Try to upload 1 log files or attachments, success rate: 1/1.
+[2024-02-28 11:17:45Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'ba478e42-295a-5352-7229-27bcde7d8679', success rate: 1/1.
+[2024-02-28 11:17:45Z INFO JobServerQueue] Tried to upload 1 file(s) to results, success rate: 1/1.
+[2024-02-28 11:17:45Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'ba478e42-295a-5352-7229-27bcde7d8679', success rate: 1/1.
+[2024-02-28 11:17:45Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'ba478e42-295a-5352-7229-27bcde7d8679', success rate: 1/1.
+[2024-02-28 11:17:46Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'ba478e42-295a-5352-7229-27bcde7d8679', success rate: 1/1.
+[2024-02-28 11:17:47Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'ba478e42-295a-5352-7229-27bcde7d8679', success rate: 1/1.
+[2024-02-28 11:17:53Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:17:53Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:17:53Z INFO HostContext] Well known directory 'Work': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work'
+[2024-02-28 11:18:03Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:18:03Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:18:03Z INFO HostContext] Well known directory 'Work': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work'
+[2024-02-28 11:18:06Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'ba478e42-295a-5352-7229-27bcde7d8679', success rate: 1/1.
+[2024-02-28 11:18:08Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'ba478e42-295a-5352-7229-27bcde7d8679', success rate: 1/1.
+[2024-02-28 11:18:08Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2024-02-28 11:18:08Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2024-02-28 11:18:08Z INFO ProcessInvokerWrapper] Finished process 3960 with exit code 0, and elapsed time 00:00:25.7385809.
+[2024-02-28 11:18:08Z INFO CreateStepSummaryCommand] Step Summary file (C:\Users\gsss\Downloads\questionBank\actions-runner\_work\_temp\_runner_file_commands\step_summary_8b968cba-7d19-44f8-95ba-1ec79800b9a4) is empty; skipping attachment upload
+[2024-02-28 11:18:08Z INFO StepsRunner] Step result: 
+[2024-02-28 11:18:08Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "actions/checkout",
+  "ref": "v4",
+  "type": "node20",
+  "stage": "Main",
+  "stepId": "ba478e42-295a-5352-7229-27bcde7d8679",
+  "stepContextName": "__actions_checkout",
+  "hasPreStep": false,
+  "hasPostStep": true,
+  "result": "succeeded",
+  "errorMessages": [
+    "no submodule mapping found in .gitmodules for path 'actions-runner/_work/QBApp/QBApp'",
+    "Unable to clean or reset the repository. The repository will be recreated instead."
+  ],
+  "executionTimeInSeconds": 26,
+  "startTime": "2024-02-28T11:17:43.076519Z",
+  "finishTime": "2024-02-28T11:18:08.9091382Z"
+}.
+[2024-02-28 11:18:08Z INFO StepsRunner] No need for updating job result with current step result 'Succeeded'.
+[2024-02-28 11:18:08Z INFO StepsRunner] Current state: job state = ''
+[2024-02-28 11:18:08Z INFO StepsRunner] Processing step: DisplayName='Login to Docker Hub'
+[2024-02-28 11:18:08Z INFO StepsRunner] Evaluating: success()
+[2024-02-28 11:18:08Z INFO StepsRunner] Result: true
+[2024-02-28 11:18:08Z INFO StepsRunner] Starting the step.
+[2024-02-28 11:18:08Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:18:08Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:18:08Z INFO HostContext] Well known directory 'Work': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work'
+[2024-02-28 11:18:08Z INFO StepsRunner] Which: 'chcp'
+[2024-02-28 11:18:08Z INFO StepsRunner] Location: 'C:\windows\system32\chcp.COM'
+[2024-02-28 11:18:08Z INFO ProcessInvokerWrapper] Starting process:
+[2024-02-28 11:18:08Z INFO ProcessInvokerWrapper]   File name: 'C:\windows\system32\chcp.COM'
+[2024-02-28 11:18:08Z INFO ProcessInvokerWrapper]   Arguments: '65001'
+[2024-02-28 11:18:08Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work'
+[2024-02-28 11:18:08Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2024-02-28 11:18:08Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2024-02-28 11:18:08Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2024-02-28 11:18:08Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2024-02-28 11:18:08Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2024-02-28 11:18:08Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2024-02-28 11:18:08Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2024-02-28 11:18:08Z INFO ProcessInvokerWrapper] Process started with process id 21764, waiting for process exit.
+[2024-02-28 11:18:08Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2024-02-28 11:18:08Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2024-02-28 11:18:08Z INFO ProcessInvokerWrapper] Finished process 21764 with exit code 0, and elapsed time 00:00:00.0248815.
+[2024-02-28 11:18:08Z INFO StepsRunner] Successfully returned to code page 65001 (UTF8)
+[2024-02-28 11:18:08Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:18:08Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:18:08Z INFO HostContext] Well known directory 'Work': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work'
+[2024-02-28 11:18:08Z INFO HostContext] Well known directory 'Actions': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work\_actions'
+[2024-02-28 11:18:08Z INFO ActionManager] Load action that reference repository from 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work\_actions\docker\login-action\v3'
+[2024-02-28 11:18:08Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:18:08Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:18:08Z INFO HostContext] Well known directory 'Work': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work'
+[2024-02-28 11:18:08Z INFO HostContext] Well known directory 'Actions': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work\_actions'
+[2024-02-28 11:18:08Z INFO ActionManifestManager] Ignore action property author.
+[2024-02-28 11:18:08Z INFO ActionManifestManager] Ignore action property branding.
+[2024-02-28 11:18:08Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Docker Login",
+  "description": "GitHub Action to login against a Docker registry",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 10,
+          "col": 3,
+          "lit": "registry"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 13,
+          "col": 3,
+          "lit": "username"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 16,
+          "col": 3,
+          "lit": "password"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 19,
+          "col": 3,
+          "lit": "ecr"
+        },
+        "value": {
+          "type": 0,
+          "file": 3,
+          "line": 21,
+          "col": 14,
+          "lit": "auto"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 23,
+          "col": 3,
+          "lit": "logout"
+        },
+        "value": {
+          "type": 0,
+          "file": 3,
+          "line": 25,
+          "col": 14,
+          "lit": "true"
+        }
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": "dist/index.js",
+    "nodeVersion": "node20",
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2024-02-28 11:18:08Z INFO ActionManager] Action pre node.js file: N/A.
+[2024-02-28 11:18:08Z INFO ActionManager] Action node.js file: dist/index.js.
+[2024-02-28 11:18:08Z INFO ActionManager] Action post node.js file: dist/index.js.
+[2024-02-28 11:18:08Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:18:08Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:18:08Z INFO HostContext] Well known directory 'Diag': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_diag'
+[2024-02-28 11:18:08Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:18:08Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:18:08Z INFO HostContext] Well known directory 'Diag': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_diag'
+[2024-02-28 11:18:08Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:18:08Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:18:08Z INFO HostContext] Well known directory 'Work': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work'
+[2024-02-28 11:18:08Z INFO HostContext] Well known directory 'Temp': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work\_temp'
+[2024-02-28 11:18:08Z INFO ExecutionContext] Write event payload to C:\Users\gsss\Downloads\questionBank\actions-runner\_work\_temp\_github_workflow\event.json
+[2024-02-28 11:18:08Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:18:08Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:18:08Z INFO HostContext] Well known directory 'Work': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work'
+[2024-02-28 11:18:08Z INFO HostContext] Well known directory 'Temp': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work\_temp'
+[2024-02-28 11:18:08Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2024-02-28 11:18:08Z INFO ActionManifestManager] Input 'ecr': default value evaluate result: {
+  "type": 0,
+  "file": 3,
+  "line": 21,
+  "col": 14,
+  "lit": "auto"
+}
+[2024-02-28 11:18:08Z INFO ActionManifestManager] Input 'logout': default value evaluate result: {
+  "type": 0,
+  "file": 3,
+  "line": 25,
+  "col": 14,
+  "lit": "true"
+}
+[2024-02-28 11:18:08Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2024-02-28 11:18:08Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2024-02-28 11:18:08Z INFO ActionCommandManager] Register action command extension for command set-env
+[2024-02-28 11:18:08Z INFO ActionCommandManager] Register action command extension for command set-output
+[2024-02-28 11:18:08Z INFO ActionCommandManager] Register action command extension for command save-state
+[2024-02-28 11:18:08Z INFO ActionCommandManager] Register action command extension for command add-path
+[2024-02-28 11:18:08Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2024-02-28 11:18:08Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2024-02-28 11:18:08Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2024-02-28 11:18:08Z INFO ActionCommandManager] Register action command extension for command warning
+[2024-02-28 11:18:08Z INFO ActionCommandManager] Register action command extension for command error
+[2024-02-28 11:18:08Z INFO ActionCommandManager] Register action command extension for command notice
+[2024-02-28 11:18:08Z INFO ActionCommandManager] Register action command extension for command debug
+[2024-02-28 11:18:08Z INFO ActionCommandManager] Register action command extension for command group
+[2024-02-28 11:18:08Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2024-02-28 11:18:08Z INFO ActionCommandManager] Register action command extension for command echo
+[2024-02-28 11:18:08Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:18:08Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:18:08Z INFO HostContext] Well known directory 'Externals': 'C:\Users\gsss\Downloads\questionBank\actions-runner\externals'
+[2024-02-28 11:18:08Z INFO ProcessInvokerWrapper] Starting process:
+[2024-02-28 11:18:08Z INFO ProcessInvokerWrapper]   File name: 'C:\Users\gsss\Downloads\questionBank\actions-runner\externals\node20\bin\node.exe'
+[2024-02-28 11:18:08Z INFO ProcessInvokerWrapper]   Arguments: '"C:\Users\gsss\Downloads\questionBank\actions-runner\_work\_actions\docker\login-action\v3\dist/index.js"'
+[2024-02-28 11:18:08Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work\QBApp\QBApp'
+[2024-02-28 11:18:08Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2024-02-28 11:18:08Z INFO ProcessInvokerWrapper]   Encoding web name: utf-8 ; code page: '65001'
+[2024-02-28 11:18:08Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2024-02-28 11:18:08Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2024-02-28 11:18:08Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2024-02-28 11:18:08Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2024-02-28 11:18:08Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2024-02-28 11:18:08Z INFO ProcessInvokerWrapper] Process started with process id 3640, waiting for process exit.
+[2024-02-28 11:18:09Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'ba478e42-295a-5352-7229-27bcde7d8679', success rate: 1/1.
+[2024-02-28 11:18:09Z INFO JobServerQueue] Try to append 1 batches web console lines for record '37ae4e0a-1fa9-5c6c-2e65-a13a12178ef9', success rate: 1/1.
+[2024-02-28 11:18:09Z INFO JobServerQueue] Try to append 1 batches web console lines for record '37ae4e0a-1fa9-5c6c-2e65-a13a12178ef9', success rate: 1/1.
+[2024-02-28 11:18:09Z INFO JobServerQueue] Got a step log file to send to results service.
+[2024-02-28 11:18:09Z INFO JobServerQueue] Starting upload of step log file to results service ResultsLog, C:\Users\gsss\Downloads\questionBank\actions-runner\_diag\blocks\0488dd85-37c6-42f8-8b76-912b5e321682_ba478e42-295a-5352-7229-27bcde7d8679.1
+[2024-02-28 11:18:10Z INFO JobServerQueue] Try to upload 1 log files or attachments, success rate: 1/1.
+[2024-02-28 11:18:10Z INFO JobServerQueue] Tried to upload 1 file(s) to results, success rate: 1/1.
+[2024-02-28 11:18:13Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:18:13Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:18:13Z INFO HostContext] Well known directory 'Work': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work'
+[2024-02-28 11:18:20Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2024-02-28 11:18:20Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2024-02-28 11:18:20Z INFO ProcessInvokerWrapper] Finished process 3640 with exit code 0, and elapsed time 00:00:11.5407060.
+[2024-02-28 11:18:20Z INFO CreateStepSummaryCommand] Step Summary file (C:\Users\gsss\Downloads\questionBank\actions-runner\_work\_temp\_runner_file_commands\step_summary_5bf0cc7e-dc26-4bb5-a939-c081339f30b1) is empty; skipping attachment upload
+[2024-02-28 11:18:20Z INFO StepsRunner] Step result: 
+[2024-02-28 11:18:20Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "docker/login-action",
+  "ref": "v3",
+  "type": "node20",
+  "stage": "Main",
+  "stepId": "37ae4e0a-1fa9-5c6c-2e65-a13a12178ef9",
+  "stepContextName": "__docker_login-action",
+  "hasPreStep": false,
+  "hasPostStep": true,
+  "result": "succeeded",
+  "errorMessages": [],
+  "executionTimeInSeconds": 12,
+  "startTime": "2024-02-28T11:18:08.9104104Z",
+  "finishTime": "2024-02-28T11:18:20.4843111Z"
+}.
+[2024-02-28 11:18:20Z INFO StepsRunner] No need for updating job result with current step result 'Succeeded'.
+[2024-02-28 11:18:20Z INFO StepsRunner] Current state: job state = ''
+[2024-02-28 11:18:20Z INFO StepsRunner] Processing step: DisplayName='Pull backend image'
+[2024-02-28 11:18:20Z INFO StepsRunner] Evaluating: success()
+[2024-02-28 11:18:20Z INFO StepsRunner] Result: true
+[2024-02-28 11:18:20Z INFO StepsRunner] Starting the step.
+[2024-02-28 11:18:20Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:18:20Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:18:20Z INFO HostContext] Well known directory 'Work': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work'
+[2024-02-28 11:18:20Z INFO StepsRunner] Which: 'chcp'
+[2024-02-28 11:18:20Z INFO StepsRunner] Location: 'C:\windows\system32\chcp.COM'
+[2024-02-28 11:18:20Z INFO ProcessInvokerWrapper] Starting process:
+[2024-02-28 11:18:20Z INFO ProcessInvokerWrapper]   File name: 'C:\windows\system32\chcp.COM'
+[2024-02-28 11:18:20Z INFO ProcessInvokerWrapper]   Arguments: '65001'
+[2024-02-28 11:18:20Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work'
+[2024-02-28 11:18:20Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2024-02-28 11:18:20Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2024-02-28 11:18:20Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2024-02-28 11:18:20Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2024-02-28 11:18:20Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2024-02-28 11:18:20Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2024-02-28 11:18:20Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2024-02-28 11:18:20Z INFO ProcessInvokerWrapper] Process started with process id 18356, waiting for process exit.
+[2024-02-28 11:18:20Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2024-02-28 11:18:20Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2024-02-28 11:18:20Z INFO ProcessInvokerWrapper] Finished process 18356 with exit code 0, and elapsed time 00:00:00.0288841.
+[2024-02-28 11:18:20Z INFO StepsRunner] Successfully returned to code page 65001 (UTF8)
+[2024-02-28 11:18:20Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:18:20Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:18:20Z INFO HostContext] Well known directory 'Work': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work'
+[2024-02-28 11:18:20Z INFO HostContext] Well known directory 'Temp': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work\_temp'
+[2024-02-28 11:18:20Z INFO ExecutionContext] Write event payload to C:\Users\gsss\Downloads\questionBank\actions-runner\_work\_temp\_github_workflow\event.json
+[2024-02-28 11:18:20Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:18:20Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:18:20Z INFO HostContext] Well known directory 'Work': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work'
+[2024-02-28 11:18:20Z INFO HostContext] Well known directory 'Temp': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work\_temp'
+[2024-02-28 11:18:20Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2024-02-28 11:18:20Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2024-02-28 11:18:20Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2024-02-28 11:18:20Z INFO ActionCommandManager] Register action command extension for command set-env
+[2024-02-28 11:18:20Z INFO ActionCommandManager] Register action command extension for command set-output
+[2024-02-28 11:18:20Z INFO ActionCommandManager] Register action command extension for command save-state
+[2024-02-28 11:18:20Z INFO ActionCommandManager] Register action command extension for command add-path
+[2024-02-28 11:18:20Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2024-02-28 11:18:20Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2024-02-28 11:18:20Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2024-02-28 11:18:20Z INFO ActionCommandManager] Register action command extension for command warning
+[2024-02-28 11:18:20Z INFO ActionCommandManager] Register action command extension for command error
+[2024-02-28 11:18:20Z INFO ActionCommandManager] Register action command extension for command notice
+[2024-02-28 11:18:20Z INFO ActionCommandManager] Register action command extension for command debug
+[2024-02-28 11:18:20Z INFO ActionCommandManager] Register action command extension for command group
+[2024-02-28 11:18:20Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2024-02-28 11:18:20Z INFO ActionCommandManager] Register action command extension for command echo
+[2024-02-28 11:18:20Z INFO ScriptHandler] Which2: 'pwsh'
+[2024-02-28 11:18:20Z INFO ScriptHandler] pwsh: command not found. Make sure 'pwsh' is installed and its location included in the 'Path' environment variable.
+[2024-02-28 11:18:20Z INFO ScriptHandler] Defaulting to powershell
+[2024-02-28 11:18:20Z INFO ScriptHandler] Which2: 'powershell'
+[2024-02-28 11:18:20Z INFO ScriptHandler] Location: 'C:\windows\System32\WindowsPowerShell\v1.0\powershell.EXE'
+[2024-02-28 11:18:20Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:18:20Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:18:20Z INFO HostContext] Well known directory 'Work': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work'
+[2024-02-28 11:18:20Z INFO HostContext] Well known directory 'Temp': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work\_temp'
+[2024-02-28 11:18:20Z INFO ScriptHandler] Which2: 'pwsh'
+[2024-02-28 11:18:20Z INFO ScriptHandler] pwsh: command not found. Make sure 'pwsh' is installed and its location included in the 'Path' environment variable.
+[2024-02-28 11:18:20Z INFO ScriptHandler] Defaulting to powershell
+[2024-02-28 11:18:20Z INFO ScriptHandler] Which2: 'powershell'
+[2024-02-28 11:18:20Z INFO ScriptHandler] Location: 'C:\windows\System32\WindowsPowerShell\v1.0\powershell.EXE'
+[2024-02-28 11:18:20Z INFO ProcessInvokerWrapper] Starting process:
+[2024-02-28 11:18:20Z INFO ProcessInvokerWrapper]   File name: 'C:\windows\System32\WindowsPowerShell\v1.0\powershell.EXE'
+[2024-02-28 11:18:20Z INFO ProcessInvokerWrapper]   Arguments: '-command ". 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work\_temp\8f6a05a8-6bd1-49c8-a971-a7a4465e70c9.ps1'"'
+[2024-02-28 11:18:20Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work\QBApp\QBApp'
+[2024-02-28 11:18:20Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2024-02-28 11:18:20Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2024-02-28 11:18:20Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2024-02-28 11:18:20Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2024-02-28 11:18:20Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2024-02-28 11:18:20Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2024-02-28 11:18:20Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2024-02-28 11:18:20Z INFO ProcessInvokerWrapper] Process started with process id 14208, waiting for process exit.
+[2024-02-28 11:18:20Z INFO JobServerQueue] Got a step log file to send to results service.
+[2024-02-28 11:18:20Z INFO JobServerQueue] Starting upload of step log file to results service ResultsLog, C:\Users\gsss\Downloads\questionBank\actions-runner\_diag\blocks\0488dd85-37c6-42f8-8b76-912b5e321682_37ae4e0a-1fa9-5c6c-2e65-a13a12178ef9.1
+[2024-02-28 11:18:20Z INFO JobServerQueue] Try to append 1 batches web console lines for record '37ae4e0a-1fa9-5c6c-2e65-a13a12178ef9', success rate: 1/1.
+[2024-02-28 11:18:20Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'd54fcd28-d409-5f75-9279-d772843b7d79', success rate: 1/1.
+[2024-02-28 11:18:21Z INFO JobServerQueue] Tried to upload 1 file(s) to results, success rate: 1/1.
+[2024-02-28 11:18:21Z INFO JobServerQueue] Try to upload 1 log files or attachments, success rate: 1/1.
+[2024-02-28 11:18:23Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:18:23Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:18:23Z INFO HostContext] Well known directory 'Work': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work'
+[2024-02-28 11:18:33Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:18:33Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:18:33Z INFO HostContext] Well known directory 'Work': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work'
+[2024-02-28 11:18:33Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'd54fcd28-d409-5f75-9279-d772843b7d79', success rate: 1/1.
+[2024-02-28 11:18:40Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'd54fcd28-d409-5f75-9279-d772843b7d79', success rate: 1/1.
+[2024-02-28 11:18:41Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'd54fcd28-d409-5f75-9279-d772843b7d79', success rate: 1/1.
+[2024-02-28 11:18:41Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2024-02-28 11:18:41Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2024-02-28 11:18:41Z INFO ProcessInvokerWrapper] Finished process 14208 with exit code 0, and elapsed time 00:00:20.6966214.
+[2024-02-28 11:18:41Z INFO CreateStepSummaryCommand] Step Summary file (C:\Users\gsss\Downloads\questionBank\actions-runner\_work\_temp\_runner_file_commands\step_summary_a5543629-ca0e-4645-92c8-caf1a49d8012) is empty; skipping attachment upload
+[2024-02-28 11:18:41Z INFO StepsRunner] Step result: 
+[2024-02-28 11:18:41Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "powershell",
+  "type": "run",
+  "stage": "Main",
+  "stepId": "d54fcd28-d409-5f75-9279-d772843b7d79",
+  "stepContextName": "__run",
+  "result": "succeeded",
+  "errorMessages": [],
+  "executionTimeInSeconds": 21,
+  "startTime": "2024-02-28T11:18:20.484995Z",
+  "finishTime": "2024-02-28T11:18:41.230057Z"
+}.
+[2024-02-28 11:18:41Z INFO StepsRunner] No need for updating job result with current step result 'Succeeded'.
+[2024-02-28 11:18:41Z INFO StepsRunner] Current state: job state = ''
+[2024-02-28 11:18:41Z INFO StepsRunner] Processing step: DisplayName='Pull frontend image'
+[2024-02-28 11:18:41Z INFO StepsRunner] Evaluating: success()
+[2024-02-28 11:18:41Z INFO StepsRunner] Result: true
+[2024-02-28 11:18:41Z INFO StepsRunner] Starting the step.
+[2024-02-28 11:18:41Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:18:41Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:18:41Z INFO HostContext] Well known directory 'Work': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work'
+[2024-02-28 11:18:41Z INFO StepsRunner] Which: 'chcp'
+[2024-02-28 11:18:41Z INFO StepsRunner] Location: 'C:\windows\system32\chcp.COM'
+[2024-02-28 11:18:41Z INFO ProcessInvokerWrapper] Starting process:
+[2024-02-28 11:18:41Z INFO ProcessInvokerWrapper]   File name: 'C:\windows\system32\chcp.COM'
+[2024-02-28 11:18:41Z INFO ProcessInvokerWrapper]   Arguments: '65001'
+[2024-02-28 11:18:41Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work'
+[2024-02-28 11:18:41Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2024-02-28 11:18:41Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2024-02-28 11:18:41Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2024-02-28 11:18:41Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2024-02-28 11:18:41Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2024-02-28 11:18:41Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2024-02-28 11:18:41Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2024-02-28 11:18:41Z INFO ProcessInvokerWrapper] Process started with process id 7516, waiting for process exit.
+[2024-02-28 11:18:41Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2024-02-28 11:18:41Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2024-02-28 11:18:41Z INFO ProcessInvokerWrapper] Finished process 7516 with exit code 0, and elapsed time 00:00:00.0253076.
+[2024-02-28 11:18:41Z INFO StepsRunner] Successfully returned to code page 65001 (UTF8)
+[2024-02-28 11:18:41Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:18:41Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:18:41Z INFO HostContext] Well known directory 'Work': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work'
+[2024-02-28 11:18:41Z INFO HostContext] Well known directory 'Temp': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work\_temp'
+[2024-02-28 11:18:41Z INFO ExecutionContext] Write event payload to C:\Users\gsss\Downloads\questionBank\actions-runner\_work\_temp\_github_workflow\event.json
+[2024-02-28 11:18:41Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:18:41Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:18:41Z INFO HostContext] Well known directory 'Work': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work'
+[2024-02-28 11:18:41Z INFO HostContext] Well known directory 'Temp': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work\_temp'
+[2024-02-28 11:18:41Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2024-02-28 11:18:41Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2024-02-28 11:18:41Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2024-02-28 11:18:41Z INFO ActionCommandManager] Register action command extension for command set-env
+[2024-02-28 11:18:41Z INFO ActionCommandManager] Register action command extension for command set-output
+[2024-02-28 11:18:41Z INFO ActionCommandManager] Register action command extension for command save-state
+[2024-02-28 11:18:41Z INFO ActionCommandManager] Register action command extension for command add-path
+[2024-02-28 11:18:41Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2024-02-28 11:18:41Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2024-02-28 11:18:41Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2024-02-28 11:18:41Z INFO ActionCommandManager] Register action command extension for command warning
+[2024-02-28 11:18:41Z INFO ActionCommandManager] Register action command extension for command error
+[2024-02-28 11:18:41Z INFO ActionCommandManager] Register action command extension for command notice
+[2024-02-28 11:18:41Z INFO ActionCommandManager] Register action command extension for command debug
+[2024-02-28 11:18:41Z INFO ActionCommandManager] Register action command extension for command group
+[2024-02-28 11:18:41Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2024-02-28 11:18:41Z INFO ActionCommandManager] Register action command extension for command echo
+[2024-02-28 11:18:41Z INFO ScriptHandler] Which2: 'pwsh'
+[2024-02-28 11:18:41Z INFO ScriptHandler] pwsh: command not found. Make sure 'pwsh' is installed and its location included in the 'Path' environment variable.
+[2024-02-28 11:18:41Z INFO ScriptHandler] Defaulting to powershell
+[2024-02-28 11:18:41Z INFO ScriptHandler] Which2: 'powershell'
+[2024-02-28 11:18:41Z INFO ScriptHandler] Location: 'C:\windows\System32\WindowsPowerShell\v1.0\powershell.EXE'
+[2024-02-28 11:18:41Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:18:41Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:18:41Z INFO HostContext] Well known directory 'Work': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work'
+[2024-02-28 11:18:41Z INFO HostContext] Well known directory 'Temp': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work\_temp'
+[2024-02-28 11:18:41Z INFO ScriptHandler] Which2: 'pwsh'
+[2024-02-28 11:18:41Z INFO ScriptHandler] pwsh: command not found. Make sure 'pwsh' is installed and its location included in the 'Path' environment variable.
+[2024-02-28 11:18:41Z INFO ScriptHandler] Defaulting to powershell
+[2024-02-28 11:18:41Z INFO ScriptHandler] Which2: 'powershell'
+[2024-02-28 11:18:41Z INFO ScriptHandler] Location: 'C:\windows\System32\WindowsPowerShell\v1.0\powershell.EXE'
+[2024-02-28 11:18:41Z INFO ProcessInvokerWrapper] Starting process:
+[2024-02-28 11:18:41Z INFO ProcessInvokerWrapper]   File name: 'C:\windows\System32\WindowsPowerShell\v1.0\powershell.EXE'
+[2024-02-28 11:18:41Z INFO ProcessInvokerWrapper]   Arguments: '-command ". 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work\_temp\5c2d6e57-94c2-4ede-942a-302a13ab5140.ps1'"'
+[2024-02-28 11:18:41Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work\QBApp\QBApp'
+[2024-02-28 11:18:41Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2024-02-28 11:18:41Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2024-02-28 11:18:41Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2024-02-28 11:18:41Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2024-02-28 11:18:41Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2024-02-28 11:18:41Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2024-02-28 11:18:41Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2024-02-28 11:18:41Z INFO ProcessInvokerWrapper] Process started with process id 18464, waiting for process exit.
+[2024-02-28 11:18:41Z INFO JobServerQueue] Try to append 1 batches web console lines for record '39cfc694-5cbb-5e12-3c84-0f9141e89cbf', success rate: 1/1.
+[2024-02-28 11:18:41Z INFO JobServerQueue] Got a step log file to send to results service.
+[2024-02-28 11:18:41Z INFO JobServerQueue] Starting upload of step log file to results service ResultsLog, C:\Users\gsss\Downloads\questionBank\actions-runner\_diag\blocks\0488dd85-37c6-42f8-8b76-912b5e321682_d54fcd28-d409-5f75-9279-d772843b7d79.1
+[2024-02-28 11:18:42Z INFO JobServerQueue] Stop aggressive process web console line queue.
+[2024-02-28 11:18:42Z INFO JobServerQueue] Try to upload 1 log files or attachments, success rate: 1/1.
+[2024-02-28 11:18:42Z INFO JobServerQueue] Tried to upload 1 file(s) to results, success rate: 1/1.
+[2024-02-28 11:18:43Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:18:43Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:18:43Z INFO HostContext] Well known directory 'Work': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work'
+[2024-02-28 11:18:53Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:18:53Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:18:53Z INFO HostContext] Well known directory 'Work': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work'
+[2024-02-28 11:18:54Z INFO JobServerQueue] Try to append 1 batches web console lines for record '39cfc694-5cbb-5e12-3c84-0f9141e89cbf', success rate: 1/1.
+[2024-02-28 11:18:59Z INFO JobServerQueue] Try to append 1 batches web console lines for record '39cfc694-5cbb-5e12-3c84-0f9141e89cbf', success rate: 1/1.
+[2024-02-28 11:18:59Z INFO JobServerQueue] Try to append 1 batches web console lines for record '39cfc694-5cbb-5e12-3c84-0f9141e89cbf', success rate: 1/1.
+[2024-02-28 11:19:03Z INFO JobServerQueue] Try to append 1 batches web console lines for record '39cfc694-5cbb-5e12-3c84-0f9141e89cbf', success rate: 1/1.
+[2024-02-28 11:19:03Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:19:03Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:19:03Z INFO HostContext] Well known directory 'Work': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work'
+[2024-02-28 11:19:03Z INFO JobServerQueue] Try to append 1 batches web console lines for record '39cfc694-5cbb-5e12-3c84-0f9141e89cbf', success rate: 1/1.
+[2024-02-28 11:19:05Z INFO JobServerQueue] Try to append 1 batches web console lines for record '39cfc694-5cbb-5e12-3c84-0f9141e89cbf', success rate: 1/1.
+[2024-02-28 11:19:08Z INFO JobServerQueue] Try to append 1 batches web console lines for record '39cfc694-5cbb-5e12-3c84-0f9141e89cbf', success rate: 1/1.
+[2024-02-28 11:19:12Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2024-02-28 11:19:12Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2024-02-28 11:19:12Z INFO ProcessInvokerWrapper] Finished process 18464 with exit code 0, and elapsed time 00:00:30.8952542.
+[2024-02-28 11:19:12Z INFO CreateStepSummaryCommand] Step Summary file (C:\Users\gsss\Downloads\questionBank\actions-runner\_work\_temp\_runner_file_commands\step_summary_cda377ed-e222-4663-8ddd-fb4d735fd614) is empty; skipping attachment upload
+[2024-02-28 11:19:12Z INFO StepsRunner] Step result: 
+[2024-02-28 11:19:12Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "powershell",
+  "type": "run",
+  "stage": "Main",
+  "stepId": "39cfc694-5cbb-5e12-3c84-0f9141e89cbf",
+  "stepContextName": "__run_2",
+  "result": "succeeded",
+  "errorMessages": [],
+  "executionTimeInSeconds": 31,
+  "startTime": "2024-02-28T11:18:41.2306606Z",
+  "finishTime": "2024-02-28T11:19:12.1614767Z"
+}.
+[2024-02-28 11:19:12Z INFO StepsRunner] No need for updating job result with current step result 'Succeeded'.
+[2024-02-28 11:19:12Z INFO StepsRunner] Current state: job state = ''
+[2024-02-28 11:19:12Z INFO StepsRunner] Processing step: DisplayName='Set up Docker Compose again'
+[2024-02-28 11:19:12Z INFO StepsRunner] Evaluating: success()
+[2024-02-28 11:19:12Z INFO StepsRunner] Result: true
+[2024-02-28 11:19:12Z INFO StepsRunner] Starting the step.
+[2024-02-28 11:19:12Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:19:12Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:19:12Z INFO HostContext] Well known directory 'Work': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work'
+[2024-02-28 11:19:12Z INFO StepsRunner] Which: 'chcp'
+[2024-02-28 11:19:12Z INFO StepsRunner] Location: 'C:\windows\system32\chcp.COM'
+[2024-02-28 11:19:12Z INFO ProcessInvokerWrapper] Starting process:
+[2024-02-28 11:19:12Z INFO ProcessInvokerWrapper]   File name: 'C:\windows\system32\chcp.COM'
+[2024-02-28 11:19:12Z INFO ProcessInvokerWrapper]   Arguments: '65001'
+[2024-02-28 11:19:12Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work'
+[2024-02-28 11:19:12Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2024-02-28 11:19:12Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2024-02-28 11:19:12Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2024-02-28 11:19:12Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2024-02-28 11:19:12Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2024-02-28 11:19:12Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2024-02-28 11:19:12Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2024-02-28 11:19:12Z INFO ProcessInvokerWrapper] Process started with process id 23756, waiting for process exit.
+[2024-02-28 11:19:12Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2024-02-28 11:19:12Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2024-02-28 11:19:12Z INFO ProcessInvokerWrapper] Finished process 23756 with exit code 0, and elapsed time 00:00:00.0251864.
+[2024-02-28 11:19:12Z INFO StepsRunner] Successfully returned to code page 65001 (UTF8)
+[2024-02-28 11:19:12Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:19:12Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:19:12Z INFO HostContext] Well known directory 'Work': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work'
+[2024-02-28 11:19:12Z INFO HostContext] Well known directory 'Temp': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work\_temp'
+[2024-02-28 11:19:12Z INFO ExecutionContext] Write event payload to C:\Users\gsss\Downloads\questionBank\actions-runner\_work\_temp\_github_workflow\event.json
+[2024-02-28 11:19:12Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:19:12Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:19:12Z INFO HostContext] Well known directory 'Work': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work'
+[2024-02-28 11:19:12Z INFO HostContext] Well known directory 'Temp': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work\_temp'
+[2024-02-28 11:19:12Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2024-02-28 11:19:12Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2024-02-28 11:19:12Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2024-02-28 11:19:12Z INFO ActionCommandManager] Register action command extension for command set-env
+[2024-02-28 11:19:12Z INFO ActionCommandManager] Register action command extension for command set-output
+[2024-02-28 11:19:12Z INFO ActionCommandManager] Register action command extension for command save-state
+[2024-02-28 11:19:12Z INFO ActionCommandManager] Register action command extension for command add-path
+[2024-02-28 11:19:12Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2024-02-28 11:19:12Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2024-02-28 11:19:12Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2024-02-28 11:19:12Z INFO ActionCommandManager] Register action command extension for command warning
+[2024-02-28 11:19:12Z INFO ActionCommandManager] Register action command extension for command error
+[2024-02-28 11:19:12Z INFO ActionCommandManager] Register action command extension for command notice
+[2024-02-28 11:19:12Z INFO ActionCommandManager] Register action command extension for command debug
+[2024-02-28 11:19:12Z INFO ActionCommandManager] Register action command extension for command group
+[2024-02-28 11:19:12Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2024-02-28 11:19:12Z INFO ActionCommandManager] Register action command extension for command echo
+[2024-02-28 11:19:12Z INFO ScriptHandler] Which2: 'pwsh'
+[2024-02-28 11:19:12Z INFO ScriptHandler] pwsh: command not found. Make sure 'pwsh' is installed and its location included in the 'Path' environment variable.
+[2024-02-28 11:19:12Z INFO ScriptHandler] Defaulting to powershell
+[2024-02-28 11:19:12Z INFO ScriptHandler] Which2: 'powershell'
+[2024-02-28 11:19:12Z INFO ScriptHandler] Location: 'C:\windows\System32\WindowsPowerShell\v1.0\powershell.EXE'
+[2024-02-28 11:19:12Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:19:12Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:19:12Z INFO HostContext] Well known directory 'Work': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work'
+[2024-02-28 11:19:12Z INFO HostContext] Well known directory 'Temp': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work\_temp'
+[2024-02-28 11:19:12Z INFO ScriptHandler] Which2: 'pwsh'
+[2024-02-28 11:19:12Z INFO ScriptHandler] pwsh: command not found. Make sure 'pwsh' is installed and its location included in the 'Path' environment variable.
+[2024-02-28 11:19:12Z INFO ScriptHandler] Defaulting to powershell
+[2024-02-28 11:19:12Z INFO ScriptHandler] Which2: 'powershell'
+[2024-02-28 11:19:12Z INFO ScriptHandler] Location: 'C:\windows\System32\WindowsPowerShell\v1.0\powershell.EXE'
+[2024-02-28 11:19:12Z INFO ProcessInvokerWrapper] Starting process:
+[2024-02-28 11:19:12Z INFO ProcessInvokerWrapper]   File name: 'C:\windows\System32\WindowsPowerShell\v1.0\powershell.EXE'
+[2024-02-28 11:19:12Z INFO ProcessInvokerWrapper]   Arguments: '-command ". 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work\_temp\13c16bf0-16a2-4f56-92c3-c93b586d87ee.ps1'"'
+[2024-02-28 11:19:12Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work\QBApp\QBApp'
+[2024-02-28 11:19:12Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2024-02-28 11:19:12Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2024-02-28 11:19:12Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2024-02-28 11:19:12Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2024-02-28 11:19:12Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2024-02-28 11:19:12Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2024-02-28 11:19:12Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2024-02-28 11:19:12Z INFO JobServerQueue] Try to append 1 batches web console lines for record '39cfc694-5cbb-5e12-3c84-0f9141e89cbf', success rate: 1/1.
+[2024-02-28 11:19:12Z INFO JobServerQueue] Try to append 1 batches web console lines for record '296d5370-bf7e-51e1-9d6b-c9340fae4e8b', success rate: 1/1.
+[2024-02-28 11:19:12Z INFO ProcessInvokerWrapper] Process started with process id 8288, waiting for process exit.
+[2024-02-28 11:19:12Z INFO JobServerQueue] Try to append 1 batches web console lines for record '296d5370-bf7e-51e1-9d6b-c9340fae4e8b', success rate: 1/1.
+[2024-02-28 11:19:12Z INFO JobServerQueue] Got a step log file to send to results service.
+[2024-02-28 11:19:12Z INFO JobServerQueue] Starting upload of step log file to results service ResultsLog, C:\Users\gsss\Downloads\questionBank\actions-runner\_diag\blocks\0488dd85-37c6-42f8-8b76-912b5e321682_39cfc694-5cbb-5e12-3c84-0f9141e89cbf.1
+[2024-02-28 11:19:13Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:19:13Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:19:13Z INFO HostContext] Well known directory 'Work': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work'
+[2024-02-28 11:19:13Z INFO JobServerQueue] Try to upload 1 log files or attachments, success rate: 1/1.
+[2024-02-28 11:19:14Z INFO JobServerQueue] Tried to upload 1 file(s) to results, success rate: 1/1.
+[2024-02-28 11:19:14Z INFO JobServerQueue] Try to append 1 batches web console lines for record '296d5370-bf7e-51e1-9d6b-c9340fae4e8b', success rate: 1/1.
+[2024-02-28 11:19:14Z INFO JobServerQueue] Try to append 1 batches web console lines for record '296d5370-bf7e-51e1-9d6b-c9340fae4e8b', success rate: 1/1.
+[2024-02-28 11:19:15Z INFO JobServerQueue] Try to append 1 batches web console lines for record '296d5370-bf7e-51e1-9d6b-c9340fae4e8b', success rate: 1/1.
+[2024-02-28 11:19:15Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2024-02-28 11:19:15Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2024-02-28 11:19:15Z INFO ProcessInvokerWrapper] Finished process 8288 with exit code 0, and elapsed time 00:00:03.5319146.
+[2024-02-28 11:19:15Z INFO CreateStepSummaryCommand] Step Summary file (C:\Users\gsss\Downloads\questionBank\actions-runner\_work\_temp\_runner_file_commands\step_summary_d69de585-41c6-4802-875f-c91c8cb6b15c) is empty; skipping attachment upload
+[2024-02-28 11:19:15Z INFO StepsRunner] Step result: 
+[2024-02-28 11:19:15Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "powershell",
+  "type": "run",
+  "stage": "Main",
+  "stepId": "296d5370-bf7e-51e1-9d6b-c9340fae4e8b",
+  "stepContextName": "__run_3",
+  "result": "succeeded",
+  "errorMessages": [],
+  "executionTimeInSeconds": 4,
+  "startTime": "2024-02-28T11:19:12.1621027Z",
+  "finishTime": "2024-02-28T11:19:15.7303488Z"
+}.
+[2024-02-28 11:19:15Z INFO StepsRunner] No need for updating job result with current step result 'Succeeded'.
+[2024-02-28 11:19:15Z INFO StepsRunner] Current state: job state = ''
+[2024-02-28 11:19:15Z INFO StepsRunner] Processing step: DisplayName='Post Login to Docker Hub'
+[2024-02-28 11:19:15Z INFO StepsRunner] Evaluating: always()
+[2024-02-28 11:19:15Z INFO StepsRunner] Result: true
+[2024-02-28 11:19:15Z INFO StepsRunner] Starting the step.
+[2024-02-28 11:19:15Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:19:15Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:19:15Z INFO HostContext] Well known directory 'Work': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work'
+[2024-02-28 11:19:15Z INFO StepsRunner] Which: 'chcp'
+[2024-02-28 11:19:15Z INFO StepsRunner] Location: 'C:\windows\system32\chcp.COM'
+[2024-02-28 11:19:15Z INFO ProcessInvokerWrapper] Starting process:
+[2024-02-28 11:19:15Z INFO ProcessInvokerWrapper]   File name: 'C:\windows\system32\chcp.COM'
+[2024-02-28 11:19:15Z INFO ProcessInvokerWrapper]   Arguments: '65001'
+[2024-02-28 11:19:15Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work'
+[2024-02-28 11:19:15Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2024-02-28 11:19:15Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2024-02-28 11:19:15Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2024-02-28 11:19:15Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2024-02-28 11:19:15Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2024-02-28 11:19:15Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2024-02-28 11:19:15Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2024-02-28 11:19:15Z INFO ProcessInvokerWrapper] Process started with process id 15868, waiting for process exit.
+[2024-02-28 11:19:15Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2024-02-28 11:19:15Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2024-02-28 11:19:15Z INFO ProcessInvokerWrapper] Finished process 15868 with exit code 0, and elapsed time 00:00:00.0317877.
+[2024-02-28 11:19:15Z INFO StepsRunner] Successfully returned to code page 65001 (UTF8)
+[2024-02-28 11:19:15Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:19:15Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:19:15Z INFO HostContext] Well known directory 'Work': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work'
+[2024-02-28 11:19:15Z INFO HostContext] Well known directory 'Actions': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work\_actions'
+[2024-02-28 11:19:15Z INFO ActionManager] Load action that reference repository from 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work\_actions\docker\login-action\v3'
+[2024-02-28 11:19:15Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:19:15Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:19:15Z INFO HostContext] Well known directory 'Work': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work'
+[2024-02-28 11:19:15Z INFO HostContext] Well known directory 'Actions': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work\_actions'
+[2024-02-28 11:19:15Z INFO ActionManifestManager] Ignore action property author.
+[2024-02-28 11:19:15Z INFO ActionManifestManager] Ignore action property branding.
+[2024-02-28 11:19:15Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Docker Login",
+  "description": "GitHub Action to login against a Docker registry",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 10,
+          "col": 3,
+          "lit": "registry"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 13,
+          "col": 3,
+          "lit": "username"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 16,
+          "col": 3,
+          "lit": "password"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 19,
+          "col": 3,
+          "lit": "ecr"
+        },
+        "value": {
+          "type": 0,
+          "file": 3,
+          "line": 21,
+          "col": 14,
+          "lit": "auto"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 23,
+          "col": 3,
+          "lit": "logout"
+        },
+        "value": {
+          "type": 0,
+          "file": 3,
+          "line": 25,
+          "col": 14,
+          "lit": "true"
+        }
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": "dist/index.js",
+    "nodeVersion": "node20",
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2024-02-28 11:19:15Z INFO ActionManager] Action pre node.js file: N/A.
+[2024-02-28 11:19:15Z INFO ActionManager] Action node.js file: dist/index.js.
+[2024-02-28 11:19:15Z INFO ActionManager] Action post node.js file: dist/index.js.
+[2024-02-28 11:19:15Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:19:15Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:19:15Z INFO HostContext] Well known directory 'Work': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work'
+[2024-02-28 11:19:15Z INFO HostContext] Well known directory 'Temp': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work\_temp'
+[2024-02-28 11:19:15Z INFO ExecutionContext] Write event payload to C:\Users\gsss\Downloads\questionBank\actions-runner\_work\_temp\_github_workflow\event.json
+[2024-02-28 11:19:15Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:19:15Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:19:15Z INFO HostContext] Well known directory 'Work': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work'
+[2024-02-28 11:19:15Z INFO HostContext] Well known directory 'Temp': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work\_temp'
+[2024-02-28 11:19:15Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2024-02-28 11:19:15Z INFO JobServerQueue] Try to append 1 batches web console lines for record '296d5370-bf7e-51e1-9d6b-c9340fae4e8b', success rate: 1/1.
+[2024-02-28 11:19:15Z INFO ActionManifestManager] Input 'ecr': default value evaluate result: {
+  "type": 0,
+  "file": 3,
+  "line": 21,
+  "col": 14,
+  "lit": "auto"
+}
+[2024-02-28 11:19:15Z INFO ActionManifestManager] Input 'logout': default value evaluate result: {
+  "type": 0,
+  "file": 3,
+  "line": 25,
+  "col": 14,
+  "lit": "true"
+}
+[2024-02-28 11:19:15Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2024-02-28 11:19:15Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2024-02-28 11:19:15Z INFO ActionCommandManager] Register action command extension for command set-env
+[2024-02-28 11:19:15Z INFO ActionCommandManager] Register action command extension for command set-output
+[2024-02-28 11:19:15Z INFO ActionCommandManager] Register action command extension for command save-state
+[2024-02-28 11:19:15Z INFO ActionCommandManager] Register action command extension for command add-path
+[2024-02-28 11:19:15Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2024-02-28 11:19:15Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2024-02-28 11:19:15Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2024-02-28 11:19:15Z INFO ActionCommandManager] Register action command extension for command warning
+[2024-02-28 11:19:15Z INFO ActionCommandManager] Register action command extension for command error
+[2024-02-28 11:19:15Z INFO ActionCommandManager] Register action command extension for command notice
+[2024-02-28 11:19:15Z INFO ActionCommandManager] Register action command extension for command debug
+[2024-02-28 11:19:15Z INFO ActionCommandManager] Register action command extension for command group
+[2024-02-28 11:19:15Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2024-02-28 11:19:15Z INFO ActionCommandManager] Register action command extension for command echo
+[2024-02-28 11:19:15Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:19:15Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:19:15Z INFO HostContext] Well known directory 'Externals': 'C:\Users\gsss\Downloads\questionBank\actions-runner\externals'
+[2024-02-28 11:19:15Z INFO ProcessInvokerWrapper] Starting process:
+[2024-02-28 11:19:15Z INFO ProcessInvokerWrapper]   File name: 'C:\Users\gsss\Downloads\questionBank\actions-runner\externals\node20\bin\node.exe'
+[2024-02-28 11:19:15Z INFO ProcessInvokerWrapper]   Arguments: '"C:\Users\gsss\Downloads\questionBank\actions-runner\_work\_actions\docker\login-action\v3\dist/index.js"'
+[2024-02-28 11:19:15Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work\QBApp\QBApp'
+[2024-02-28 11:19:15Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2024-02-28 11:19:15Z INFO ProcessInvokerWrapper]   Encoding web name: utf-8 ; code page: '65001'
+[2024-02-28 11:19:15Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2024-02-28 11:19:15Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2024-02-28 11:19:15Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2024-02-28 11:19:15Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2024-02-28 11:19:15Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2024-02-28 11:19:15Z INFO ProcessInvokerWrapper] Process started with process id 15000, waiting for process exit.
+[2024-02-28 11:19:16Z INFO JobServerQueue] Got a step log file to send to results service.
+[2024-02-28 11:19:16Z INFO JobServerQueue] Starting upload of step log file to results service ResultsLog, C:\Users\gsss\Downloads\questionBank\actions-runner\_diag\blocks\0488dd85-37c6-42f8-8b76-912b5e321682_296d5370-bf7e-51e1-9d6b-c9340fae4e8b.1
+[2024-02-28 11:19:16Z INFO JobServerQueue] Try to append 1 batches web console lines for record '80a5c9fb-e1b9-4d5a-8c67-79adcdd40bdd', success rate: 1/1.
+[2024-02-28 11:19:16Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2024-02-28 11:19:16Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2024-02-28 11:19:16Z INFO ProcessInvokerWrapper] Finished process 15000 with exit code 0, and elapsed time 00:00:00.5766046.
+[2024-02-28 11:19:16Z INFO CreateStepSummaryCommand] Step Summary file (C:\Users\gsss\Downloads\questionBank\actions-runner\_work\_temp\_runner_file_commands\step_summary_b61ca71d-7806-4cf5-aaa1-61395f853236) is empty; skipping attachment upload
+[2024-02-28 11:19:16Z INFO StepsRunner] Step result: 
+[2024-02-28 11:19:16Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "docker/login-action",
+  "ref": "v3",
+  "type": "node20",
+  "stage": "Post",
+  "stepId": "80a5c9fb-e1b9-4d5a-8c67-79adcdd40bdd",
+  "result": "succeeded",
+  "errorMessages": [],
+  "executionTimeInSeconds": 1,
+  "startTime": "2024-02-28T11:19:15.7310692Z",
+  "finishTime": "2024-02-28T11:19:16.3483549Z"
+}.
+[2024-02-28 11:19:16Z INFO StepsRunner] No need for updating job result with current step result 'Succeeded'.
+[2024-02-28 11:19:16Z INFO StepsRunner] Current state: job state = ''
+[2024-02-28 11:19:16Z INFO StepsRunner] Processing step: DisplayName='Post Run actions/checkout@v4'
+[2024-02-28 11:19:16Z INFO StepsRunner] Evaluating: always()
+[2024-02-28 11:19:16Z INFO StepsRunner] Result: true
+[2024-02-28 11:19:16Z INFO StepsRunner] Starting the step.
+[2024-02-28 11:19:16Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:19:16Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:19:16Z INFO HostContext] Well known directory 'Work': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work'
+[2024-02-28 11:19:16Z INFO StepsRunner] Which: 'chcp'
+[2024-02-28 11:19:16Z INFO StepsRunner] Location: 'C:\windows\system32\chcp.COM'
+[2024-02-28 11:19:16Z INFO ProcessInvokerWrapper] Starting process:
+[2024-02-28 11:19:16Z INFO ProcessInvokerWrapper]   File name: 'C:\windows\system32\chcp.COM'
+[2024-02-28 11:19:16Z INFO ProcessInvokerWrapper]   Arguments: '65001'
+[2024-02-28 11:19:16Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work'
+[2024-02-28 11:19:16Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2024-02-28 11:19:16Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2024-02-28 11:19:16Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2024-02-28 11:19:16Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2024-02-28 11:19:16Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2024-02-28 11:19:16Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2024-02-28 11:19:16Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2024-02-28 11:19:16Z INFO ProcessInvokerWrapper] Process started with process id 15200, waiting for process exit.
+[2024-02-28 11:19:16Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2024-02-28 11:19:16Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2024-02-28 11:19:16Z INFO ProcessInvokerWrapper] Finished process 15200 with exit code 0, and elapsed time 00:00:00.0323112.
+[2024-02-28 11:19:16Z INFO StepsRunner] Successfully returned to code page 65001 (UTF8)
+[2024-02-28 11:19:16Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:19:16Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:19:16Z INFO HostContext] Well known directory 'Work': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work'
+[2024-02-28 11:19:16Z INFO HostContext] Well known directory 'Actions': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work\_actions'
+[2024-02-28 11:19:16Z INFO ActionManager] Load action that reference repository from 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work\_actions\actions\checkout\v4'
+[2024-02-28 11:19:16Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:19:16Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:19:16Z INFO HostContext] Well known directory 'Work': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work'
+[2024-02-28 11:19:16Z INFO HostContext] Well known directory 'Actions': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work\_actions'
+[2024-02-28 11:19:16Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Checkout",
+  "description": "Checkout a Git repository at a particular version",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 4,
+          "col": 3,
+          "lit": "repository"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 6,
+          "col": 14,
+          "expr": "github.repository"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 7,
+          "col": 3,
+          "lit": "ref"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 12,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 24,
+          "col": 14,
+          "expr": "github.token"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 25,
+          "col": 3,
+          "lit": "ssh-key"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 37,
+          "col": 3,
+          "lit": "ssh-known-hosts"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 42,
+          "col": 3,
+          "lit": "ssh-strict"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 47,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 48,
+          "col": 3,
+          "lit": "persist-credentials"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 50,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 51,
+          "col": 3,
+          "lit": "path"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 53,
+          "col": 3,
+          "lit": "clean"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 55,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 56,
+          "col": 3,
+          "lit": "filter"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 60,
+          "col": 14,
+          "lit": ""
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 61,
+          "col": 3,
+          "lit": "sparse-checkout"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 65,
+          "col": 14,
+          "lit": ""
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 66,
+          "col": 3,
+          "lit": "sparse-checkout-cone-mode"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 69,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 70,
+          "col": 3,
+          "lit": "fetch-depth"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 72,
+          "col": 14,
+          "lit": "1"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 73,
+          "col": 3,
+          "lit": "fetch-tags"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 75,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 76,
+          "col": 3,
+          "lit": "show-progress"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 78,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 79,
+          "col": 3,
+          "lit": "lfs"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 81,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 82,
+          "col": 3,
+          "lit": "submodules"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 90,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 91,
+          "col": 3,
+          "lit": "set-safe-directory"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 93,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 94,
+          "col": 3,
+          "lit": "github-server-url"
+        },
+        "value": ""
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": "dist/index.js",
+    "nodeVersion": "node20",
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2024-02-28 11:19:16Z INFO ActionManager] Action pre node.js file: N/A.
+[2024-02-28 11:19:16Z INFO ActionManager] Action node.js file: dist/index.js.
+[2024-02-28 11:19:16Z INFO ActionManager] Action post node.js file: dist/index.js.
+[2024-02-28 11:19:16Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:19:16Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:19:16Z INFO HostContext] Well known directory 'Work': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work'
+[2024-02-28 11:19:16Z INFO HostContext] Well known directory 'Temp': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work\_temp'
+[2024-02-28 11:19:16Z INFO ExecutionContext] Write event payload to C:\Users\gsss\Downloads\questionBank\actions-runner\_work\_temp\_github_workflow\event.json
+[2024-02-28 11:19:16Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:19:16Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:19:16Z INFO HostContext] Well known directory 'Work': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work'
+[2024-02-28 11:19:16Z INFO HostContext] Well known directory 'Temp': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work\_temp'
+[2024-02-28 11:19:16Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2024-02-28 11:19:16Z INFO ActionManifestManager] Input 'repository': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 6,
+  "col": 14,
+  "lit": "GopiAgasthia/QBApp"
+}
+[2024-02-28 11:19:16Z INFO ActionManifestManager] Input 'ref': default value evaluate result: ""
+[2024-02-28 11:19:16Z INFO ActionManifestManager] Input 'token': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 24,
+  "col": 14,
+  "lit": "***"
+}
+[2024-02-28 11:19:16Z INFO ActionManifestManager] Input 'ssh-key': default value evaluate result: ""
+[2024-02-28 11:19:16Z INFO ActionManifestManager] Input 'ssh-known-hosts': default value evaluate result: ""
+[2024-02-28 11:19:16Z INFO ActionManifestManager] Input 'ssh-strict': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 47,
+  "col": 14,
+  "lit": "true"
+}
+[2024-02-28 11:19:16Z INFO ActionManifestManager] Input 'persist-credentials': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 50,
+  "col": 14,
+  "lit": "true"
+}
+[2024-02-28 11:19:16Z INFO ActionManifestManager] Input 'path': default value evaluate result: ""
+[2024-02-28 11:19:16Z INFO ActionManifestManager] Input 'clean': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 55,
+  "col": 14,
+  "lit": "true"
+}
+[2024-02-28 11:19:16Z INFO ActionManifestManager] Input 'filter': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 60,
+  "col": 14,
+  "lit": ""
+}
+[2024-02-28 11:19:16Z INFO ActionManifestManager] Input 'sparse-checkout': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 65,
+  "col": 14,
+  "lit": ""
+}
+[2024-02-28 11:19:16Z INFO ActionManifestManager] Input 'sparse-checkout-cone-mode': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 69,
+  "col": 14,
+  "lit": "true"
+}
+[2024-02-28 11:19:16Z INFO ActionManifestManager] Input 'fetch-depth': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 72,
+  "col": 14,
+  "lit": "1"
+}
+[2024-02-28 11:19:16Z INFO ActionManifestManager] Input 'fetch-tags': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 75,
+  "col": 14,
+  "lit": "false"
+}
+[2024-02-28 11:19:16Z INFO ActionManifestManager] Input 'show-progress': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 78,
+  "col": 14,
+  "lit": "true"
+}
+[2024-02-28 11:19:16Z INFO ActionManifestManager] Input 'lfs': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 81,
+  "col": 14,
+  "lit": "false"
+}
+[2024-02-28 11:19:16Z INFO ActionManifestManager] Input 'submodules': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 90,
+  "col": 14,
+  "lit": "false"
+}
+[2024-02-28 11:19:16Z INFO ActionManifestManager] Input 'set-safe-directory': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 93,
+  "col": 14,
+  "lit": "true"
+}
+[2024-02-28 11:19:16Z INFO ActionManifestManager] Input 'github-server-url': default value evaluate result: ""
+[2024-02-28 11:19:16Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2024-02-28 11:19:16Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2024-02-28 11:19:16Z INFO ActionCommandManager] Register action command extension for command set-env
+[2024-02-28 11:19:16Z INFO ActionCommandManager] Register action command extension for command set-output
+[2024-02-28 11:19:16Z INFO ActionCommandManager] Register action command extension for command save-state
+[2024-02-28 11:19:16Z INFO ActionCommandManager] Register action command extension for command add-path
+[2024-02-28 11:19:16Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2024-02-28 11:19:16Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2024-02-28 11:19:16Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2024-02-28 11:19:16Z INFO ActionCommandManager] Register action command extension for command warning
+[2024-02-28 11:19:16Z INFO ActionCommandManager] Register action command extension for command error
+[2024-02-28 11:19:16Z INFO ActionCommandManager] Register action command extension for command notice
+[2024-02-28 11:19:16Z INFO ActionCommandManager] Register action command extension for command debug
+[2024-02-28 11:19:16Z INFO ActionCommandManager] Register action command extension for command group
+[2024-02-28 11:19:16Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2024-02-28 11:19:16Z INFO ActionCommandManager] Register action command extension for command echo
+[2024-02-28 11:19:16Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:19:16Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:19:16Z INFO HostContext] Well known directory 'Externals': 'C:\Users\gsss\Downloads\questionBank\actions-runner\externals'
+[2024-02-28 11:19:16Z INFO ProcessInvokerWrapper] Starting process:
+[2024-02-28 11:19:16Z INFO ProcessInvokerWrapper]   File name: 'C:\Users\gsss\Downloads\questionBank\actions-runner\externals\node20\bin\node.exe'
+[2024-02-28 11:19:16Z INFO ProcessInvokerWrapper]   Arguments: '"C:\Users\gsss\Downloads\questionBank\actions-runner\_work\_actions\actions\checkout\v4\dist/index.js"'
+[2024-02-28 11:19:16Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\gsss\Downloads\questionBank\actions-runner\_work\QBApp\QBApp'
+[2024-02-28 11:19:16Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2024-02-28 11:19:16Z INFO ProcessInvokerWrapper]   Encoding web name: utf-8 ; code page: '65001'
+[2024-02-28 11:19:16Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2024-02-28 11:19:16Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2024-02-28 11:19:16Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2024-02-28 11:19:16Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2024-02-28 11:19:16Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2024-02-28 11:19:16Z INFO ProcessInvokerWrapper] Process started with process id 15108, waiting for process exit.
+[2024-02-28 11:19:16Z INFO AddMaskCommandExtension] Add new secret mask with length of 32
+[2024-02-28 11:19:16Z INFO JobServerQueue] Try to append 1 batches web console lines for record '81428c0c-bb30-4485-b73f-c51638c85939', success rate: 1/1.
+[2024-02-28 11:19:16Z INFO JobServerQueue] Tried to upload 1 file(s) to results, success rate: 1/1.
+[2024-02-28 11:19:17Z INFO JobServerQueue] Try to upload 2 log files or attachments, success rate: 2/2.
+[2024-02-28 11:19:17Z INFO JobServerQueue] Got a step log file to send to results service.
+[2024-02-28 11:19:17Z INFO JobServerQueue] Starting upload of step log file to results service ResultsLog, C:\Users\gsss\Downloads\questionBank\actions-runner\_diag\blocks\0488dd85-37c6-42f8-8b76-912b5e321682_80a5c9fb-e1b9-4d5a-8c67-79adcdd40bdd.1
+[2024-02-28 11:19:18Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2024-02-28 11:19:18Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2024-02-28 11:19:18Z INFO ProcessInvokerWrapper] Finished process 15108 with exit code 0, and elapsed time 00:00:02.0942548.
+[2024-02-28 11:19:18Z INFO CreateStepSummaryCommand] Step Summary file (C:\Users\gsss\Downloads\questionBank\actions-runner\_work\_temp\_runner_file_commands\step_summary_4fabc923-42af-4d86-90cb-5d6eeca84053) is empty; skipping attachment upload
+[2024-02-28 11:19:18Z INFO StepsRunner] Step result: 
+[2024-02-28 11:19:18Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "actions/checkout",
+  "ref": "v4",
+  "type": "node20",
+  "stage": "Post",
+  "stepId": "81428c0c-bb30-4485-b73f-c51638c85939",
+  "result": "succeeded",
+  "errorMessages": [
+    "The process 'C:\\Program Files\\Git\\cmd\\git.exe' failed with exit code 128"
+  ],
+  "executionTimeInSeconds": 3,
+  "startTime": "2024-02-28T11:19:16.349065Z",
+  "finishTime": "2024-02-28T11:19:18.4858318Z"
+}.
+[2024-02-28 11:19:18Z INFO StepsRunner] No need for updating job result with current step result 'Succeeded'.
+[2024-02-28 11:19:18Z INFO StepsRunner] Current state: job state = ''
+[2024-02-28 11:19:18Z INFO JobRunner] Finalize job.
+[2024-02-28 11:19:18Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:19:18Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:19:18Z INFO HostContext] Well known directory 'Diag': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_diag'
+[2024-02-28 11:19:18Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:19:18Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:19:18Z INFO HostContext] Well known directory 'Diag': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_diag'
+[2024-02-28 11:19:18Z INFO JobExtension] Initialize Env context
+[2024-02-28 11:19:18Z INFO JobExtension] Initialize steps context
+[2024-02-28 11:19:18Z INFO JobExtension] Total accessible running process: 313.
+[2024-02-28 11:19:18Z INFO JobExtension] Inspecting process environment variables. PID: 20120 (SearchProtocolHost)
+[2024-02-28 11:19:18Z WARN JobExtension] Ignore exception during read process environment variables: Access is denied.
+[2024-02-28 11:19:18Z INFO JobExtension] Inspecting process environment variables. PID: 25220 (SearchFilterHost)
+[2024-02-28 11:19:18Z WARN JobExtension] Ignore exception during read process environment variables: Access is denied.
+[2024-02-28 11:19:18Z INFO JobExtension] Inspecting process environment variables. PID: 16416 (SearchProtocolHost)
+[2024-02-28 11:19:18Z INFO JobExtension] Inspecting process environment variables. PID: 7948 (WmiPrvSE)
+[2024-02-28 11:19:18Z WARN JobExtension] Ignore exception during read process environment variables: Access is denied.
+[2024-02-28 11:19:18Z INFO JobExtension] Inspecting process environment variables. PID: 23384 (svchost)
+[2024-02-28 11:19:18Z WARN JobExtension] Ignore exception during read process environment variables: Access is denied.
+[2024-02-28 11:19:18Z INFO JobExtension] Inspecting process environment variables. PID: 24888 (smartscreen)
+[2024-02-28 11:19:18Z INFO JobExtension] Wait for all connectivity checks to finish.
+[2024-02-28 11:19:18Z INFO JobExtension] Connectivity check result: https://acghubeus0.actions.githubusercontent.com/_apis/health: OK
+[2024-02-28 11:19:18Z INFO JobExtension] Connectivity check result: https://results-receiver.actions.githubusercontent.com/health: OK
+[2024-02-28 11:19:18Z INFO JobExtension] Connectivity check result: https://actions-results-receiver-production.githubapp.com/health: OK
+[2024-02-28 11:19:18Z INFO JobExtension] Connectivity check result: https://pipelinesghubeus6.actions.githubusercontent.com/_apis/health: OK
+[2024-02-28 11:19:18Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "complete_job",
+  "type": "runner",
+  "stage": "Post",
+  "stepId": "61a0fec2-080a-462a-a9cd-881a4dc63671",
+  "result": "succeeded",
+  "errorMessages": [],
+  "executionTimeInSeconds": 1,
+  "startTime": "2024-02-28T11:19:18.4960983Z",
+  "finishTime": "2024-02-28T11:19:18.5361049Z"
+}.
+[2024-02-28 11:19:18Z INFO JobRunner] Job result after all job steps finish: Succeeded
+[2024-02-28 11:19:18Z INFO JobRunner] Completing the job execution context.
+[2024-02-28 11:19:18Z INFO JobRunner] Shutting down the job server queue.
+[2024-02-28 11:19:18Z INFO JobServerQueue] Fire signal to shutdown all queues.
+[2024-02-28 11:19:18Z INFO JobServerQueue] Tried to upload 1 file(s) to results, success rate: 1/1.
+[2024-02-28 11:19:19Z INFO JobServerQueue] All queue process task stopped.
+[2024-02-28 11:19:19Z INFO JobServerQueue] Try to append 1 batches web console lines for record '81428c0c-bb30-4485-b73f-c51638c85939', success rate: 1/1.
+[2024-02-28 11:19:19Z INFO JobServerQueue] Try to append 1 batches web console lines for record '61a0fec2-080a-462a-a9cd-881a4dc63671', success rate: 1/1.
+[2024-02-28 11:19:19Z INFO JobServerQueue] Web console line queue drained.
+[2024-02-28 11:19:19Z INFO JobServerQueue] Uploading 3 files in one shot.
+[2024-02-28 11:19:21Z INFO JobServerQueue] Try to upload 3 log files or attachments, success rate: 3/3.
+[2024-02-28 11:19:21Z INFO JobServerQueue] File upload queue drained.
+[2024-02-28 11:19:21Z INFO JobServerQueue] Starting results-based upload queue...
+[2024-02-28 11:19:21Z INFO JobServerQueue] Uploading 3 file(s) in one shot through results service.
+[2024-02-28 11:19:21Z INFO JobServerQueue] Got a step log file to send to results service.
+[2024-02-28 11:19:21Z INFO JobServerQueue] Starting upload of step log file to results service ResultsLog, C:\Users\gsss\Downloads\questionBank\actions-runner\_diag\blocks\0488dd85-37c6-42f8-8b76-912b5e321682_81428c0c-bb30-4485-b73f-c51638c85939.1
+[2024-02-28 11:19:22Z INFO JobServerQueue] Got a step log file to send to results service.
+[2024-02-28 11:19:22Z INFO JobServerQueue] Starting upload of step log file to results service ResultsLog, C:\Users\gsss\Downloads\questionBank\actions-runner\_diag\blocks\0488dd85-37c6-42f8-8b76-912b5e321682_61a0fec2-080a-462a-a9cd-881a4dc63671.1
+[2024-02-28 11:19:23Z INFO JobServerQueue] Got a job log file to send to results service.
+[2024-02-28 11:19:23Z INFO JobServerQueue] Starting upload of job log file to results service ResultsLog, C:\Users\gsss\Downloads\questionBank\actions-runner\_diag\blocks\0488dd85-37c6-42f8-8b76-912b5e321682_3bd1eaf3-d624-5be1-f0e1-b82f230106fd.1
+[2024-02-28 11:19:24Z INFO JobServerQueue] Tried to upload 3 file(s) to results, success rate: 3/3.
+[2024-02-28 11:19:24Z INFO JobServerQueue] Results upload queue drained.
+[2024-02-28 11:19:24Z INFO JobServerQueue] Timeline update queue drained.
+[2024-02-28 11:19:24Z INFO JobServerQueue] Disposing job server ...
+[2024-02-28 11:19:24Z INFO JobServerQueue] Disposing results server ...
+[2024-02-28 11:19:24Z INFO JobServerQueue] All queue process tasks have been stopped, and all queues are drained.
+[2024-02-28 11:19:24Z INFO JobServerQueue] Actions upload time: 5954 ms, Result upload time: 9795 ms
+[2024-02-28 11:19:24Z INFO TempDirectoryManager] Cleaning runner temp folder: C:\Users\gsss\Downloads\questionBank\actions-runner\_work\_temp
+[2024-02-28 11:19:24Z INFO HostContext] Well known directory 'Bin': 'C:\Users\gsss\Downloads\questionBank\actions-runner\bin'
+[2024-02-28 11:19:24Z INFO HostContext] Well known directory 'Root': 'C:\Users\gsss\Downloads\questionBank\actions-runner'
+[2024-02-28 11:19:24Z INFO HostContext] Well known directory 'Diag': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_diag'
+[2024-02-28 11:19:24Z INFO HostContext] Well known config file 'Telemetry': 'C:\Users\gsss\Downloads\questionBank\actions-runner\_diag\.telemetry'
+[2024-02-28 11:19:24Z INFO JobRunner] Raising job completed event
+[2024-02-28 11:19:24Z INFO Worker] Job completed.
